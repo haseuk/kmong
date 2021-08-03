@@ -3,7 +3,7 @@
 *--------------------------------------------------------------------------------------------------------------*/
 @media (max-width: 809px) {
   html {
-    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+    font-family: 'Notokr', sans-serif;
   }
   .container {
     width: 100vw;
@@ -13,11 +13,16 @@
   .container .wrapper {
     font-size: 0vw;
     text-align: center;
-    letter-spacing: -0.12345679vw;
   }
   .container .wrapper img {
     width: 100%;
     backface-visibility: hidden;
+  }
+  .container .wrapper p,
+  .container .wrapper h2,
+  .container .wrapper h3 {
+    letter-spacing: -0.06em;
+    word-break: keep-all;
   }
   .container .wrapper .wrap {
     padding-top: 11.11111111vw;
@@ -27,7 +32,7 @@
     box-sizing: border-box;
   }
   .container .wrapper .wrap .top h2 {
-    font-size: 5.92592593vw;
+    font-size: 5.67901235vw;
     color: #484848;
     font-weight: 500;
   }
@@ -71,7 +76,7 @@
   }
   .container .wrapper .wrap section.sec1 .manager {
     padding-top: 2.59259259vw;
-    padding-right: 5.18518519vw;
+    padding-right: 0vw;
     padding-bottom: 2.59259259vw;
     padding-left: 5.18518519vw;
     box-sizing: border-box;
@@ -98,7 +103,7 @@
     margin-bottom: 1.11111111vw;
   }
   .container .wrapper .wrap section.sec1 .manager .profile .inner i {
-    width: 1.2345679vw;
+    width: 0.61728395vw;
     display: inline-block;
   }
   .container .wrapper .wrap section.sec1 .manager .profile .inner span {
@@ -115,6 +120,7 @@
     font-size: 3.33333333vw;
     font-weight: 500;
     line-height: 4.32098765vw;
+    width: 61.11111111vw;
   }
   .container .wrapper .wrap section.sec2 {
     padding-top: 11.11111111vw;
@@ -126,7 +132,7 @@
     font-size: 7.90123457vw;
     font-weight: 700;
     color: #c41230;
-    letter-spacing: -0.24691358vw;
+    line-height: 1;
     text-align: center;
   }
   .container .wrapper .wrap section .paragraph {
@@ -200,7 +206,6 @@
     vertical-align: middle;
     padding-top: 0.24691358vw;
     box-sizing: border-box;
-    letter-spacing: -0.30864198vw;
   }
   .container .wrapper .juvu {
     background-color: #c41230;
@@ -259,6 +264,7 @@
     padding-bottom: 1.85185185vw;
     padding-left: 0vw;
     line-height: 5.92592593vw;
+    letter-spacing: -0.065em;
   }
   .container .wrapper .standard table th {
     color: #c7c7c7;

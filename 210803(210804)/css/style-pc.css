@@ -2,7 +2,7 @@
 *  Template
 *--------------------------------------------------------------------------------------------------------------*/
 html {
-  font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+  font-family: 'Notokr', sans-serif;
 }
 .container {
   width: 810px;
@@ -12,11 +12,16 @@ html {
 .container .wrapper {
   font-size: 0px;
   text-align: center;
-  letter-spacing: -1px;
 }
 .container .wrapper img {
   width: 100%;
   backface-visibility: hidden;
+}
+.container .wrapper p,
+.container .wrapper h2,
+.container .wrapper h3 {
+  letter-spacing: -0.06em;
+  word-break: keep-all;
 }
 .container .wrapper .wrap {
   padding-top: 90px;
@@ -26,7 +31,7 @@ html {
   box-sizing: border-box;
 }
 .container .wrapper .wrap .top h2 {
-  font-size: 48px;
+  font-size: 46px;
   color: #484848;
   font-weight: 500;
 }
@@ -70,7 +75,7 @@ html {
 }
 .container .wrapper .wrap section.sec1 .manager {
   padding-top: 21px;
-  padding-right: 42px;
+  padding-right: 0px;
   padding-bottom: 21px;
   padding-left: 42px;
   box-sizing: border-box;
@@ -97,7 +102,7 @@ html {
   margin-bottom: 9px;
 }
 .container .wrapper .wrap section.sec1 .manager .profile .inner i {
-  width: 10px;
+  width: 5px;
   display: inline-block;
 }
 .container .wrapper .wrap section.sec1 .manager .profile .inner span {
@@ -114,6 +119,7 @@ html {
   font-size: 27px;
   font-weight: 500;
   line-height: 35px;
+  width: 495px;
 }
 .container .wrapper .wrap section.sec2 {
   padding-top: 90px;
@@ -125,7 +131,7 @@ html {
   font-size: 64px;
   font-weight: 700;
   color: #c41230;
-  letter-spacing: -2px;
+  line-height: 1;
   text-align: center;
 }
 .container .wrapper .wrap section .paragraph {
@@ -199,7 +205,6 @@ html {
   vertical-align: middle;
   padding-top: 2px;
   box-sizing: border-box;
-  letter-spacing: -2.5px;
 }
 .container .wrapper .juvu {
   background-color: #c41230;
@@ -258,6 +263,7 @@ html {
   padding-bottom: 15px;
   padding-left: 0px;
   line-height: 48px;
+  letter-spacing: -0.065em;
 }
 .container .wrapper .standard table th {
   color: #c7c7c7;
