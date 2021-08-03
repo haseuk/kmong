@@ -1,0 +1,283 @@
+/*--------------------------------------------------------------------------------------------------------------
+*  Template
+*--------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 809px) {
+  html {
+    font-family: 'Malgun Gothic', '맑은 고딕', sans-serif;
+  }
+  .container {
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container .wrapper {
+    font-size: 0vw;
+    text-align: center;
+    letter-spacing: -0.12345679vw;
+  }
+  .container .wrapper img {
+    width: 100%;
+    backface-visibility: hidden;
+  }
+  .container .wrapper .wrap {
+    padding-top: 11.11111111vw;
+    padding-right: 3.95061728vw;
+    padding-bottom: 0vw;
+    padding-left: 3.95061728vw;
+    box-sizing: border-box;
+  }
+  .container .wrapper .wrap .top h2 {
+    font-size: 5.92592593vw;
+    color: #484848;
+    font-weight: 500;
+  }
+  .container .wrapper .wrap .top h2 + p {
+    font-size: 8.39506173vw;
+    color: #c41230;
+    font-weight: 700;
+  }
+  .container .wrapper .wrap .top img {
+    margin-top: 2.22222222vw;
+  }
+  .container .wrapper .wrap .top .txt {
+    font-size: 4.69135802vw;
+    line-height: 6.17283951vw;
+    text-align: left;
+    margin-top: 2.71604938vw;
+    font-weight: 500;
+  }
+  .container .wrapper .wrap section {
+    box-sizing: border-box;
+    text-align: left;
+  }
+  .container .wrapper .wrap section.sec1 {
+    padding-top: 6.17283951vw;
+    padding-right: 3.20987654vw;
+    padding-bottom: 6.17283951vw;
+    padding-left: 3.20987654vw;
+    border: 2px solid #c7c7c7;
+    margin-top: 13.95061728vw;
+    position: relative;
+  }
+  .container .wrapper .wrap section.sec1 h3 {
+    width: 48.39506173vw;
+    position: absolute;
+    left: 50%;
+    top: 0vw;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
+    background-color: #fff;
+  }
+  .container .wrapper .wrap section.sec1 .manager {
+    padding-top: 2.59259259vw;
+    padding-right: 5.18518519vw;
+    padding-bottom: 2.59259259vw;
+    padding-left: 5.18518519vw;
+    box-sizing: border-box;
+    background-color: #f5f5f5;
+  }
+  .container .wrapper .wrap section.sec1 .manager .manager-icon {
+    width: 15.43209877vw;
+    height: 15.43209877vw;
+    display: inline-block;
+    margin-right: 2.83950617vw;
+    vertical-align: middle;
+  }
+  .container .wrapper .wrap section.sec1 .manager .profile {
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 0.74074074vw;
+    padding-right: 0vw;
+    padding-bottom: 0.74074074vw;
+    padding-left: 0vw;
+    box-sizing: border-box;
+  }
+  .container .wrapper .wrap section.sec1 .manager .profile .inner {
+    font-weight: 700;
+    margin-bottom: 1.11111111vw;
+  }
+  .container .wrapper .wrap section.sec1 .manager .profile .inner i {
+    width: 1.2345679vw;
+    display: inline-block;
+  }
+  .container .wrapper .wrap section.sec1 .manager .profile .inner span {
+    font-size: 1.97530864vw;
+    display: inline-block;
+    line-height: 4.32098765vw;
+  }
+  .container .wrapper .wrap section.sec1 .manager .profile .inner .name {
+    font-size: 3.33333333vw;
+    display: inline-block;
+    line-height: 4.32098765vw;
+  }
+  .container .wrapper .wrap section.sec1 .manager .profile .txt {
+    font-size: 3.33333333vw;
+    font-weight: 500;
+    line-height: 4.32098765vw;
+  }
+  .container .wrapper .wrap section.sec2 {
+    padding-top: 11.11111111vw;
+    padding-right: 0vw;
+    padding-bottom: 6.41975309vw;
+    padding-left: 0vw;
+  }
+  .container .wrapper .wrap section h3 {
+    font-size: 7.90123457vw;
+    font-weight: 700;
+    color: #c41230;
+    letter-spacing: -0.24691358vw;
+    text-align: center;
+  }
+  .container .wrapper .wrap section .paragraph {
+    margin-top: 3.7037037vw;
+  }
+  .container .wrapper .wrap section .paragraph .tit {
+    font-size: 4.69135802vw;
+    font-weight: 700;
+    line-height: 5.92592593vw;
+    margin-top: 5.18518519vw;
+    margin-right: 0vw;
+    margin-bottom: 0.61728395vw;
+    margin-left: 0vw;
+  }
+  .container .wrapper .wrap section .paragraph .txt {
+    font-size: 4.19753086vw;
+    font-weight: 500;
+    line-height: 5.92592593vw;
+    margin-bottom: 4.9382716vw;
+  }
+  .container .wrapper .wrap section .paragraph:last-of-type .txt {
+    margin-bottom: 0vw;
+  }
+  .container .wrapper .check-point {
+    background-color: #b7c1cd;
+    padding-top: 5.55555556vw;
+    padding-right: 0vw;
+    padding-bottom: 7.40740741vw;
+    padding-left: 0vw;
+    box-sizing: border-box;
+  }
+  .container .wrapper .check-point h2 {
+    font-size: 7.90123457vw;
+    font-weight: 700;
+    color: #fff;
+  }
+  .container .wrapper .check-point ul {
+    margin-top: 4.69135802vw;
+    padding-top: 0vw;
+    padding-right: 6.17283951vw;
+    padding-bottom: 0vw;
+    padding-left: 7.40740741vw;
+    box-sizing: border-box;
+  }
+  .container .wrapper .check-point ul li {
+    margin-bottom: 2.4691358vw;
+    height: 9.87654321vw;
+    text-align: left;
+  }
+  .container .wrapper .check-point ul li span {
+    font-size: 4.69135802vw;
+    color: #585e65;
+    font-weight: 700;
+    width: 17.28395062vw;
+    height: 9.87654321vw;
+    line-height: 9.87654321vw;
+    display: inline-block;
+    background-color: #fff;
+    margin-right: 1.85185185vw;
+    border-radius: 1.60493827vw;
+    text-align: center;
+    vertical-align: middle;
+  }
+  .container .wrapper .check-point ul li p {
+    font-size: 4.19753086vw;
+    width: 66.04938272vw;
+    line-height: 4.9382716vw;
+    font-weight: 500;
+    display: inline-block;
+    color: #fff;
+    vertical-align: middle;
+    padding-top: 0.24691358vw;
+    box-sizing: border-box;
+    letter-spacing: -0.30864198vw;
+  }
+  .container .wrapper .juvu {
+    background-color: #c41230;
+    padding-top: 5.55555556vw;
+    padding-right: 0vw;
+    padding-bottom: 6.17283951vw;
+    padding-left: 0vw;
+    box-sizing: border-box;
+  }
+  .container .wrapper .juvu h2 {
+    font-size: 7.40740741vw;
+    font-weight: 700;
+    color: #fff;
+  }
+  .container .wrapper .juvu p {
+    font-size: 3.7037037vw;
+    line-height: 6.41975309vw;
+    color: #fff;
+  }
+  .container .wrapper .committee {
+    padding-top: 11.11111111vw;
+    padding-right: 3.95061728vw;
+    padding-bottom: 11.11111111vw;
+    padding-left: 3.95061728vw;
+    box-sizing: border-box;
+  }
+  .container .wrapper .committee h2 {
+    font-size: 4.69135802vw;
+    font-weight: 700;
+    line-height: 6.17283951vw;
+    margin-bottom: 2.83950617vw;
+  }
+  .container .wrapper .standard {
+    padding-top: 0vw;
+    padding-right: 3.95061728vw;
+    padding-bottom: 0vw;
+    padding-left: 3.95061728vw;
+    box-sizing: border-box;
+    margin-bottom: 12.34567901vw;
+  }
+  .container .wrapper .standard h2 {
+    font-size: 7.40740741vw;
+    color: #c41230;
+    font-weight: 700;
+    margin-bottom: 2.71604938vw;
+  }
+  .container .wrapper .standard table {
+    font-size: 4.19753086vw;
+    font-weight: 500;
+    border-collapse: collapse;
+  }
+  .container .wrapper .standard table th,
+  .container .wrapper .standard table td {
+    padding-top: 1.85185185vw;
+    padding-right: 0vw;
+    padding-bottom: 1.85185185vw;
+    padding-left: 0vw;
+    line-height: 5.92592593vw;
+  }
+  .container .wrapper .standard table th {
+    color: #c7c7c7;
+    border: 2px solid #c7c7c7;
+    border-left: 0;
+    width: 17.77777778vw;
+  }
+  .container .wrapper .standard table td {
+    text-align: left;
+    padding-left: 3.7037037vw;
+    box-sizing: border-box;
+    border: 2px solid #c7c7c7;
+    border-right: 0;
+  }
+  .container .wrapper .bottom-tip {
+    padding-top: 0vw;
+    padding-right: 7.40740741vw;
+    padding-bottom: 14.81481481vw;
+    padding-left: 7.40740741vw;
+  }
+}
+/*# sourceMappingURL=style-m.css.map */

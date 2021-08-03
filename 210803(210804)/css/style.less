@@ -1,0 +1,68 @@
+@import 'asset';
+
+html { font-family: 'Malgun Gothic', '맑은 고딕', sans-serif; }
+.container { .w(810); .mh-c;
+  .wrapper { .fs(0); .tc; .ls(-1);
+
+    img { .wf; backface-visibility: hidden; }
+
+    .wrap { .p(90,32,0); .-box;
+      .top {
+        h2 { .fs(48); color:#484848; .medium; }
+        h2 + p { .fs(68); color:#c41230; .bold; }
+        img { .mt(18); }
+        .txt { .fs(38); .lh(50); .tl; .mt(22); .medium; }
+      }
+      section { .-box; .tl;
+        &.sec1 { .p(50,26); .-a(#c7c7c7,2px); .mt(113); .rel;
+          h3 { .w(392); .abs; .lt(50%,0); transform: translate(-50%,-50%); .bgc(#fff); }
+          .manager { .p(21,42); .-box; .bgc(#f5f5f5);
+            .manager-icon { .wh(125,125); .ib; .mr(23); .vam; }
+            .profile { .ib; .vam; .p(6,0); .-box;
+              .inner { .bold; .mb(9);
+                i { .w(10); .ib; }
+                span { .fs(16); .ib; .lh(35); }
+                .name { .fs(27); .ib; .lh(35); }
+              }
+              .txt { .fs(27); .medium; .lh(35); }
+            }
+          }
+        }
+        &.sec2 { .p(90,0,52); }
+
+        h3 { .fs(64); .bold; color:#c41230; .ls(-2); .tc; }
+        .paragraph { .mt(30);
+          .tit { .fs(38); .bold; .lh(48); .m(42,0,5); }
+          .txt { .fs(34); .medium; .lh(48); .mb(40);
+          }
+          &:last-of-type .txt { .mb(0); }
+        }
+      }
+    }
+    .check-point { .bgc(#b7c1cd); .p(45,0,60); .-box;
+      h2 { .fs(64); .bold; color:#fff; }
+      ul { .mt(38); .p(0,50,0,60); .-box;
+        li { .mb(20); .h(80); .tl;
+          span { .fs(38); color:#585e65; .bold; .wh(140,80); .lh(80); .ib; .bgc(#fff); .mr(15); .br(13); .tc; .vam; }
+          p { .fs(34); .w(535); .lh(40); .medium; .ib; color:#fff; .vam; .pt(2); .-box; .ls(-2.5); }
+        }
+      }
+    }
+    .juvu { .bgc(#c41230); .p(45,0,50); .-box;
+      h2 { .fs(60); .bold; color:#fff; }
+      p {.fs(30); .lh(52); color:#fff; }
+    }
+    .committee { .p(90,32); .-box;
+      h2 { .fs(38); .bold; .lh(50); .mb(23); }
+    }
+    .standard { .p(0,32); .-box; .mb(100);
+      h2 { .fs(60); color:#c41230; .bold; .mb(22); }
+      table { .fs(34); .medium; border-collapse: collapse;
+        th, td { .p(15,0); .lh(48); }
+        th { color:#c7c7c7; .-a(#c7c7c7,2px); .-l; .w(144); }
+        td { .tl; .pl(30); .-box; .-a(#c7c7c7,2px); .-r; }
+      }
+    }
+    .bottom-tip { .p(0,60,120); }
+  }
+}
