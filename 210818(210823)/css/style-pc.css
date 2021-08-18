@@ -1,0 +1,28 @@
+/*--------------------------------------------------------------------------------------------------------------
+*  Template
+*--------------------------------------------------------------------------------------------------------------*/
+html {
+  font-family: 'NanumSquare', sans-serif;
+}
+html .container {
+  text-align: center;
+}
+html .container header {
+  height: 69px;
+}
+html .container header .inner {
+  height: 69px;
+  line-height: 69px;
+  transform: translateY(50%);
+  position: relative;
+}
+html .container header .inner h1 {
+  font-size: 0px;
+  background-repeat: no-repeat;
+  background-image: url('../img/m-logo.png');
+  background-size: contain;
+  width: 421px;
+  height: 46px;
+  display: inline-block;
+}
+/*# sourceMappingURL=style-pc.css.map */

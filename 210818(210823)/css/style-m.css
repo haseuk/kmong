@@ -1,0 +1,30 @@
+/*--------------------------------------------------------------------------------------------------------------
+*  Template
+*--------------------------------------------------------------------------------------------------------------*/
+@media (max-width: 1124px) {
+  html {
+    font-family: 'NanumSquare', sans-serif;
+  }
+  html .container {
+    text-align: center;
+  }
+  html .container header {
+    height: 6.13333333vw;
+  }
+  html .container header .inner {
+    height: 6.13333333vw;
+    line-height: 6.13333333vw;
+    transform: translateY(50%);
+    position: relative;
+  }
+  html .container header .inner h1 {
+    font-size: 0vw;
+    background-repeat: no-repeat;
+    background-image: url('../img/m-logo.png');
+    background-size: contain;
+    width: 37.42222222vw;
+    height: 4.08888889vw;
+    display: inline-block;
+  }
+}
+/*# sourceMappingURL=style-m.css.map */
