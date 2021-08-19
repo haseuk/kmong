@@ -1,10 +1,135 @@
 @import 'asset';
 
+img { .wf; .block; backface-visibility: hidden; }
+button { background: none; }
+.robo { font-family: 'Roboto', sans-serif; }
+.p { .ls(-0.1em); }
+
 html { font-family: 'NanumSquare', sans-serif;
-  .container { .tc;
-    header { .h(69);
+  .container { .fs(0); .tc; overflow: hidden;
+    header { .h(69); z-index: 10; .rel; .robo;
+      &.mo { .block; }
+      &.pc { .hide; }
       .inner { .h(69); .lh(69); transform: translateY(50%); .rel;
-        h1 { .fs(0); .contain('../img/m-logo.png'); .wh(421,46); .ib; }
+        .menu { .wh(60,41); .abs; .contain('../img/m-btn.png'); .lt(40,15); }
+        h1 { .fs(0); .contain('../img/m-logo.png'); .wh(421,46); .mt(9); .ib; }
+        .cart { .fs(25); .abs; .rt(70,20); .bold; .robo; }
+        .search { .wh(25,25); .contain('../img/m-search.png'); .abs; .rt(20,23); }
+      }
+      .menu-box { .wh(0,100vh); .abs; .lt;
+        .dim { .f; .bgc(#000); opacity: 0.5; }
+        ul { .wh(400,100vh); .bgc(#fff); .abs; .lt(-400,0); .p(150,0); .-box; transition:left 1s;
+          li { .fs(45); .lh(70); .bold;
+            a { .block; .f; .pointer; }
+          }
+        }
+        .close { .wh(40,40); .contain('../img/ico-x.svg'); .abs; .lt(-70,30); transition: left 1s; }
+      }
+      .menu-box.on { .wf;
+        ul { .l(0); }
+        .close { .l(330); }
+      }
+    }
+    article {
+      section.top {
+        .swiper-container1 { .rel;
+          .swiper-slide { .rel;
+            p { color:#fff; .abs; .tl;
+              &.tit { .fs(80); .lh(100); .lt(90,554); }
+              &.txt { .fs(18); .lh(36); .lt(90,770); }
+            }
+          }
+          .swiper-pagination { .b(70);
+            .swiper-pagination-bullet { .wh(119,8); .m(0,1); .bgc(#fff); .br(0); opacity: 0.5; .rel;
+              &:after { content: ''; .abs; .lt(50%,15); .contain('../img/m-vit2.png'); .wh(76,18); .ml(-38); }
+            }
+            .swiper-pagination-bullet-active { opacity: 1;
+              &:after { .contain('../img/m-vit.png'); }
+            }
+          }
+        }
+      }
+      section.best, .cont { .p(100,0,150);
+        h2 { .fs(40); .extra-bold; }
+        .sub-tit { .fs(20); color:#999; .mt(15); }
+        .swiper-container2, .swiper-container3, .swiper-container4 { .mt(50); .p(0,90);
+          .swiper-slide { .w(38%);
+            .txt { .fs(22); .mt(25); .tl; .lh(42); .ls(-0.05em);
+              b { .block; }
+            }
+            .price-box { .mt(40); .tl;
+              p { .mb(20); }
+              .price { .fs(40); color:#ff5602; .bold; }
+              .ds { .fs(25); text-decoration: line-through; }
+              .review { .fs(20);
+                img { .w(200); .ib; }
+              }
+              .tip { .fs(20);  s { .bold; }}
+            }
+          }
+        }
+        .more { .wh(248,74); .mt(80); .pointer; }
+      }
+      section.banner { .p(0,50);
+        li { .rel;
+          .box { .abs; .lt(50%,115); transform: translateX(-50%);
+            p { color:#fff; }
+            .tit { .fs(48); .bold; }
+            .txt { .fs(24); .mt(10); }
+          }
+          a { .block; .f; .pointer; .abs; .lt;}
+        }
+      }
+      section.mentor { .mt(180); .p(0,78); .rel; .h(1217);
+        h2 { .fs(100); .lh(99); .robo; color:#000; font-style: italic; .extra-bold; .tl; .ml(90); .rel; z-index: 1; }
+        h2 + img { .wh(640,668); .abs; .rt(78,126); }
+        .txt { .fs(22); .lh(34); .tl; .abs; .lt(406,835); }
+        .about { .wh(233,74); .abs; .lt(406,1020); }
+      }
+      section.new { .bgc(#f8faff); }
+      section.c-review {
+        .swiper-container4 {
+          .swiper-slide { .w(42%); .p(30,30,50); .-box; box-shadow: 5px 10px 10px 1px rgba(224,232,236,0.93);
+            .review-box {
+              p { .tl; }
+              .tit, .add { .fs(22); .bold; .mt(25); }
+            }
+          }
+        }
+      }
+    }
+    footer { .fs(30); .bgc(#222); .p(85,170,50); color:#fff;
+      > div { .p(60,0); .tl; .-b(#565656); }
+      p { .lh(45); }
+      .top { .p(0); .tc; .-b;
+        h2 { .wh(319,36); .mh-c; }
+        ul { .ib; .mt(35);
+          li { color:#fff; .m(0,10); .ib; }
+        }
+      }
+      .add-box {
+        a { .fs(45); .bold; .m(10,0); .block; }
+        p:nth-of-type(3) { .m(60,0,20); }
+      }
+      .bank-social { .clear;
+        .bank-info { .fl;
+          p:nth-child(2) { .fs(45); .bold; .m(10,0); .block;  }
+        }
+        .social { .fr;
+          div { .mt(20);
+            a { .ib;
+              img { .wh(76.7,57.2); }
+            }
+          }
+          div + div { .mt(30);}
+        }
+      }
+      .comp {
+        p, a { opacity: 0.5; }
+        a { .block; .mb(30); }
+      }
+      .copy { .tc; .-b;
+        p { opacity: 0.5; }
       }
     }
   }

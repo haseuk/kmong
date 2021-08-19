@@ -1,28 +1,78 @@
 /*--------------------------------------------------------------------------------------------------------------
 *  Template
 *--------------------------------------------------------------------------------------------------------------*/
-html {
-  font-family: 'NanumSquare', sans-serif;
-}
-html .container {
-  text-align: center;
-}
-html .container header {
-  height: 69px;
-}
-html .container header .inner {
-  height: 69px;
-  line-height: 69px;
-  transform: translateY(50%);
-  position: relative;
-}
-html .container header .inner h1 {
-  font-size: 0px;
-  background-repeat: no-repeat;
-  background-image: url('../img/m-logo.png');
-  background-size: contain;
-  width: 421px;
-  height: 46px;
-  display: inline-block;
+@media (min-width: 1125px) {
+  img {
+    width: 100%;
+    display: block;
+    backface-visibility: hidden;
+  }
+  button {
+    background: none;
+  }
+  .robo {
+    font-family: 'Roboto', sans-serif;
+  }
+  .p {
+    letter-spacing: -0.1em;
+  }
+  html {
+    font-family: 'NanumSquare', sans-serif;
+  }
+  html .container {
+    font-size: 0px;
+    text-align: center;
+    overflow: hidden;
+  }
+  html .container header {
+    height: 56px;
+  }
+  html .container header.mo {
+    display: none;
+  }
+  html .container header.pc {
+    display: block;
+  }
+  html .container header .inner {
+    height: 56px;
+    line-height: 56px;
+    transform: translateY(50%);
+    position: relative;
+  }
+  html .container header .inner h1 {
+    background-repeat: no-repeat;
+    background-image: url('../img/logo.png');
+    background-size: contain;
+    width: 381px;
+    height: 42px;
+    margin-top: 4px;
+  }
+  html .container header .menu-box,
+  html .container header .login-box {
+    height: 56px;
+    line-height: 56px;
+    position: relative;
+    left: auto;
+    top: auto;
+  }
+  html .container header .menu-box ul,
+  html .container header .login-box ul {
+    width: auto;
+    height: auto;
+    position: relative;
+    left: auto;
+    top: auto;
+    padding: 0px;
+    transition: none;
+  }
+  html .container header .menu-box ul li,
+  html .container header .login-box ul li {
+    font-size: 13px;
+    line-height: 56px;
+    margin-right: 24px;
+  }
+  html .container header .menu-box {
+    float: left;
+  }
 }
 /*# sourceMappingURL=style-pc.css.map */

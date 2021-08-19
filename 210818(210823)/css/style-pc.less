@@ -1,1 +1,28 @@
-@import "style";
+@import 'asset';
+
+@media (min-width: 1125px) {
+  img { .wf; .block; backface-visibility: hidden; }
+  button { background: none; }
+  .robo { font-family: 'Roboto', sans-serif; }
+  .p { .ls(-0.1em); }
+
+  html { font-family: 'NanumSquare', sans-serif;
+    .container { .fs(0); .tc; overflow: hidden;
+      header { .h(56);
+        &.mo { .hide; }
+        &.pc { .block; }
+        .inner { .h(56); .lh(56); transform: translateY(50%); .rel;
+          h1 { .contain('../img/logo.png'); .wh(381,42); .mt(4); }
+        }
+        .menu-box, .login-box { .h(56); .lh(56); .rel; left: auto; top:auto;
+          ul { width:auto;height: auto;.rel; left: auto;top:auto;.p(0); transition: none;
+            li { .fs(13); .lh(56); .mr(24); }
+          }
+        }
+        .menu-box { .fl;
+
+        }
+      }
+    }
+  }
+}
