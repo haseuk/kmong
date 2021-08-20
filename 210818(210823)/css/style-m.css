@@ -16,6 +16,12 @@
   .p {
     letter-spacing: -0.1em;
   }
+  .mo {
+    display: block;
+  }
+  .pc {
+    display: none;
+  }
   html {
     font-family: 'NanumSquare', sans-serif;
   }
@@ -29,12 +35,6 @@
     z-index: 10;
     position: relative;
     font-family: 'Roboto', sans-serif;
-  }
-  html .container header.mo {
-    display: block;
-  }
-  html .container header.pc {
-    display: none;
   }
   html .container header .inner {
     height: 6.13333333vw;
@@ -476,6 +476,7 @@
   }
   html .container footer p {
     line-height: 4vw;
+    letter-spacing: -0.05em;
   }
   html .container footer .top {
     padding: 0vw;
@@ -500,6 +501,9 @@
     margin-left: 0.88888889vw;
     display: inline-block;
   }
+  html .container footer .top ul li.pc {
+    display: none;
+  }
   html .container footer .add-box a {
     font-size: 4vw;
     font-weight: 700;
@@ -509,7 +513,7 @@
     margin-left: 0vw;
     display: block;
   }
-  html .container footer .add-box p:nth-of-type(3) {
+  html .container footer .add-box .ret-box {
     margin-top: 5.33333333vw;
     margin-right: 0vw;
     margin-bottom: 1.77777778vw;
@@ -543,6 +547,7 @@
   }
   html .container footer .bank-social .social div {
     margin-top: 1.77777778vw;
+    font-size: 0vw;
   }
   html .container footer .bank-social .social div a {
     display: inline-block;

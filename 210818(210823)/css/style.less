@@ -4,12 +4,12 @@ img { .wf; .block; backface-visibility: hidden; }
 button { background: none; }
 .robo { font-family: 'Roboto', sans-serif; }
 .p { .ls(-0.1em); }
+.mo { .block; }
+.pc { .hide; }
 
 html { font-family: 'NanumSquare', sans-serif;
   .container { .fs(0); .tc; overflow: hidden;
     header { .h(69); z-index: 10; .rel; .robo;
-      &.mo { .block; }
-      &.pc { .hide; }
       .inner { .h(69); .lh(69); transform: translateY(50%); .rel;
         .menu { .wh(60,41); .abs; .contain('../img/m-btn.png'); .lt(40,15); }
         h1 { .fs(0); .contain('../img/m-logo.png'); .wh(421,46); .mt(9); .ib; }
@@ -100,23 +100,24 @@ html { font-family: 'NanumSquare', sans-serif;
     }
     footer { .fs(30); .bgc(#222); .p(85,170,50); color:#fff;
       > div { .p(60,0); .tl; .-b(#565656); }
-      p { .lh(45); }
+      p { .lh(45); .ls(-0.05em); }
       .top { .p(0); .tc; .-b;
         h2 { .wh(319,36); .mh-c; }
         ul { .ib; .mt(35);
           li { color:#fff; .m(0,10); .ib; }
+          li.pc { .hide; }
         }
       }
       .add-box {
         a { .fs(45); .bold; .m(10,0); .block; }
-        p:nth-of-type(3) { .m(60,0,20); }
+        .ret-box { .m(60,0,20); }
       }
       .bank-social { .clear;
         .bank-info { .fl;
           p:nth-child(2) { .fs(45); .bold; .m(10,0); .block;  }
         }
         .social { .fr;
-          div { .mt(20);
+          div { .mt(20); .fs(0);
             a { .ib;
               img { .wh(76.7,57.2); }
             }

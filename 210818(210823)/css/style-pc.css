@@ -16,28 +16,35 @@
   .p {
     letter-spacing: -0.1em;
   }
+  .mo {
+    display: none;
+  }
+  .pc {
+    display: block;
+  }
   html {
+    font-size: 18px;
     font-family: 'NanumSquare', sans-serif;
   }
   html .container {
     font-size: 0px;
     text-align: center;
     overflow: hidden;
+    max-width: 1920px;
+    margin-left: auto;
+    margin-right: auto;
   }
   html .container header {
     height: 56px;
-  }
-  html .container header.mo {
-    display: none;
-  }
-  html .container header.pc {
-    display: block;
+    z-index: 10;
+    position: relative;
   }
   html .container header .inner {
     height: 56px;
     line-height: 56px;
     transform: translateY(50%);
     position: relative;
+    overflow: hidden;
   }
   html .container header .inner h1 {
     background-repeat: no-repeat;
@@ -45,34 +52,515 @@
     background-size: contain;
     width: 381px;
     height: 42px;
+    margin-left: auto;
+    margin-right: auto;
     margin-top: 4px;
   }
   html .container header .menu-box,
   html .container header .login-box {
     height: 56px;
     line-height: 56px;
-    position: relative;
-    left: auto;
-    top: auto;
-  }
-  html .container header .menu-box ul,
-  html .container header .login-box ul {
-    width: auto;
-    height: auto;
-    position: relative;
-    left: auto;
-    top: auto;
-    padding: 0px;
-    transition: none;
+    position: absolute;
+    top: 0px;
   }
   html .container header .menu-box ul li,
   html .container header .login-box ul li {
     font-size: 13px;
     line-height: 56px;
     margin-right: 24px;
+    display: inline-block;
+    font-weight: 700;
+    font-family: 'Roboto', sans-serif;
   }
   html .container header .menu-box {
+    left: 40px;
+  }
+  html .container header .login-box {
+    right: 40px;
+  }
+  html .container header .login-box .logout {
+    display: none;
+  }
+  html .container article section.top .swiper-container1 {
+    position: relative;
+  }
+  html .container article section.top .swiper-container1 .swiper-slide {
+    position: relative;
+    background: url("../img/visual1.png") center center no-repeat;
+    height: 1024px;
+    background-size: cover;
+  }
+  html .container article section.top .swiper-container1 .swiper-slide p {
+    color: #fff;
+    position: absolute;
+    left: 50%;
+    margin-left: -737px;
+    text-align: left;
+  }
+  html .container article section.top .swiper-container1 .swiper-slide .nm {
+    font-size: 16px;
+    font-style: italic;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    top: 310px;
+    font-family: 'Roboto', sans-serif;
+  }
+  html .container article section.top .swiper-container1 .swiper-slide .tit {
+    font-size: 80px;
+    line-height: 99px;
+    letter-spacing: -0.1em;
+    top: 364px;
+  }
+  html .container article section.top .swiper-container1 .swiper-slide .txt {
+    font-size: 18px;
+    line-height: 30px;
+    letter-spacing: -0.05em;
+    top: 585px;
+  }
+  html .container article section.top .swiper-container1 .swiper-pagination {
+    bottom: 131px;
+    left: 50%;
+    margin-left: -737px;
+    width: auto;
+  }
+  html .container article section.top .swiper-container1 .swiper-pagination .swiper-pagination-bullet {
+    width: 119px;
+    height: 4px;
+    background-color: #fff;
+    opacity: 0.5;
+    margin-right: 3px;
+    border-radius: 0px;
+    position: relative;
+  }
+  html .container article section.top .swiper-container1 .swiper-pagination .swiper-pagination-bullet:after {
+    content: '어반비타민';
+    font-size: 18px;
+    color: #fff;
+    position: absolute;
+    width: 119px;
+    text-align: center;
+    left: 50%;
+    top: 12px;
+    right: auto;
+    bottom: auto;
+    transform: translateX(-50%);
+  }
+  html .container article section.top .swiper-container1 .swiper-pagination .swiper-pagination-bullet-active {
+    opacity: 1;
+  }
+  html .container article section.cont {
+    padding-top: 130px;
+    padding-right: 220px;
+    padding-bottom: 130px;
+    padding-left: 220px;
+  }
+  html .container article section.cont .more.pc {
+    font-size: 16px;
+    width: 153px;
+    height: 47px;
+    line-height: 47px;
+    text-align: center;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    margin-top: 40px;
+  }
+  html .container article section.best,
+  html .container article .cont {
+    padding-top: 6.77083333vw;
+    padding-right: 11.45833333vw;
+    padding-bottom: 6.77083333vw;
+    padding-left: 11.45833333vw;
+  }
+  html .container article section.best h2,
+  html .container article .cont h2 {
+    font-size: 36px;
+    font-weight: 800;
+  }
+  html .container article section.best .sub-tit,
+  html .container article .cont .sub-tit {
+    font-size: 14px;
+    color: #999;
+    font-weight: 600;
+    margin-top: 15px;
+  }
+  html .container article section.best .swiper-container2-pc,
+  html .container article .cont .swiper-container2-pc,
+  html .container article section.best .swiper-container3-pc,
+  html .container article .cont .swiper-container3-pc {
+    margin-top: 60px;
+    padding-top: 0px;
+    padding-right: 10px;
+    padding-bottom: 0px;
+    padding-left: 10px;
+    overflow: hidden;
+    box-sizing: border-box;
+  }
+  html .container article section.best .swiper-container2-pc .swiper-slide,
+  html .container article .cont .swiper-container2-pc .swiper-slide,
+  html .container article section.best .swiper-container3-pc .swiper-slide,
+  html .container article .cont .swiper-container3-pc .swiper-slide {
+    text-align: center;
+  }
+  html .container article section.best .swiper-container2-pc .swiper-slide img,
+  html .container article .cont .swiper-container2-pc .swiper-slide img,
+  html .container article section.best .swiper-container3-pc .swiper-slide img,
+  html .container article .cont .swiper-container3-pc .swiper-slide img {
+    width: 20.52083333vw;
+  }
+  html .container article section.best .swiper-container2-pc .swiper-slide .txt,
+  html .container article .cont .swiper-container2-pc .swiper-slide .txt,
+  html .container article section.best .swiper-container3-pc .swiper-slide .txt,
+  html .container article .cont .swiper-container3-pc .swiper-slide .txt {
+    font-size: 16px;
+    color: #333;
+    line-height: 25px;
+    width: 290px;
+    margin-top: 25px;
+    text-align: left;
+    box-sizing: border-box;
+    word-break: keep-all;
+    display: inline-block;
+  }
+  html .container article section.best .swiper-container2-pc .swiper-slide .txt b,
+  html .container article .cont .swiper-container2-pc .swiper-slide .txt b,
+  html .container article section.best .swiper-container3-pc .swiper-slide .txt b,
+  html .container article .cont .swiper-container3-pc .swiper-slide .txt b {
+    display: block;
+  }
+  html .container article section.best .swiper-container2-pc .swiper-slide .price-box,
+  html .container article .cont .swiper-container2-pc .swiper-slide .price-box,
+  html .container article section.best .swiper-container3-pc .swiper-slide .price-box,
+  html .container article .cont .swiper-container3-pc .swiper-slide .price-box {
+    margin-top: 20px;
+    text-align: left;
+  }
+  html .container article section.best .swiper-container2-pc .swiper-slide .price-box p,
+  html .container article .cont .swiper-container2-pc .swiper-slide .price-box p,
+  html .container article section.best .swiper-container3-pc .swiper-slide .price-box p,
+  html .container article .cont .swiper-container3-pc .swiper-slide .price-box p {
+    font-size: 16px;
+    line-height: 25px;
+  }
+  html .container article section.best .swiper-container2-pc .swiper-slide .price-box .price,
+  html .container article .cont .swiper-container2-pc .swiper-slide .price-box .price,
+  html .container article section.best .swiper-container3-pc .swiper-slide .price-box .price,
+  html .container article .cont .swiper-container3-pc .swiper-slide .price-box .price {
+    font-size: 18px;
+    font-weight: 800;
+    color: #ff5501;
+    letter-spacing: -0.05em;
+  }
+  html .container article section.best .swiper-container2-pc .swiper-slide .price-box .ds,
+  html .container article .cont .swiper-container2-pc .swiper-slide .price-box .ds,
+  html .container article section.best .swiper-container3-pc .swiper-slide .price-box .ds,
+  html .container article .cont .swiper-container3-pc .swiper-slide .price-box .ds {
+    font-weight: 700;
+    text-decoration: line-through;
+  }
+  html .container article section.best .swiper-container2-pc .swiper-slide .price-box .review,
+  html .container article .cont .swiper-container2-pc .swiper-slide .price-box .review,
+  html .container article section.best .swiper-container3-pc .swiper-slide .price-box .review,
+  html .container article .cont .swiper-container3-pc .swiper-slide .price-box .review {
+    line-height: 21px;
+  }
+  html .container article section.best .swiper-container2-pc .swiper-slide .price-box .review img,
+  html .container article .cont .swiper-container2-pc .swiper-slide .price-box .review img,
+  html .container article section.best .swiper-container3-pc .swiper-slide .price-box .review img,
+  html .container article .cont .swiper-container3-pc .swiper-slide .price-box .review img {
+    width: 85px;
+    height: 21px;
+    color: #737373;
+    display: inline-block;
+    vertical-align: top;
+  }
+  html .container article section.best .swiper-container2-pc .swiper-slide .price-box .tip,
+  html .container article .cont .swiper-container2-pc .swiper-slide .price-box .tip,
+  html .container article section.best .swiper-container3-pc .swiper-slide .price-box .tip,
+  html .container article .cont .swiper-container3-pc .swiper-slide .price-box .tip {
+    font-size: 14px;
+    color: #737373;
+    letter-spacing: -0.05em;
+  }
+  html .container article section.best .swiper-container2-pc .swiper-slide .price-box .tip s,
+  html .container article .cont .swiper-container2-pc .swiper-slide .price-box .tip s,
+  html .container article section.best .swiper-container3-pc .swiper-slide .price-box .tip s,
+  html .container article .cont .swiper-container3-pc .swiper-slide .price-box .tip s {
+    font-weight: 700;
+    display: inline-block;
+  }
+  html .container article section.banner li {
+    width: 740px;
+    height: 350px;
+    display: inline-block;
+    vertical-align: top;
+    position: relative;
+  }
+  html .container article section.banner li .box {
+    position: absolute;
+    left: 50%;
+    top: 130px;
+    right: auto;
+    bottom: auto;
+    transform: translateX(-50%);
+  }
+  html .container article section.banner li .box p {
+    color: #fff;
+    letter-spacing: -0.05em;
+  }
+  html .container article section.banner li .box .tit {
+    font-size: 48px;
+    font-weight: 800;
+    font-family: 'Roboto', sans-serif;
+  }
+  html .container article section.banner li .box .txt {
+    font-size: 16px;
+    margin-top: 18px;
+  }
+  html .container article section.banner li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    right: auto;
+    bottom: auto;
+  }
+  html .container article section.mentor {
+    padding-top: 260px;
+    padding-right: 0px;
+    padding-bottom: 200px;
+    padding-left: 0px;
+    position: relative;
+    height: 1300px;
+    box-sizing: border-box;
+  }
+  html .container article section.mentor h2 {
+    font-size: 130px;
+    font-style: italic;
+    font-weight: 800;
+    line-height: 130px;
+    font-family: 'Roboto', sans-serif;
+    text-align: left;
+    position: absolute;
+    left: 50%;
+    top: 260px;
+    right: auto;
+    bottom: auto;
+    margin-left: -568px;
+    z-index: 1;
+  }
+  html .container article section.mentor img.pc {
+    width: 661px;
+    height: 692px;
+    position: absolute;
+    left: 50%;
+    top: 406px;
+    right: auto;
+    bottom: auto;
+    margin-left: -60px;
+  }
+  html .container article section.mentor .txt {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 25px;
+    position: absolute;
+    left: 50%;
+    top: 914px;
+    right: auto;
+    bottom: auto;
+    margin-left: -568px;
+    text-align: left;
+  }
+  html .container article section.mentor .about {
+    font-size: 16px;
+    font-weight: 700;
+    width: 153px;
+    height: 47px;
+    line-height: 47px;
+    text-align: center;
+    border: 1px solid #000;
+    box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
+    display: block;
+    position: absolute;
+    left: 50%;
+    top: 1050px;
+    right: auto;
+    bottom: auto;
+    margin-left: -568px;
+  }
+  html .container article section.new {
+    background-color: #f8faff;
+    padding-top: 6.77083333vw;
+    padding-right: 11.45833333vw;
+    padding-bottom: 6.77083333vw;
+    padding-left: 11.45833333vw;
+  }
+  html .container article section.c-review {
+    padding-top: 130px;
+    padding-right: 0px;
+    padding-bottom: 130px;
+    padding-left: 0px;
+  }
+  html .container article section.c-review .swiper-container4-pc {
+    margin-top: 30px;
+  }
+  html .container article section.c-review .swiper-container4-pc .swiper-slide .review-box {
+    width: 303px;
+    display: inline-block;
+    padding: 20px;
+    box-sizing: border-box;
+    box-shadow: 5px 10px 10px 1px rgba(224, 232, 236, 0.93);
+  }
+  html .container article section.c-review .swiper-container4-pc .swiper-slide .review-box p {
+    font-size: 16px;
+    line-height: 25px;
+    text-align: left;
+  }
+  html .container article section.c-review .swiper-container4-pc .swiper-slide .review-box .tit {
+    margin-top: 20px;
+    font-weight: 800;
+  }
+  html .container article section.c-review .swiper-container4-pc .swiper-slide .review-box .txt {
+    margin-top: 20px;
+  }
+  html .container article section.c-review .swiper-container4-pc .swiper-slide .review-box .add {
+    margin-top: 5px;
+    font-weight: 700;
+  }
+  html .container footer {
+    font-size: 16px;
+    color: #fff;
+    padding-top: 90px;
+    padding-right: 0px;
+    padding-bottom: 90px;
+    padding-left: 0px;
+    height: 650px;
+    box-sizing: border-box;
+    background-color: #222;
+    position: relative;
+    letter-spacing: -0.05em;
+  }
+  html .container footer .top h2 img.pc {
+    width: 319px;
+    height: 36px;
+    display: inline-block;
+  }
+  html .container footer .top ul {
+    display: inline-block;
+    margin-top: 25px;
+  }
+  html .container footer .top ul li {
+    margin-right: 20px;
+    display: inline-block;
+  }
+  html .container footer .comp {
+    position: absolute;
+    left: 50%;
+    top: 242px;
+    right: auto;
+    bottom: auto;
+    margin-left: -663px;
+    width: 1330px;
+    padding-bottom: 50px;
+    border-bottom: 1px solid #565656;
+  }
+  html .container footer .comp p {
+    text-align: left;
+    opacity: 0.5;
+    line-height: 26px;
+    display: inline-block;
     float: left;
+  }
+  html .container footer .comp p + p {
+    float: right;
+  }
+  html .container footer .comp a {
+    margin-left: 10px;
+  }
+  html .container footer .add-box {
+    position: absolute;
+    left: 50%;
+    top: 380px;
+    right: auto;
+    bottom: auto;
+    margin-left: -663px;
+    text-align: left;
+    line-height: 26px;
+  }
+  html .container footer .add-box p:first-child {
+    margin-bottom: 5px;
+  }
+  html .container footer .add-box a {
+    font-size: 30px;
+    font-weight: 800;
+  }
+  html .container footer .add-box .ret-box {
+    width: 360px;
+    position: absolute;
+    left: 360px;
+    top: 0px;
+    right: auto;
+    bottom: auto;
+  }
+  html .container footer .bank-social {
+    position: absolute;
+    left: 50%;
+    top: 380px;
+    right: auto;
+    bottom: auto;
+    margin-left: 180px;
+    text-align: left;
+    line-height: 26px;
+  }
+  html .container footer .bank-social .bank-info {
+    display: inline-block;
+    vertical-align: top;
+  }
+  html .container footer .bank-social .bank-info p:nth-child(1) {
+    margin-bottom: 5px;
+  }
+  html .container footer .bank-social .bank-info p:nth-child(2) {
+    font-size: 30px;
+    font-weight: 800;
+    margin-bottom: 15px;
+  }
+  html .container footer .bank-social .social {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 140px;
+  }
+  html .container footer .bank-social .social p {
+    margin-bottom: 10px;
+  }
+  html .container footer .bank-social .social div {
+    font-size: 0px;
+    margin-bottom: 10px;
+  }
+  html .container footer .bank-social .social div a {
+    display: inline-block;
+  }
+  html .container footer .bank-social .social div a img.pc {
+    width: 39px;
+    height: 29px;
+  }
+  html .container footer .copy {
+    padding-top: 40px;
+    padding-right: 0px;
+    padding-bottom: 40px;
+    padding-left: 0px;
+    text-align: center;
+    margin-top: 370px;
+    border-top: 1px solid #565656;
+  }
+  html .container footer .copy p {
+    font-size: 16px;
+    color: #fff;
+    font-weight: 700;
+    opacity: 0.3;
   }
 }
 /*# sourceMappingURL=style-pc.css.map */
