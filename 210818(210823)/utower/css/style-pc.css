@@ -1,0 +1,26 @@
+/*--------------------------------------------------------------------------------------------------------------
+*  Template
+*--------------------------------------------------------------------------------------------------------------*/
+@media (min-width: 1125px) {
+  img {
+    width: 100%;
+    display: block;
+    backface-visibility: hidden;
+  }
+  button {
+    background: none;
+  }
+  .robo {
+    font-family: 'Roboto', sans-serif;
+  }
+  .p {
+    letter-spacing: -0.1em;
+  }
+  .mo {
+    display: none;
+  }
+  .pc {
+    display: block;
+  }
+}
+/*# sourceMappingURL=style-pc.css.map */

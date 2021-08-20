@@ -31,6 +31,7 @@
     text-align: center;
     overflow: hidden;
     max-width: 1920px;
+    min-width: 1480px;
     margin-left: auto;
     margin-right: auto;
   }
@@ -201,13 +202,15 @@
   html .container article .cont .swiper-container2-pc .swiper-slide,
   html .container article section.best .swiper-container3-pc .swiper-slide,
   html .container article .cont .swiper-container3-pc .swiper-slide {
+    width: 20.52083333vw;
     text-align: center;
   }
   html .container article section.best .swiper-container2-pc .swiper-slide img,
   html .container article .cont .swiper-container2-pc .swiper-slide img,
   html .container article section.best .swiper-container3-pc .swiper-slide img,
   html .container article .cont .swiper-container3-pc .swiper-slide img {
-    width: 20.52083333vw;
+    width: 100%;
+    height: 100%;
   }
   html .container article section.best .swiper-container2-pc .swiper-slide .txt,
   html .container article .cont .swiper-container2-pc .swiper-slide .txt,
@@ -291,8 +294,9 @@
     display: inline-block;
   }
   html .container article section.banner li {
-    width: 740px;
+    width: 50%;
     height: 350px;
+    max-width: 740px;
     display: inline-block;
     vertical-align: top;
     position: relative;
@@ -407,9 +411,12 @@
   }
   html .container article section.c-review .swiper-container4-pc {
     margin-top: 30px;
+    margin-left: 40px;
+  }
+  html .container article section.c-review .swiper-container4-pc .swiper-slide {
+    width: 303px;
   }
   html .container article section.c-review .swiper-container4-pc .swiper-slide .review-box {
-    width: 303px;
     display: inline-block;
     padding: 20px;
     box-sizing: border-box;
