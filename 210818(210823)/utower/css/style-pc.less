@@ -1,14 +1,149 @@
 @import 'asset';
 
-@media (min-width: 1125px) {
+@media (min-width: 800px) {
+
   img { .wf; .block; backface-visibility: hidden; }
   button { background: none; }
-  .robo { font-family: 'Roboto', sans-serif; }
   .p { .ls(-0.1em); }
   .mo { .hide; }
-  .pc { .block; }
+  .pc { .ib; }
 
-  html {
+  @font-face {
+    font-family: 'twayair';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_tway@1.0/twayair.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+  }
 
+  .robo { font-family: 'Roboto', sans-serif; }
+  .tway { font-family: 'twayair', sans-serif; }
+
+  h2 { .vw-fs(36); color:#336699; .tway; .bold; .ib; .vat; .vw-mb(20); }
+  .h2-txt { .vw-fs(18); .vw-lh(35); .tl; .ib; }
+
+  html { font-family: 'Nanum Gothic', sans-serif;
+    .container { .vw-max-w(1920); .tc; .rel;
+      header { .vw-h(147); .vw-lh(147); .vw-p(0,111); .-box; .clear; .rel; z-index: 1;
+        h1 { .vw-h(147); .vw-lh(147); .tl; .ib; .fl;
+          img { .vw-wh(151,26); .ib; }
+        }
+        ul { .ib; .fr;
+          li { .fs(18); color:#000; .tway; .bold; .vw-mr(148); .ib; .vw-h(147); .vw-lh(147); z-index: 1;
+            a { .ib; .f; .pointer; }
+          }
+        }
+      }
+      article {
+        section { .vw-mt(200); }
+        .top { .rel; .vw-p(0,110); .mt(0);
+          img { .vw-mt(-147); }
+          a { .fs(0); .ib; .abs; .vw-lb(111,0); .vw-wh(318,112); .pointer;  }
+        }
+        .ro { .fs(0); .vw-p(0,319); .-box; .tl;
+          img { .vw-wh(577,220); .ib; .vw-mr(70); .vat; }
+          .txt-box { .vw-w(605); .tl; .ib; .vat; .rel;
+            &:after { .cnt; .vw-wh(58,52); .abs; .vw-rb(10,-50); .contain('../img/m-quot.png');  }
+          }
+          .pic-box { .vw-mt(120); .fs(0);
+            img { .vw-wh(615,945); .ib; .vat; .vw-mr(20); }
+            img + img { .mr(0); }
+          }
+        }
+        .model { .rel;
+          .ut { .vw-wh(26,208); .abs; .lt(50%,0); .vw-ml(-565); }
+          h2, .h2-txt { .abs; .lt(50%,0); .vw-ml(-460); }
+          .h2-txt { .vw-t(77); .vw-ml(-460);
+            &:after { .cnt; .vw-wh(924,107); .abs; .vw-lb(0,-130); .contain('../img/m-ro1.png');  }
+          }
+          .pic { .fs(0); .ib; .vat; .vw-mt(304); .rel;
+            img { .vw-wh(394,584); .vw-mr(44); .ib; }
+            .pic6 { .mr(0); }
+          }
+        }
+        .memory { .vw-p(0,300); .-box; .rel; overflow: hidden;
+          &:after { .cnt; .vw-wh(691,247); .abs; .l(50%); .vw-t(760); .vw-ml(-110); .contain('../img/m-ro2.png');  }
+          .txt-en { .vw-fs(18); .vw-lh(32); .abs; .lt(50%,0); .vw-ml(-655); .vw-w(350); text-transform: uppercase; .break-all; .tl;
+            &:after { .cnt; .vw-wh(58,52); .abs; .vw-rb(10,-60); .contain('../img/m-quot.png');  }
+          }
+          h2, .h2-txt { .abs; .lt(50%,0); .vw-ml(-110); }
+          .h2-txt { .vw-t(77); .vw-ml(-110); .vw-w(620); }
+          .pic7 { .vw-wh(347,531); .abs; .l(50%); .vw-t(315); .vw-ml(-655);  }
+          .swiper-container { .vw-mt(1000);
+            &:after { .cnt; .vw-wh(97,44); .abs; .vw-lb(95,60); .contain('../img/arrow.png'); z-index: 1; }
+            .swiper-slide { .fs(0);
+              .t-box { .vw-fs(18); color:#fff; .tl; .vw-p(65); .-box; .vw-w(570); .ib; .vat; .abs; .vw-lt(27,60);
+                .tit { .vw-fs(36); .tway; .bold; .vw-mb(30); }
+                .txt { .vw-lh(35); }
+              }
+              img.pc { .vw-wh(1256,581); .ib; .vat;}
+            }
+            .swiper-btn { .vw-wh(44,44); .m(0); .abs; .vw-lb(95,60); z-index: 10;
+              &.swiper-button-prev { .vw-l(95); }
+              &.swiper-button-next { .vw-l(145); }
+              &:after { .hide; }
+            }
+          }
+        }
+        .wave { .wf; .vw-mt(150); .vw-pt(150); .tc; .rel;
+          &:after { .cnt; .w(50%); .vw-h(493); .abs; .l(50%); .vw-t(0); .bgc(#eaeff5); z-index: -1; }
+          h2 { .block; .mh-c; }
+          .h2-txt { .tc; }
+          .pic9 { .vw-wh(863,594); .vw-mt(290); .mh-c; .vw-pl(60); }
+          .s1, .s2, .s3 { .vw-wh(1,280); .bgc(#000); .block; .mh-c; .vw-mt(50); .vw-mb(50);
+            &.s2, &.s3 { .vw-h(50); }
+          }
+          .logo { .vw-wh(151,26); .block; .mh-c; }
+          .sns { .rel; .ib;
+            img { .vw-wh(319,50); .block; .mh-c; }
+            .btns { .fs(0); .abs; .lt;
+              a { .fs(0); .vw-wh(79,50); .ib; }
+            }
+          }
+        }
+      }
+      footer { .vw-pb(50);
+        p { .vw-lh(35); .vw-mb(50); }
+        img { .vw-wh(304,17); .ib; }
+      }
+
+      #utower, #wave { .ib; }
+    }
   }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
