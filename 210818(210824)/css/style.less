@@ -1,0 +1,152 @@
+@import "asset";
+
+html { font-family: "メイリオ","Meiryo","ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","Osaka","ＭＳ Ｐゴシック","MS PGothic","Arial",sans-serif; }
+
+.f-pri { color:#ffcd09; }
+.f-brow { color:#563640; }
+
+.bg-pri { .bgc(#ffcd09); }
+.bg-brown { .bgc(#563640); }
+.bg-red { .bgc(#ff7064); }
+
+.bg-error { background:rgba(255,112,100,0.25);}
+
+.h2-f-y { .fs(24); color:#ffcd09; .bold; }
+.h2-f-b { .fs(24); color:#563640; .bold; }
+
+.btn-pri { .fs(14); .wh(96,37); .f-brow; .bold; .bg-pri; .ib; .br(3); .lh(37); .tc; box-shadow: 1px 1px 0 0 #563640; }
+.btn-gray { .btn-pri; color:#555; .bgc(#eee); }
+
+.top-pri { .fs(24); .bold; .lh(84); .f-pri; .tc; .bg-brown; .rel;
+  &:after { .cnt; .wh(36,36); .abs; .lt(16,24); .contain('../img/arrow-left.png'); }
+}
+.p16 { .p(16); .-box; }
+
+.mo { .ib; }
+
+::placeholder { .f-brow; }
+
+.container { .fs(0); .tc; .min-w(320);
+  &.login-cont { width: auto;
+    .wrap { .rel;
+      .dim { .fix; .lt; .f; .bgc(#000); opacity: 0.3; }
+      .login { .w(600); .ib; .bgc(#fff); .rel; .pb(16);  z-index: 1;
+        .top { .fs(0); .h(84); .lh(84); .bgc(#563640); .p(16); .-box; .tl;
+          h1 { .wh(100,52); .contain('../img/logo.svg'); .ib; .vat; }
+          p { .h2-f-y; .ib; .vat; .w(412); .tc; .lh(52); }
+        }
+        .input-form { .fs(0); .tl; .mt(96); .wh(568,128); .ib; .-a(#563640); .br(5); .p(16); .-box;
+          p, input { .fs(14); .mb(16); .vat; .bold; .f-brow;
+            &:last-child { .mb(0); }
+          }
+          p { .wh(154,40); .lh(40); .ib; .mr(14); }
+          input { .wh(366,40); .lh(40); .pl(8); .-box; .ib; border: solid 1px lightgrey; .br(3); }
+        }
+        button { .wh(154,53); .btn-pri; .wh(154,53); .lh(53); .tc; .mt(60); }
+        .notice, .ft { .fs(13); .lh(20); .f-brow; opacity: 0.5; .mt(16); .tc; }
+      }
+    }
+  }
+  &.app-cont { .fs(14);
+    .app {
+      .top { .top-pri; }
+    }
+    article { .p16;
+      .sec1 { .bg-pri; .p(24,0); .-box;
+        h2 { .h2-f-b; .lh(36); .mb(48);}
+        .step { .fs(0);
+          li { .ib; .w(68); .tc; .rel;
+            &:after { .cnt; .wh(32,3); .bg-brown; .br(2); .abs; .-a(#563640); .rt(-15,12); .-box; }
+            &:last-child:after { .hide; }
+            span { .wh(24,24); .ib; .contain('../img/web-icon-radio-check.svg'); }
+            p { .fs(15); .lh(23); .f-brow; .mt(3); }
+            &.on span { .contain('../img/web-icon-radio-checked.svg'); }
+          }
+        }
+      }
+
+      .sec2 { .mt(32);
+        h3 { .fs(23); .f-brow; .lh(35); .pb(8); .-b(#563640); }
+        .info-wrap { .mt(10);
+          h4.title { .fs(16); .f-brow; .lh(40); .tl; .bg-pri;
+            span { color:#fff; .ib; .lh(40); .w(31); .bg-brown; .mr(8); .tc; }
+          }
+          .radio-input { .mt(24);
+            .tit { .fs(14); .f-brow; .lh(37); .tl; .bold; .mb(5);
+              span { color:#fff; .wh(44,37); .tc; .ib; .bg-red; .fr; }
+            }
+            .input-box { .tl; .mt(10);
+              label {
+                input { .hide; }
+                input[type=radio] + i { .wh(24,24); .contain('../img/web-icon-radio-check.svg'); .ib; .vam; }
+                input[type=radio]:checked + i { .wh(24,24); .contain('../img/web-icon-radio-checked.svg'); .ib; .vam; }
+                s { .fs(14); .f-brow; .bold; .vam; .ml(8); }
+              }
+              label + label { .fr; }
+            }
+          }
+          .standard-input, .error-input, .standard-pic, .uploaded-pic, .standard-nm-input { .tl; .mt(16);
+            .t { .fs(14); .bold; .f-brow; .lh(21); .mb(13); }
+            input { .fs(14); .wf; .lh(37); .-a(#eee); .br(3); .-box; .pl(8); .mb(5); }
+            .g { .fs(13); .lh(20); .f-brow; opacity: 0.5;}
+          }
+          .error-input {
+            input.error { .bg-error; }
+            .g { color:#ff7064;}
+          }
+          .standard-pic, .uploaded-pic {
+            .pic-btn { .btn-pri; .mb(5); }
+          }
+          .uploaded-pic {
+            .pic-btn.uploaded { .btn-gray; }
+            .f-nm { .fs(14); color:#6881f4; text-decoration: underline; .block; }
+          }
+          .standard-nm-input {
+            s, input { .fs(14); .ib; }
+            s { .w(5%); .mr(5%); }
+            input { .w(90%); }
+          }
+        }
+      }
+    }
+  }
+}
+
+
+@media screen and (min-width: 600px) {
+  @import "style-t";
+}
+@media screen and (min-width: 1024px) {
+  @import "style-pc";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

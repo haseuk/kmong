@@ -1,0 +1,45 @@
+@import "asset";
+
+.mo { .hide; }
+
+.container {
+  &.app-cont {
+    article {
+      .sec1 {
+        .step {
+          li { .w(84);
+            &:after { .cnt; .w(48); .r(-23); }
+          }
+        }
+      }
+
+      .sec2 {
+        .info-wrap { .fs(0); .tl;
+          .radio-input {
+            .tit { .w(27%); .mb(0); .ib; .vat; .mr(3%); }
+            .input-box { .w(70%); .lh(37); .mt(0); .ib; .vat;
+              label { .w(223); .ib; }
+              label + label { width:auto; float: unset; }
+            }
+          }
+          .standard-input, .error-input, .standard-pic, .uploaded-pic, .standard-nm-input { .clear;
+            .t { .ib; .w(27%); .mr(3%); }
+            input { .w(70%); }
+            .g { .w(70%); .fr; }
+          }
+          .uploaded-pic {
+            .pic-btn.uploaded { .btn-gray; }
+            .f-nm { .ib; .ml(20); }
+          }
+          .standard-nm-input {
+            s, input { .w(3%); .mr(1%);  }
+            input { .w(30%); .mr(2%);
+              &:last-of-type {.mr(0); }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
