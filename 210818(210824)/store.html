@@ -1,0 +1,283 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>야무야무 전자계약-점포정보</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container store-cont">
+    <div class="wrap">
+      <div class="store">
+        <div class="top">
+          <p>야무야무 전자계약</p>
+        </div>
+
+        <article>
+          <section class="sec1">
+            <h2>이용 신청서 작성</h2>
+            <div class="step">
+              <ul>
+                <li>
+                  <span></span>
+                  <p>계약정보</p>
+                </li>
+                <li class="on">
+                  <span></span>
+                  <p>점포정보</p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>서비스</p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>확인</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="sec2">
+            <div class="info-wrap">
+              <h4 class="title"><span>4</span>출점 점포 등록</h4>
+            </div>
+            <div class="sub-tit">
+              <p class="tit">여러개의 매장을 출점 하시는 경우</p>
+              <p class="txt">10개 이상의 점포를 동시에 출점하시는 경우 03-5326-1234으로 연락주시기 바랍니다</p>
+            </div>
+            <div class="notice">
+              <ol>
+                <li>주의사항 적는곳</li>
+                <li>최소 한개 이상의 점포 입력이 반드시 필요합니다</li>
+                <li>내용이 길어질 수록 아래 방향으로 늘어납니다</li>
+              </ol>
+            </div>
+            <div class="store-info">
+              <div class="cell">
+                <div class="cell-top">
+                  <p>1 번 점포</p>
+                  <div class="btns">
+                    <a class="edit">수정</a>
+                  </div>
+                </div>
+                <table cellspacing="0" cellpadding="0" border="0">
+                  <colgroup>
+                    <col width="94">
+                    <col width="auto">
+                  </colgroup>
+                  <tr>
+                    <th>장르</th>
+                    <td>이자카야</td>
+                  </tr>
+                  <tr>
+                    <th>점포명</th>
+                    <td>이자카야 겸</td>
+                  </tr>
+                  <tr>
+                    <th>주소</th>
+                    <td>도쿄도 신주쿠구 오오쿠보 1-1-1</td>
+                  </tr>
+                </table>
+              </div>
+              <div class="cell">
+                <div class="cell-top">
+                  <p>2 번 점포</p>
+                  <div class="btns">
+                    <a class="edit">수정</a>
+                    <a class="del">삭제</a>
+                  </div>
+                </div>
+                <table cellspacing="0" cellpadding="0" border="0">
+                  <colgroup>
+                    <col width="94">
+                    <col width="auto">
+                  </colgroup>
+                  <tr>
+                    <th>장르</th>
+                    <td>이자카야</td>
+                  </tr>
+                  <tr>
+                    <th>점포명</th>
+                    <td>이자카야 겸</td>
+                  </tr>
+                  <tr>
+                    <th>주소</th>
+                    <td>도쿄도 신주쿠구 오오쿠보 1-1-1</td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <a class="add btn">+ 출점할 점포를 추가</a>
+            <div class="page-nation">
+              <a href="application.html" class="prev btn">이전</a>
+              <a href="service.html" class="next btn">다음</a>
+            </div>
+          </section>
+        </article>
+      </div>
+    </div>
+
+    <!--매장팝업-->
+    <div class="store-popup">
+      <div class="dim"></div>
+      <div class="inner">
+        <P class="tit">1번 점포 정보</P>
+        <form action="">
+          <div class="info-wrap">
+            <div class="store-nm">
+              <p class="t">점포명(일반)</p>
+              <input type="text" placeholder="居酒屋「春」" required>
+              <p class="g">점포명을 입력 해 주세요</p>
+            </div>
+            <div class="store-lang">
+              <p class="t">점포명(가나)</p>
+              <input type="text" placeholder="イザカヤ　ハル" required>
+              <p class="g">전각 가나로 입력 해 주십시오. 가타카나만 입력 체크</p>
+            </div>
+            <div class="store-lang">
+              <p class="t">점포명(영대문)</p>
+              <input type="text" class="error" placeholder="izakaya homu" required>
+              <p class="g">모두 대문자로 입력 해 주십시오. 영문대문자만 입력 체크</p>
+            </div>
+            <div class="num-input">
+              <p class="t">테이블 수</p>
+              <input type="number" class="num" maxlength="25" required>
+              <p class="g">숫자로 입력 해 주십시오</p>
+            </div>
+            <div class="tel-input">
+              <p class="t">전화번호</p>
+              <input type="number" class="num2" required>
+              <s class="line">-</s>
+              <input type="number" class="num2" required>
+              <s class="line">-</s>
+              <input type="number" class="num2" required>
+            </div>
+            <div class="post-input">
+              <p class="t">우편번호</p>
+              <input type="number" class="num2" required>
+              <s class="line">-</s>
+              <input type="number" class="num2" required>
+            </div>
+            <div class="store-lang">
+              <p class="t">주소</p>
+              <input type="text" required>
+              <p class="g">도도부현부터 건물이름까지 입력 해 주세요</p>
+            </div>
+
+            <div class="menu-input">
+              <p class="tit">라디오 <span>必須</span></p>
+              <div class="input-box">
+                <label>
+                  <input type="radio" name="m">
+                  <i></i>
+                  <s>이자카야</s>
+                </label>
+                <label>
+                  <input type="radio" name="m">
+                  <i></i>
+                  <s>야끼니꾸</s>
+                </label>
+                <label>
+                  <input type="radio" name="m">
+                  <i></i>
+                  <s>스시</s>
+                </label>
+                <label>
+                  <input type="radio" name="m">
+                  <i></i>
+                  <s>라멘</s>
+                </label>
+                <label>
+                  <input type="radio" name="m">
+                  <i></i>
+                  <s>우동소바</s>
+                </label>
+                <label>
+                  <input type="radio" name="m">
+                  <i></i>
+                  <s>정식</s>
+                </label>
+                <label>
+                  <input type="radio" name="m">
+                  <i></i>
+                  <s>이탈리안</s>
+                </label>
+                <label>
+                  <input type="radio" name="m">
+                  <i></i>
+                  <s>중화</s>
+                </label>
+                <label>
+                  <input type="radio" name="m">
+                  <i></i>
+                  <s>양식</s>
+                </label>
+                <label>
+                  <input type="radio" name="m">
+                  <i></i>
+                  <s>한국요리</s>
+                </label>
+                <label>
+                  <input type="radio" name="m">
+                  <i></i>
+                  <s>카페</s>
+                </label>
+                <label>
+                  <input type="radio" name="m">
+                  <i></i>
+                  <s>에스닉</s>
+                </label>
+              </div>
+            </div>
+            <div class="standard-pic">
+              <p class="t">가게로고 사진</p>
+              <span class="pic-btn btn">사진 선택</span>
+              <p class="g">로고사진이 없는경우 간판이 잘 나오도록 가게 외관을 촬영한 사진을 업로드 해주세요. 둘 다 없는경우 점포 이름으로 임의제작을 하겠습니다</p>
+            </div>
+            <div class="uploaded-pic">
+              <p class="t">메뉴판 사진</p>
+              <span class="pic-btn btn uploaded">사진 삭제</span>
+              <s class="f-nm">20210806134.jpg</s>
+            </div>
+          </div>
+        </form>
+
+        <div class="btns">
+          <button class="btn close">닫기</button>
+          <input type="submit" value="점포 정보 등록" class="submit btn">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let sp = document.querySelector('.store-popup');
+    let add = document.querySelector('.add');
+    let x = document.querySelector('.close');
+    let ed = document.querySelectorAll('.edit');
+    let del = document.querySelectorAll('.del');
+
+    add.addEventListener('click', function() {
+      sp.classList.add('on');
+    });
+    x.addEventListener('click', function() {
+      sp.classList.remove('on');
+    });
+    ed.forEach(function(e) {
+      e.addEventListener('click', function() {
+        sp.classList.add('on');
+      });
+    });
+    del.forEach(function(e) {
+      e.addEventListener('click', function() {
+        sp.classList.add('on');
+      });
+    });
+
+  </script>
+</body>
+</html>

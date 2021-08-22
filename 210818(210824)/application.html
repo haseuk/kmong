@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>야무야무 전자계약</title>
+  <title>야무야무 전자계약-계약정보</title>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/style.css">
 </head>
@@ -45,11 +45,26 @@
             <form action="">
               <div class="info-wrap">
                 <h4 class="title"><span>1</span>계약 정보</h4>
-                <div class="radio-input">
+                <div class="standard-radio-input">
                   <p class="tit">라디오 <span>必須</span></p>
                   <div class="input-box">
                     <label>
                       <input type="radio" required>
+                      <i></i>
+                      <s>A (선택되지 않음)</s>
+                    </label>
+                    <label>
+                      <input type="radio" checked required>
+                      <i></i>
+                      <s>B (선택됨)</s>
+                    </label>
+                  </div>
+                </div>
+                <div class="disable-radio-input">
+                  <p class="tit">라디오 비활성화<span>必須</span></p>
+                  <div class="input-box">
+                    <label>
+                      <input type="radio" disabled>
                       <i></i>
                       <s>A (선택되지 않음)</s>
                     </label>
@@ -66,29 +81,90 @@
                   <p class="g">인풋에 설명이 필요한 경우 아래에 텍스트로 표시합니다. 텍스트가 길어질경우 이렇게 늘어납니다. 최대 50자</p>
                 </div>
                 <div class="error-input">
-                  <p class="t">일반 오류</p>
+                  <p class="t">입력 오류</p>
                   <input type="text" class="error" required>
                   <p class="g">필수마크(빨간색마크)가 달린 항목은 required 입니다. 빈 칸인 채로 진행(다음버튼 클릭) 할 시 오류 체크할 수 있도록 합니다</p>
                 </div>
+                <div class="disable-input">
+                  <p class="t">입력 비활성화</p>
+                  <input type="text" disabled>
+                </div>
+                <div class="lang-input">
+                  <p class="t">가타카나 체크</p>
+                  <input type="text" class="lang" required>
+                  <p class="g">전각 가타카나만 입력할 수 있게, 스페이스또한 일어전각공백</p>
+                </div>
+                <div class="num-input">
+                  <p class="t">숫자입력</p>
+                  <input type="number" class="num" maxlength="25" required>
+                  <p class="g">숫자만 입력하는 인풋박스. 최대 25자리</p>
+                </div>
+                <div class="num-division-input">
+                  <p class="t">숫자 2분할</p>
+                  <input type="number" class="num2" maxlength="5" required>
+                  <s class="line">-</s>
+                  <input type="number" class="num2" maxlength="5" required>
+                  <p class="g">숫자만 입력하는 인풋박스. 칸 당 최대 5자리</p>
+                </div>
+                <div class="num-div-div-input">
+                  <p class="t">숫자 3분할</p>
+                  <input type="number" class="num2" maxlength="5" required>
+                  <s class="line">-</s>
+                  <input type="number" class="num2" maxlength="5" required>
+                  <s class="line">-</s>
+                  <input type="number" class="num2" maxlength="5" required>
+                  <p class="g">숫자만 입력하는 인풋박스. 칸 당 최대 5자리</p>
+                </div>
                 <div class="standard-pic">
                   <p class="t">사진업로드</p>
-                  <span class="pic-btn">사진 선택</span>
+                  <span class="pic-btn btn">사진 선택</span>
+                  <p class="g">버튼 클릭시 탐색기 호출해서 파일을 선택합니다. 이미지 파일만가능</p>
+                </div>
+                <div class="error-pic">
+                  <p class="t">사진오류</p>
+                  <span class="pic-btn btn error">사진 선택</span>
                   <p class="g">버튼 클릭시 탐색기 호출해서 파일을 선택합니다. 이미지 파일만가능</p>
                 </div>
                 <div class="uploaded-pic">
                   <p class="t">사진업로드</p>
-                  <span class="pic-btn uploaded">사진 삭제</span>
+                  <span class="pic-btn btn uploaded">사진 삭제</span>
                   <s class="f-nm">20210806134.jpg</s>
                   <p class="g">삭제 버튼 클릭시 바로 삭제, 업로드전 상태로 변환합니다. 파일이름 클릭 시 새창에서 이미지 보기</p>
                 </div>
+              </div>
+
+              <div class="info-wrap">
+                <h4 class="title"><span>2</span>대표자 정보</h4>
                 <div class="standard-nm-input">
                   <p class="t">이름</p>
-                  <s>성</s><input type="text" placeholder="성">
-                  <s>명</s><input type="text" placeholder="이름">
+                  <s>성</s><input type="text" maxlength="40" placeholder="성">
+                  <s>명</s><input type="text" maxlength="40" placeholder="이름">
                   <p class="g">성 / 명 각각 최대 40자</p>
                 </div>
               </div>
+
+              <div class="info-wrap">
+                <h4 class="title"><span>3</span>계좌정보</h4>
+                <div class="vet-radio-input">
+                  <p class="tit">라디오 버티컬</p>
+                  <div class="input-box">
+                    <label>
+                      <input type="radio" required>
+                      <i></i>
+                      <s>A (선택되지 않음)</s>
+                    </label>
+                    <label>
+                      <input type="radio" checked required>
+                      <i></i>
+                      <s>B (선택됨)</s>
+                    </label>
+                  </div>
+                </div>
+              </div>
             </form>
+            <div class="page-nation">
+              <a href="store.html" class="next btn">다음</a>
+            </div>
           </section>
         </article>
       </div>

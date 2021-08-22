@@ -1,0 +1,133 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>야무야무 전자계약-서비스</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+  <div class="container confirm-cont">
+    <div class="wrap">
+      <div class="confirm">
+        <div class="top">
+          <p>야무야무 전자계약</p>
+        </div>
+
+        <article>
+          <section class="sec1">
+            <h2>이용 신청서 작성</h2>
+            <div class="step">
+              <ul>
+                <li>
+                  <span></span>
+                  <p>계약정보</p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>점포정보</p>
+                </li>
+                <li>
+                  <span></span>
+                  <p>서비스</p>
+                </li>
+                <li class="on">
+                  <span></span>
+                  <p>확인</p>
+                </li>
+              </ul>
+            </div>
+          </section>
+
+          <section class="sec2">
+            <div class="info-wrap">
+              <h4 class="title"><span>7</span>신청 서비스 확인</h4>
+            </div>
+            <div class="confirm-info">
+              <div class="cell">
+                <div class="cell-top">
+                  <p>신청한 서비스</p>
+                </div>
+                <table cellspacing="0" cellpadding="0" border="0">
+                  <colgroup>
+                    <col width="100">
+                    <col width="auto">
+                  </colgroup>
+                  <tr>
+                    <th>설명타입A</th>
+                    <td>설명내용이 기술됩니다. 설명내용은 일반 텍스트이며 내용이 길어지면 이렇게 표시됩니다</td>
+                  </tr>
+                  <tr>
+                    <th>설명타입A</th>
+                    <td>
+                      작은 글씨로 부가 설명이 추가될 수 있습니다.
+                      <span>부가설명은 작은 글씨로 기술됩니다. 부가설명 텍스트 앞에 간격을 줍니다. 부가설명의 글이 길어지면 이렇게 표시됩니다</span>
+                    </td>
+                  </tr>
+                  <tr>
+                    <th>설명타입B</th>
+                    <td>
+                      <ol>
+                        <li>리스트 설명 내용입니다</li>
+                        <li>리스트 설명 타입에 여러줄의 내용이 표시 될 경우 이렇게 표시됩니다.</li>
+                      </ol>
+                    </td>
+                  </tr>
+                </table>
+              </div>
+            </div>
+            <div class="info-wrap">
+              <h4 class="title"><span>8</span>서명</h4>
+            </div>
+            <div class="sign-wrap">
+              <p class="date">2021 년 08월 05일</p>
+              <div class="signatory">
+                <p>신청인(대표자)</p>
+                <p class="sign-nm">남궁 민수</p>
+              </div>
+              <div class="sign-box">
+                <a class="modal-up"></a>
+              </div>
+            </div>
+            <div class="page-nation">
+              <a href="service.html" class="edit btn">수정</a>
+            </div>
+            <a href="login.html" class="submit btn">전송</a>
+          </section>
+        </article>
+      </div>
+    </div>
+
+
+    <!--서명팝업-->
+    <div class="sign-popup">
+      <div class="dim"></div>
+      <div class="inner">
+        <p class="tit">서명을 해주세요</p>
+        <div class="canvas">
+          <!-- 서명들어갈 자리 -->
+        </div>
+        <p class="txt">마우스로 그리거나 손가락 터치로 사인이 가능합니다</p>
+        <div class="btns">
+          <button class="btn">다시 그리기</button>
+          <input type="submit" value="서명 완료" class="submit btn">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    var mu = document.querySelector('.modal-up');
+    var sPopup = document.querySelector('.sign-popup');
+    var submit = document.querySelector('.sign-popup .submit');
+    mu.addEventListener('click', function() {
+      sPopup.classList.add('on');
+    });
+    submit.addEventListener('click', function() {
+      sPopup.classList.remove('on');
+    })
+  </script>
+</body>
+</html>

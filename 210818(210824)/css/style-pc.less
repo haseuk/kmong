@@ -1,8 +1,11 @@
 @import "asset";
 
-
+.mo { .hide; }
 .container { .max-w(1024); .mh-c;
-  &.app-cont {
+  &.app-cont, &.store-cont, &.service-cont, &.confirm-cont {
     article { .w(600); .mh-c; }
+  }
+  &.confirm-cont {
+    .signatory { .ml(0)!important; }
   }
 }

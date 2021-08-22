@@ -15,20 +15,28 @@
 
       .sec2 {
         .info-wrap { .fs(0); .tl;
-          .radio-input {
+          .standard-radio-input, .disable-radio-input, .vet-radio-input {
             .tit { .w(27%); .mb(0); .ib; .vat; .mr(3%); }
             .input-box { .w(70%); .lh(37); .mt(0); .ib; .vat;
               label { .w(223); .ib; }
               label + label { width:auto; float: unset; }
             }
           }
-          .standard-input, .error-input, .standard-pic, .uploaded-pic, .standard-nm-input { .clear;
-            .t { .ib; .w(27%); .mr(3%); }
+          .standard-input, .error-input, .disable-input, .lang-input, .num-input, .num-division-input, .num-div-div-input,
+          .standard-pic, .error-pic, .uploaded-pic, .standard-nm-input { .clear;
+            .t { .ib; .w(27%); .lh(37); .mb(5); .mr(3%); }
             input { .w(70%); }
             .g { .w(70%); .fr; }
           }
+          .num-division-input, .num-div-div-input {
+            input { .w(33%); }
+            .line { .w(4%); }
+          }
+          .num-div-div-input {
+            input { .w(20.6%); }
+          }
           .uploaded-pic {
-            .pic-btn.uploaded { .btn-gray; }
+            .pic-btn.uploaded { .btn-gray; .p(8,19); }
             .f-nm { .ib; .ml(20); }
           }
           .standard-nm-input {
@@ -37,7 +45,83 @@
               &:last-of-type {.mr(0); }
             }
           }
+          .vet-radio-input {
+            label { .block!important; }
+            label + label { float: unset!important; }
+          }
         }
+      }
+    }
+  }
+
+  //service 스타일
+  &.service-cont {
+    article {
+      .sec2 {
+        .service-info.agree {
+          .cell {
+            .cell-top {
+              .type2 { .lh(27); .p(5,0); }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // confirm 스타일
+  &.confirm-cont {
+    article {
+      .sec2 {
+        .sign-wrap {
+          .signatory, .sign-box { .ib; .vam; }
+          .signatory { .ml(80); }
+        }
+        .page-nation {
+          .edit { .btn-pri; }
+        }
+        .submit { .btn-pri; .-a; .w(154); .abs; .lb(50%,0); transform: translateX(-50%); }
+      }
+    }
+  }
+
+  //매장팝업
+  .store-popup {
+    .inner { .fs(0);
+      .menu-input {
+        .tit { .w(27%); .mb(0); .ib; .vat; .mr(3%); }
+        .input-box { .w(70%); .lh(37); .mt(0); .ib; .vat; }
+      }
+
+      .store-nm, .store-lang, .num-input, .post-input, .tel-input,
+      .standard-pic, .uploaded-pic { .clear;
+        .t { .ib; .w(27%); .lh(37); .mb(5); .mr(3%); }
+        input { .w(70%); }
+        .g { .w(70%); .fr; }
+      }
+      .post-input, .tel-input {
+        input { .w(33%); }
+        .line { .w(4%); }
+      }
+      .tel-input {
+        input { .w(20.6%); }
+      }
+      .standard-pic, .uploaded-pic {
+        .pic-btn { .btn-pri; .mb(5); .p(8,19); }
+      }
+      .uploaded-pic {
+        .pic-btn.uploaded { .btn-gray; .p(8,19); }
+        .f-nm { .ib; .ml(20); }
+      }
+      .standard-nm-input {
+        s, input { .w(3%); .mr(1%);  }
+        input { .w(30%); .mr(2%);
+          &:last-of-type {.mr(0); }
+        }
+      }
+      .vet-radio-input {
+        label { .block!important; }
+        label + label { float: unset!important; }
       }
     }
   }
