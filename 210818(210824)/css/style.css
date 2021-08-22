@@ -103,6 +103,10 @@ button {
   box-shadow: inset 1px 1px #563640 !important;
   opacity: 0.5;
 }
+.error {
+  background: rgba(255, 112, 100, 0.25) !important;
+  color: #ff7064 !important;
+}
 .container {
   font-size: 0px;
   text-align: center;
