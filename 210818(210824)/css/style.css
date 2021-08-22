@@ -540,9 +540,22 @@ button {
 .container.app-cont article .sec2 .info-wrap .num-div-div-input input {
   width: 30%;
 }
-.container.app-cont article .sec2 .info-wrap .standard-pic .pic-btn,
-.container.app-cont article .sec2 .info-wrap .error-pic .pic-btn,
-.container.app-cont article .sec2 .info-wrap .uploaded-pic .pic-btn {
+.container.app-cont article .sec2 .info-wrap .custom {
+  border: 0 !important;
+  display: inline-block;
+  width: 92px!important;
+  padding-left: 0px !important;
+  color: #000 !important;
+}
+.container.app-cont article .sec2 .info-wrap .custom::-webkit-file-upload-button {
+  visibility: hidden;
+  margin-left: -50px;
+}
+.container.app-cont article .sec2 .info-wrap .custom:before {
+  content: '사진 선택';
+  color: #000;
+  outline: none;
+  cursor: pointer;
   font-size: 14px;
   color: #563640;
   font-weight: 700;
@@ -560,11 +573,12 @@ button {
   padding-bottom: 8px;
   padding-left: 19px;
 }
-.container.app-cont article .sec2 .info-wrap .error-pic .pic-btn.error {
-  background: rgba(255, 112, 100, 0.25);
-  color: #ff7064;
+.container.app-cont article .sec2 .info-wrap .custom:hover:before {
+  box-shadow: inset 1px 1px #563640 !important;
+  opacity: 0.5;
 }
-.container.app-cont article .sec2 .info-wrap .uploaded-pic .pic-btn.uploaded {
+.container.app-cont article .sec2 .info-wrap .custom.uploaded:before {
+  content: '사진 삭제';
   font-size: 14px;
   color: #563640;
   font-weight: 700;
@@ -583,11 +597,19 @@ button {
   padding-bottom: 8px;
   padding-left: 19px;
 }
+.container.app-cont article .sec2 .info-wrap .custom.error {
+  background: transparent!important;
+}
+.container.app-cont article .sec2 .info-wrap .custom.error:before {
+  background: rgba(255, 112, 100, 0.25);
+  color: #ff7064;
+}
 .container.app-cont article .sec2 .info-wrap .uploaded-pic .f-nm {
   font-size: 14px;
   color: #6881f4;
   text-decoration: underline;
   display: block;
+  cursor: pointer;
 }
 .container.app-cont article .sec2 .info-wrap .standard-nm-input s,
 .container.app-cont article .sec2 .info-wrap .standard-nm-input input {
@@ -1271,8 +1293,22 @@ button {
 .container .store-popup .inner .tel-input input {
   width: 30%;
 }
-.container .store-popup .inner .standard-pic .pic-btn,
-.container .store-popup .inner .uploaded-pic .pic-btn {
+.container .store-popup .inner .custom {
+  border: 0 !important;
+  display: inline-block;
+  width: 92px!important;
+  padding-left: 0px !important;
+  color: #000 !important;
+}
+.container .store-popup .inner .custom::-webkit-file-upload-button {
+  visibility: hidden;
+  margin-left: -50px;
+}
+.container .store-popup .inner .custom:before {
+  content: '사진 선택';
+  color: #000;
+  outline: none;
+  cursor: pointer;
   font-size: 14px;
   color: #563640;
   font-weight: 700;
@@ -1290,7 +1326,12 @@ button {
   padding-bottom: 8px;
   padding-left: 19px;
 }
-.container .store-popup .inner .uploaded-pic .pic-btn.uploaded {
+.container .store-popup .inner .custom:hover:before {
+  box-shadow: inset 1px 1px #563640 !important;
+  opacity: 0.5;
+}
+.container .store-popup .inner .custom.uploaded:before {
+  content: '사진 삭제';
   font-size: 14px;
   color: #563640;
   font-weight: 700;
@@ -1314,7 +1355,15 @@ button {
   color: #6881f4;
   text-decoration: underline;
   display: block;
+  cursor: pointer;
   font-weight: 400;
+}
+.container .store-popup .inner .custom.error {
+  background: transparent!important;
+}
+.container .store-popup .inner .custom.error:before {
+  background: rgba(255, 112, 100, 0.25);
+  color: #ff7064;
 }
 .container .store-popup .inner .btns {
   text-align: center;
@@ -1465,9 +1514,10 @@ button {
   .container.app-cont article .sec2 .info-wrap .standard-nm-input .t {
     display: inline-block;
     width: 27%;
-    line-height: 37px;
+    line-height: 39px;
     margin-bottom: 5px;
     margin-right: 3%;
+    vertical-align: middle;
   }
   .container.app-cont article .sec2 .info-wrap .standard-input input,
   .container.app-cont article .sec2 .info-wrap .error-input input,
@@ -1481,6 +1531,7 @@ button {
   .container.app-cont article .sec2 .info-wrap .uploaded-pic input,
   .container.app-cont article .sec2 .info-wrap .standard-nm-input input {
     width: 70%;
+    vertical-align: middle;
   }
   .container.app-cont article .sec2 .info-wrap .standard-input .g,
   .container.app-cont article .sec2 .info-wrap .error-input .g,
@@ -1507,28 +1558,9 @@ button {
   .container.app-cont article .sec2 .info-wrap .num-div-div-input input {
     width: 20.6%;
   }
-  .container.app-cont article .sec2 .info-wrap .uploaded-pic .pic-btn.uploaded {
-    font-size: 14px;
-    color: #563640;
-    font-weight: 700;
-    background-color: #ffcd09;
-    display: inline-block;
-    border-radius: 3px;
-    padding: 16px;
-    box-sizing: border-box;
-    line-height: 21px;
-    text-align: center;
-    box-shadow: 1px 1px 0 0 #563640;
-    color: #555;
-    background-color: #eee;
-    padding-top: 8px;
-    padding-right: 19px;
-    padding-bottom: 8px;
-    padding-left: 19px;
-  }
   .container.app-cont article .sec2 .info-wrap .uploaded-pic .f-nm {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .container.app-cont article .sec2 .info-wrap .standard-nm-input s,
   .container.app-cont article .sec2 .info-wrap .standard-nm-input input {
@@ -1680,47 +1712,9 @@ button {
   .container .store-popup .inner .tel-input input {
     width: 20.6%;
   }
-  .container .store-popup .inner .standard-pic .pic-btn,
-  .container .store-popup .inner .uploaded-pic .pic-btn {
-    font-size: 14px;
-    color: #563640;
-    font-weight: 700;
-    background-color: #ffcd09;
-    display: inline-block;
-    border-radius: 3px;
-    padding: 16px;
-    box-sizing: border-box;
-    line-height: 21px;
-    text-align: center;
-    box-shadow: 1px 1px 0 0 #563640;
-    margin-bottom: 5px;
-    padding-top: 8px;
-    padding-right: 19px;
-    padding-bottom: 8px;
-    padding-left: 19px;
-  }
-  .container .store-popup .inner .uploaded-pic .pic-btn.uploaded {
-    font-size: 14px;
-    color: #563640;
-    font-weight: 700;
-    background-color: #ffcd09;
-    display: inline-block;
-    border-radius: 3px;
-    padding: 16px;
-    box-sizing: border-box;
-    line-height: 21px;
-    text-align: center;
-    box-shadow: 1px 1px 0 0 #563640;
-    color: #555;
-    background-color: #eee;
-    padding-top: 8px;
-    padding-right: 19px;
-    padding-bottom: 8px;
-    padding-left: 19px;
-  }
   .container .store-popup .inner .uploaded-pic .f-nm {
     display: inline-block;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .container .store-popup .inner .standard-nm-input s,
   .container .store-popup .inner .standard-nm-input input {

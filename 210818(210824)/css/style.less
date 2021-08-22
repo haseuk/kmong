@@ -2,26 +2,23 @@
 
 html { font-family: "メイリオ","Meiryo","ヒラギノ角ゴ Pro","Hiragino Kaku Gothic Pro","Osaka","ＭＳ Ｐゴシック","MS PGothic","Arial",sans-serif; }
 
+
 .f-pri { color:#ffcd09; }
 .f-brow { color:#563640; }
-
 .bg-pri { .bgc(#ffcd09); }
 .bg-brown { .bgc(#563640); }
 .bg-red { .bgc(#ff7064); }
-
 .bg-error { background:rgba(255,112,100,0.25);}
-
 .h2-f-y { .fs(24); color:#ffcd09; .bold; }
 .h2-f-b { .fs(24); color:#563640; .bold; }
 
 .btn-pri { .fs(14); .f-brow; .bold; .bg-pri; .ib; .br(3); .p(16); .-box; .lh(21); .tc; box-shadow: 1px 1px 0 0 #563640; }
 .btn-gray { .btn-pri; color:#555; .bgc(#eee); }
-
 .top-pri { .fs(24); .bold; .lh(84); .f-pri; .tc; .bg-brown; .rel;
   &:after { .cnt; .wh(36,36); .abs; .lt(16,24); .contain('../img/arrow-left.png'); }
 }
-.p16 { .p(16); .-box; }
 
+.p16 { .p(16); .-box; }
 .mo { .ib; }
 
 ::placeholder { .f-brow; }
@@ -139,17 +136,19 @@ button { .bgc(#fff); }
           .num-div-div-input {
             input { .w(30%); }
           }
-          .standard-pic, .error-pic, .uploaded-pic {
-            .pic-btn { .btn-pri; .mb(5); .p(8,19);
-              &:hover {}
-            }
+          .custom { .-a!important; .ib; width:92px!important; .pl(0)!important; color:#000!important;
+            &::-webkit-file-upload-button { visibility: hidden; .ml(-50); }
+            &:before { content: '사진 선택'; .ib; color:#000; outline: none; .pointer; .btn-pri; .mb(5); .p(8,19); }
+            &:hover:before { box-shadow: inset 1px 1px #563640!important; opacity: 0.5; }
           }
-          .error-pic {
-            .pic-btn.error { .bg-error; color:#ff7064; }
+          .custom.uploaded {
+            &:before { content:'사진 삭제'; .btn-gray;  .p(8,19);}
+          }
+          .custom.error { background: transparent!important;
+            &:before { .bg-error; color:#ff7064; }
           }
           .uploaded-pic {
-            .pic-btn.uploaded { .btn-gray; .p(8,19); }
-            .f-nm { .fs(14); color:#6881f4; text-decoration: underline; .block; }
+            .f-nm { .fs(14); color:#6881f4; text-decoration: underline; .block; .pointer; }
           }
           .standard-nm-input {
             s, input { .fs(14); .ib; }
@@ -343,12 +342,19 @@ button { .bgc(#fff); }
       .tel-input {
         input { .w(30%); }
       }
-      .standard-pic, .uploaded-pic {
-        .pic-btn { .btn-pri; .mb(5); .p(8,19); }
+      .custom { .-a!important; .ib; width:92px!important; .pl(0)!important; color:#000!important;
+        &::-webkit-file-upload-button { visibility: hidden; .ml(-50); }
+        &:before { content: '사진 선택'; .ib; color:#000; outline: none; .pointer; .btn-pri; .mb(5); .p(8,19); }
+        &:hover:before { box-shadow: inset 1px 1px #563640!important; opacity: 0.5; }
+      }
+      .custom.uploaded {
+        &:before { content:'사진 삭제'; .btn-gray;  .p(8,19);}
       }
       .uploaded-pic {
-        .pic-btn.uploaded { .btn-gray; .p(8,19); }
-        .f-nm { .fs(14); color:#6881f4; text-decoration: underline; .block; .regular; }
+        .f-nm { .fs(14); color:#6881f4; text-decoration: underline; .block; .pointer; .regular; }
+      }
+      .custom.error { background: transparent!important;
+        &:before { .bg-error; color:#ff7064; }
       }
       .btns { .tc; .mt(24);
         button, .submit { .btn-pri; .-a; .ib; .m(0,6); .vam; }
