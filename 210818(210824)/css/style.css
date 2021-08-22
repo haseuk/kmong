@@ -619,9 +619,12 @@ button {
 .container.app-cont article .sec2 .info-wrap .standard-nm-input s {
   width: 5%;
   margin-right: 5%;
+  margin-bottom: 5px;
+  vertical-align: middle;
 }
 .container.app-cont article .sec2 .info-wrap .standard-nm-input input {
   width: 90%;
+  vertical-align: middle;
 }
 .container.store-cont article .sec2 .sub-tit {
   font-size: 17px;
