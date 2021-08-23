@@ -27,6 +27,12 @@ button { .bgc(#fff); }
 .btn:hover { box-shadow: inset 1px 1px #563640!important; opacity: 0.5; }
 .error { .bg-error!important; color:#ff7064!important; }
 
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button
+{  -webkit-appearance: none; margin: 0; }
+input[type="number"] { -moz-appearance: textfield; }
+
+.essential { .fs(14); color:#fff; .wh(44,37); .lh(37); .tc; .ib; .bg-red; }
 
 .container { .fs(0); .tc; .min-w(320);
 
@@ -88,9 +94,10 @@ button { .bgc(#fff); }
       .sec2 {
         h3 { .fs(23); .f-brow; .lh(35); .pb(8); .-b(#563640); }
         .info-wrap {
+          span.essential { .fr; }
           .standard-radio-input, .disable-radio-input, .vet-radio-input { .mt(24);
             .tit { .fs(14); .f-brow; .lh(37); .tl; .bold; .mb(5);
-              span { color:#fff; .wh(44,37); .tc; .ib; .bg-red; .fr; }
+              span { color:#fff; .wh(44,37); .tc; .ib; .bg-red; .fr; .mr(0); }
             }
             .input-box { .tl; .mt(10);
               label {
@@ -118,8 +125,8 @@ button { .bgc(#fff); }
           .standard-input, .error-input, .disable-input, .lang-input, .num-input, .num-division-input, .num-div-div-input,
           .standard-pic, .error-pic, .uploaded-pic, .standard-nm-input
           { .tl; .mt(16);
-            .t { .fs(14); .bold; .f-brow; .lh(21); .mb(13); }
-            input { .fs(14); .wf; .lh(37); .-a(#eee); .br(3); .-box; .pl(8); .mb(5); }
+            .t { .fs(14); .bold; .f-brow; .lh(37); .mb(5); }
+            input { .fs(14); .wf; .lh(35); .-a(#eee); .br(3); .-box; .pl(8); .mb(5); }
             .g { .fs(13); .lh(20); .f-brow; opacity: 0.5;}
           }
           .error-input {
@@ -136,10 +143,13 @@ button { .bgc(#fff); }
           .num-div-div-input {
             input { .w(30%); }
           }
-          .custom { .-a!important; .ib; width:92px!important; .pl(0)!important; color:#000!important;
+          .custom { .-a!important; .ib; width:100px!important; .pl(0)!important; color:#000!important;
             &::-webkit-file-upload-button { visibility: hidden; .ml(-50); }
+            &::-ms-browse { visibility: hidden; .ml(-50); }
+            &::file-selector-button { visibility: hidden; .ml(-50); }
             &:before { content: '사진 선택'; .ib; color:#000; outline: none; .pointer; .btn-pri; .mb(5); .p(8,19); }
             &:hover:before { box-shadow: inset 1px 1px #563640!important; opacity: 0.5; }
+            input { .hide; }
           }
           .custom.uploaded {
             &:before { content:'사진 삭제'; .btn-gray;  .p(8,19);}
@@ -175,12 +185,13 @@ button { .bgc(#fff); }
         }
         .store-info {
           .cell {
-            .cell-top { .m(8,0); .clear;
+            .cell-top { .m(8,0); .clear; .tl;
               p, a { .fs(14); .bold; .ib; .lh(37); }
               p { .w(99); .pr(8); .-box; .f-brow; .tr; .bg-pri; .fl; }
               .btns { .fr;
-                a { .w(50); color:#ff7064; }
+                a { color:#ff7064; .p(0,16); }
               }
+              .essential { .ml(16); }
             }
             table {
               tr {
@@ -226,22 +237,36 @@ button { .bgc(#fff); }
         .service-info {
           .cell { .mb(12);
             .cell-top { .tl; .clear;
+              .essential { .mr(16); }
               p { .fs(19); .bold; .f-brow; .ib; .lh(27); .p(5,0); .-box; .vam;
                 &.type2 { .lh(22); .p(0); }
               }
-              label { .ib; .fr; .w(90); .p(8); .-box; .vam;
+              label { .fs(0); .ib; .fr; .-box; .vam; .rel;
+                //기본 체크박스
                 input[type=checkbox] + i { .wh(29,29); .contain('../img/web-icon-checkbox.svg'); .ib; .vam; .rel;
-                  &:after { .cnt; .abs; .lt(-8,-8);  background: rgba(255,205,9,0.25); .wh(90,45); z-index: -1; }
+                  &:after { .cnt; .abs; .lt(-8,-8);  background: rgba(255,205,9,0.25); .wh(45,45); z-index: -1; }
                 }
+
+                //체크된 체크박스
                 input[type=checkbox]:checked + i { .wh(29,29); .contain('../img/web-icon-checkbox-checked.svg'); .ib; .vam; .rel;
                   &:after { .bg-pri; }
                 }
+                input[type=checkbox]:checked + i + s { .bg-pri; }
+
+                //비활성화 체크박스
                 input[type=checkbox]:disabled + i { .wh(29,29); .contain('../img/web-icon-checkbox.svg'); .ib; .vam; .rel;
                   &:after { .bgc(#eee); }
                 }
-                input[type=checkbox]:disabled + i + s { color:#555; }
+                input[type=checkbox]:disabled + i + s { color:#555; .bgc(#eee); }
+
+                // 체크된 비활성화 체크박스
+                input[type=checkbox]:disabled.checked + i { .wh(29,29); .contain('../img/web-icon-checkbox-checked-disable.svg'); .ib; .vam; .rel;
+                  &:after { .bg-pri; }
+                }
+                input[type=checkbox]:disabled.checked + i + s { .bg-pri; .f-brow; }
+
                 input { .hide; }
-                s { .fs(19); .bold; .f-brow; .lh(24); .vam; .ml(5); }
+                s { .fs(19); .bold; .f-brow; .h(45); .lh(45); .ib; .vam; .ml(8); .ls(-0.1em); background: rgba(255,205,9,0.25); .pr(8); }
               }
             }
           }
@@ -316,7 +341,7 @@ button { .bgc(#fff); }
 
       .menu-input { .mt(24);
         .tit { .fs(14); .f-brow; .lh(37); .tl; .bold; .mb(5);
-          span { color:#fff; .wh(44,37); .tc; .ib; .bg-red; .fr; }
+          span { color:#fff; .wh(44,37); .tc; .ib; .bg-red; .fr; .mr(0); }
         }
         .input-box { .tl; .mt(10);
           label { .ib; .w(17.5%); .min-w(93); .mb(8);
@@ -331,7 +356,9 @@ button { .bgc(#fff); }
       .store-nm, .store-lang, .num-input, .post-input, .tel-input,
       .standard-pic, .uploaded-pic
       { .tl; .mt(16);
-        .t { .fs(14); .bold; .f-brow; .lh(21); .mb(13); }
+        .t { .fs(14); .bold; .f-brow; .lh(37); .mb(5);
+          .essential { .fr; .mr(0); }
+        }
         input { .fs(14); .wf; .lh(37); .-a(#eee); .br(3); .-box; .pl(8); .mb(5); }
         .g { .fs(13); .lh(20); .f-brow; opacity: 0.5;}
       }
@@ -344,8 +371,11 @@ button { .bgc(#fff); }
       }
       .custom { .-a!important; .ib; width:92px!important; .pl(0)!important; color:#000!important;
         &::-webkit-file-upload-button { visibility: hidden; .ml(-50); }
+        &::-ms-browse { visibility: hidden; .ml(-50); }
+        &::file-selector-button { visibility: hidden; .ml(-50); }
         &:before { content: '사진 선택'; .ib; color:#000; outline: none; .pointer; .btn-pri; .mb(5); .p(8,19); }
         &:hover:before { box-shadow: inset 1px 1px #563640!important; opacity: 0.5; }
+        input { .hide; }
       }
       .custom.uploaded {
         &:before { content:'사진 삭제'; .btn-gray;  .p(8,19);}
@@ -381,7 +411,7 @@ button { .bgc(#fff); }
 @media screen and (min-width: 600px) {
   @import "style-t";
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   @import "style-pc";
 }
 

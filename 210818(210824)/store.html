@@ -59,7 +59,7 @@
             <div class="store-info">
               <div class="cell">
                 <div class="cell-top">
-                  <p>1 번 점포</p>
+                  <p>1 번 점포</p><span class="essential">必須</span>
                   <div class="btns">
                     <a class="edit">수정</a>
                   </div>
@@ -129,27 +129,27 @@
         <form action="">
           <div class="info-wrap">
             <div class="store-nm">
-              <p class="t">점포명(일반)</p>
+              <p class="t">점포명(일반)<span class="essential">必須</span></p>
               <input type="text" placeholder="居酒屋「春」" required>
               <p class="g">점포명을 입력 해 주세요</p>
             </div>
             <div class="store-lang">
-              <p class="t">점포명(가나)</p>
+              <p class="t">점포명(가나)<span class="essential">必須</span></p>
               <input type="text" placeholder="イザカヤ　ハル" required>
               <p class="g">전각 가나로 입력 해 주십시오. 가타카나만 입력 체크</p>
             </div>
             <div class="store-lang">
-              <p class="t">점포명(영대문)</p>
+              <p class="t">점포명(영대문)<span class="essential">必須</span></p>
               <input type="text" class="error" placeholder="izakaya homu" required>
               <p class="g">모두 대문자로 입력 해 주십시오. 영문대문자만 입력 체크</p>
             </div>
             <div class="num-input">
-              <p class="t">테이블 수</p>
+              <p class="t">테이블 수<span class="essential">必須</span></p>
               <input type="number" class="num" maxlength="25" required>
               <p class="g">숫자로 입력 해 주십시오</p>
             </div>
             <div class="tel-input">
-              <p class="t">전화번호</p>
+              <p class="t">전화번호<span class="essential">必須</span></p>
               <input type="number" class="num2" required>
               <s class="line">-</s>
               <input type="number" class="num2" required>
@@ -157,19 +157,19 @@
               <input type="number" class="num2" required>
             </div>
             <div class="post-input">
-              <p class="t">우편번호</p>
+              <p class="t">우편번호<span class="essential">必須</span></p>
               <input type="number" class="num2" required>
               <s class="line">-</s>
               <input type="number" class="num2" required>
             </div>
             <div class="store-lang">
-              <p class="t">주소</p>
+              <p class="t">주소<span class="essential">必須</span></p>
               <input type="text" required>
               <p class="g">도도부현부터 건물이름까지 입력 해 주세요</p>
             </div>
 
             <div class="menu-input">
-              <p class="tit">라디오 <span>必須</span></p>
+              <p class="tit">라디오 <span class="essential">必須</span></p>
               <div class="input-box">
                 <label>
                   <input type="radio" name="m">
@@ -234,13 +234,17 @@
               </div>
             </div>
             <div class="standard-pic">
-              <p class="t">가게로고 사진</p>
-              <input type="file" class="custom" accept="image/png, image/gif, image/jpeg" required>
+              <p class="t">가게로고 사진<span class="essential">必須</span></p>
+              <label class="custom">
+                <input type="file" accept="image/png, image/gif, image/jpeg" required>
+              </label>
               <p class="g">로고사진이 없는경우 간판이 잘 나오도록 가게 외관을 촬영한 사진을 업로드 해주세요. 둘 다 없는경우 점포 이름으로 임의제작을 하겠습니다</p>
             </div>
             <div class="uploaded-pic">
               <p class="t">메뉴판 사진</p>
-              <input type="file" class="custom uploaded" accept="image/png, image/gif, image/jpeg" required>
+              <label class="custom uploaded">
+                <input type="file" accept="image/png, image/gif, image/jpeg" required>
+              </label>
               <s class="f-nm">20210806134.jpg</s>
             </div>
           </div>

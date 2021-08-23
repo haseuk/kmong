@@ -107,6 +107,24 @@ button {
   background: rgba(255, 112, 100, 0.25) !important;
   color: #ff7064 !important;
 }
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+.essential {
+  font-size: 14px;
+  color: #fff;
+  width: 44px;
+  height: 37px;
+  line-height: 37px;
+  text-align: center;
+  display: inline-block;
+  background-color: #ff7064;
+}
 .container {
   font-size: 0px;
   text-align: center;
@@ -344,6 +362,9 @@ button {
   padding-bottom: 8px;
   border-bottom: 1px solid #563640;
 }
+.container.app-cont article .sec2 .info-wrap span.essential {
+  float: right;
+}
 .container.app-cont article .sec2 .info-wrap .standard-radio-input,
 .container.app-cont article .sec2 .info-wrap .disable-radio-input,
 .container.app-cont article .sec2 .info-wrap .vet-radio-input {
@@ -369,6 +390,7 @@ button {
   display: inline-block;
   background-color: #ff7064;
   float: right;
+  margin-right: 0px;
 }
 .container.app-cont article .sec2 .info-wrap .standard-radio-input .input-box,
 .container.app-cont article .sec2 .info-wrap .disable-radio-input .input-box,
@@ -474,8 +496,8 @@ button {
   font-size: 14px;
   font-weight: 700;
   color: #563640;
-  line-height: 21px;
-  margin-bottom: 13px;
+  line-height: 37px;
+  margin-bottom: 5px;
 }
 .container.app-cont article .sec2 .info-wrap .standard-input input,
 .container.app-cont article .sec2 .info-wrap .error-input input,
@@ -490,7 +512,7 @@ button {
 .container.app-cont article .sec2 .info-wrap .standard-nm-input input {
   font-size: 14px;
   width: 100%;
-  line-height: 37px;
+  line-height: 35px;
   border: 1px solid #eee;
   border-radius: 3px;
   box-sizing: border-box;
@@ -543,11 +565,19 @@ button {
 .container.app-cont article .sec2 .info-wrap .custom {
   border: 0 !important;
   display: inline-block;
-  width: 92px!important;
+  width: 100px!important;
   padding-left: 0px !important;
   color: #000 !important;
 }
 .container.app-cont article .sec2 .info-wrap .custom::-webkit-file-upload-button {
+  visibility: hidden;
+  margin-left: -50px;
+}
+.container.app-cont article .sec2 .info-wrap .custom::-ms-browse {
+  visibility: hidden;
+  margin-left: -50px;
+}
+.container.app-cont article .sec2 .info-wrap .custom::file-selector-button {
   visibility: hidden;
   margin-left: -50px;
 }
@@ -576,6 +606,9 @@ button {
 .container.app-cont article .sec2 .info-wrap .custom:hover:before {
   box-shadow: inset 1px 1px #563640 !important;
   opacity: 0.5;
+}
+.container.app-cont article .sec2 .info-wrap .custom input {
+  display: none;
 }
 .container.app-cont article .sec2 .info-wrap .custom.uploaded:before {
   content: '사진 삭제';
@@ -666,6 +699,7 @@ button {
   margin-bottom: 8px;
   margin-left: 0px;
   zoom: 1;
+  text-align: left;
 }
 .container.store-cont article .sec2 .store-info .cell .cell-top:after {
   content: '';
@@ -695,8 +729,14 @@ button {
   float: right;
 }
 .container.store-cont article .sec2 .store-info .cell .cell-top .btns a {
-  width: 50px;
   color: #ff7064;
+  padding-top: 0px;
+  padding-right: 16px;
+  padding-bottom: 0px;
+  padding-left: 16px;
+}
+.container.store-cont article .sec2 .store-info .cell .cell-top .essential {
+  margin-left: 16px;
 }
 .container.store-cont article .sec2 .store-info .cell table tr th {
   vertical-align: middle;
@@ -821,6 +861,9 @@ button {
   height: 0;
   visibility: hidden;
 }
+.container.service-cont article .sec2 .service-info .cell .cell-top .essential {
+  margin-right: 16px;
+}
 .container.service-cont article .sec2 .service-info .cell .cell-top p {
   font-size: 19px;
   font-weight: 700;
@@ -839,12 +882,12 @@ button {
   padding: 0px;
 }
 .container.service-cont article .sec2 .service-info .cell .cell-top label {
+  font-size: 0px;
   display: inline-block;
   float: right;
-  width: 90px;
-  padding: 8px;
   box-sizing: border-box;
   vertical-align: middle;
+  position: relative;
 }
 .container.service-cont article .sec2 .service-info .cell .cell-top label input[type=checkbox] + i {
   width: 29px;
@@ -865,7 +908,7 @@ button {
   right: auto;
   bottom: auto;
   background: rgba(255, 205, 9, 0.25);
-  width: 90px;
+  width: 45px;
   height: 45px;
   z-index: -1;
 }
@@ -880,6 +923,9 @@ button {
   position: relative;
 }
 .container.service-cont article .sec2 .service-info .cell .cell-top label input[type=checkbox]:checked + i:after {
+  background-color: #ffcd09;
+}
+.container.service-cont article .sec2 .service-info .cell .cell-top label input[type=checkbox]:checked + i + s {
   background-color: #ffcd09;
 }
 .container.service-cont article .sec2 .service-info .cell .cell-top label input[type=checkbox]:disabled + i {
@@ -897,6 +943,24 @@ button {
 }
 .container.service-cont article .sec2 .service-info .cell .cell-top label input[type=checkbox]:disabled + i + s {
   color: #555;
+  background-color: #eee;
+}
+.container.service-cont article .sec2 .service-info .cell .cell-top label input[type=checkbox]:disabled.checked + i {
+  width: 29px;
+  height: 29px;
+  background-repeat: no-repeat;
+  background-image: url('../img/web-icon-checkbox-checked-disable.svg');
+  background-size: contain;
+  display: inline-block;
+  vertical-align: middle;
+  position: relative;
+}
+.container.service-cont article .sec2 .service-info .cell .cell-top label input[type=checkbox]:disabled.checked + i:after {
+  background-color: #ffcd09;
+}
+.container.service-cont article .sec2 .service-info .cell .cell-top label input[type=checkbox]:disabled.checked + i + s {
+  background-color: #ffcd09;
+  color: #563640;
 }
 .container.service-cont article .sec2 .service-info .cell .cell-top label input {
   display: none;
@@ -905,9 +969,14 @@ button {
   font-size: 19px;
   font-weight: 700;
   color: #563640;
-  line-height: 24px;
+  height: 45px;
+  line-height: 45px;
+  display: inline-block;
   vertical-align: middle;
-  margin-left: 5px;
+  margin-left: 8px;
+  letter-spacing: -0.1em;
+  background: rgba(255, 205, 9, 0.25);
+  padding-right: 8px;
 }
 .container.service-cont article .sec2 .service-info.agree .cell tr td {
   vertical-align: top;
@@ -1188,6 +1257,7 @@ button {
   display: inline-block;
   background-color: #ff7064;
   float: right;
+  margin-right: 0px;
 }
 .container .store-popup .inner .menu-input .input-box {
   text-align: left;
@@ -1247,8 +1317,18 @@ button {
   font-size: 14px;
   font-weight: 700;
   color: #563640;
-  line-height: 21px;
-  margin-bottom: 13px;
+  line-height: 37px;
+  margin-bottom: 5px;
+}
+.container .store-popup .inner .store-nm .t .essential,
+.container .store-popup .inner .store-lang .t .essential,
+.container .store-popup .inner .num-input .t .essential,
+.container .store-popup .inner .post-input .t .essential,
+.container .store-popup .inner .tel-input .t .essential,
+.container .store-popup .inner .standard-pic .t .essential,
+.container .store-popup .inner .uploaded-pic .t .essential {
+  float: right;
+  margin-right: 0px;
 }
 .container .store-popup .inner .store-nm input,
 .container .store-popup .inner .store-lang input,
@@ -1307,6 +1387,14 @@ button {
   visibility: hidden;
   margin-left: -50px;
 }
+.container .store-popup .inner .custom::-ms-browse {
+  visibility: hidden;
+  margin-left: -50px;
+}
+.container .store-popup .inner .custom::file-selector-button {
+  visibility: hidden;
+  margin-left: -50px;
+}
 .container .store-popup .inner .custom:before {
   content: '사진 선택';
   color: #000;
@@ -1332,6 +1420,9 @@ button {
 .container .store-popup .inner .custom:hover:before {
   box-shadow: inset 1px 1px #563640 !important;
   opacity: 0.5;
+}
+.container .store-popup .inner .custom input {
+  display: none;
 }
 .container .store-popup .inner .custom.uploaded:before {
   content: '사진 삭제';
@@ -1517,10 +1608,10 @@ button {
   .container.app-cont article .sec2 .info-wrap .standard-nm-input .t {
     display: inline-block;
     width: 27%;
-    line-height: 39px;
+    line-height: 37px;
     margin-bottom: 5px;
     margin-right: 3%;
-    vertical-align: middle;
+    vertical-align: top;
   }
   .container.app-cont article .sec2 .info-wrap .standard-input input,
   .container.app-cont article .sec2 .info-wrap .error-input input,
@@ -1534,7 +1625,7 @@ button {
   .container.app-cont article .sec2 .info-wrap .uploaded-pic input,
   .container.app-cont article .sec2 .info-wrap .standard-nm-input input {
     width: 70%;
-    vertical-align: middle;
+    vertical-align: top;
   }
   .container.app-cont article .sec2 .info-wrap .standard-input .g,
   .container.app-cont article .sec2 .info-wrap .error-input .g,
@@ -1569,6 +1660,7 @@ button {
   .container.app-cont article .sec2 .info-wrap .standard-nm-input input {
     width: 3%;
     margin-right: 1%;
+    line-height: 37px;
   }
   .container.app-cont article .sec2 .info-wrap .standard-nm-input input {
     width: 30%;
@@ -1585,9 +1677,9 @@ button {
   }
   .container.service-cont article .sec2 .service-info.agree .cell .cell-top .type2 {
     line-height: 27px;
-    padding-top: 5px;
+    padding-top: 3px;
     padding-right: 0px;
-    padding-bottom: 5px;
+    padding-bottom: 3px;
     padding-left: 0px;
   }
   .container.confirm-cont article .sec2 .sign-wrap .signatory,
@@ -1684,6 +1776,7 @@ button {
     line-height: 37px;
     margin-bottom: 5px;
     margin-right: 3%;
+    vertical-align: top;
   }
   .container .store-popup .inner .store-nm input,
   .container .store-popup .inner .store-lang input,
@@ -1693,6 +1786,7 @@ button {
   .container .store-popup .inner .standard-pic input,
   .container .store-popup .inner .uploaded-pic input {
     width: 70%;
+    vertical-align: top;
   }
   .container .store-popup .inner .store-nm .g,
   .container .store-popup .inner .store-lang .g,
@@ -1738,12 +1832,11 @@ button {
     float: unset!important;
   }
 }
-@media screen and (min-width: 1024px) {
+@media screen and (min-width: 1025px) {
   .mo {
     display: none;
   }
   .container {
-    max-width: 1024px;
     margin-left: auto;
     margin-right: auto;
   }
