@@ -68,22 +68,22 @@ input[type="number"] { -moz-appearance: textfield; }
   &.login-cont { width: auto;
     .wrap { .rel;
       //.dim { .fix; .lt; .f; .bgc(#000); opacity: 0.3; }
-      .login { .ib; .bgc(#fff); .rel; .pb(16);  z-index: 1; .max-w(600); .mh-c;
+      .login { .ib; .bgc(#fff); .rel; .pb(16);  z-index: 1; .tc; .wf;
         .top { .fs(0); .bgc(#563640); .p(16); .-box; .tl; line-height: unset;
           h1 { .wh(100,52); .contain('../img/logo.svg'); }
           p { .h2-f-y; .tc; .lh(52); }
         }
-        .input-inner { .p16;
-          .input-form { .fs(0); .tl; .mt(96); .wh(100%,128); .ib; .-a(#563640); .br(5); .p16;
-            p, input { .fs(14); .mb(16); .vat; .bold; .f-brow;
-              &:last-child { .mb(0); }
+        .inner { .max-w(600); .ib;
+          .input-inner { .p16;
+            .input-form { .fs(0); .tl; .mt(96); .wh(100%,128); .ib; .-a(#563640); .br(5); .p16;
+              p, input { .fs(14); .mb(16); .vat; .bold; .f-brow; }
+              p { .w(30%); .ib; .mr(5%); .-box; .vam; .keep-all; }
+              input { .wh(65%,40); .lh(40); .pl(8); .-box; .vam; .ib; border: solid 1px lightgrey; .br(3); }
             }
-            p { .wh(30%,21); .lh(21); .ib; .mr(5%); .p(8,0); .-box; }
-            input { .wh(65%,40); .lh(40); .pl(8); .-box; .ib; border: solid 1px lightgrey; .br(3); }
           }
+          .btn { .wh(154,53); .btn-pri; .wh(154,53); .tc; .mt(60); }
+          .notice, .ft { .fs(13); .lh(20); .f-brow; opacity: 0.5; .mt(16); .tc; }
         }
-        .btn { .wh(154,53); .btn-pri; .wh(154,53); .tc; .mt(60); }
-        .notice, .ft { .fs(13); .lh(20); .f-brow; opacity: 0.5; .mt(16); .tc; }
       }
     }
   }
@@ -344,11 +344,11 @@ input[type="number"] { -moz-appearance: textfield; }
           span { color:#fff; .wh(44,37); .tc; .ib; .bg-red; .fr; .mr(0); }
         }
         .input-box { .tl; .mt(10);
-          label { .ib; .w(17.5%); .min-w(93); .mb(8);
+          label { .fs(0); .ib; .w(17.5%); .min-w(93); .mb(8);
             input { .hide; }
             input[type=radio] + i { .wh(24,24); .contain('../img/web-icon-radio-check.svg'); .ib; .vam; }
             input[type=radio]:checked + i { .wh(24,24); .contain('../img/web-icon-radio-checked.svg'); .ib; .vam; }
-            s { .fs(14); .f-brow; .bold; .vam; .ml(8); }
+            s { .fs(13); .f-brow; .bold; .vam; .ml(4); }
           }
         }
       }
@@ -369,7 +369,7 @@ input[type="number"] { -moz-appearance: textfield; }
       .tel-input {
         input { .w(30%); }
       }
-      .custom { .-a!important; .ib; width:92px!important; .pl(0)!important; color:#000!important;
+      .custom { .-a!important; .ib; width:100px!important; .pl(0)!important; color:#000!important;
         &::-webkit-file-upload-button { visibility: hidden; .ml(-50); }
         &::-ms-browse { visibility: hidden; .ml(-50); }
         &::file-selector-button { visibility: hidden; .ml(-50); }

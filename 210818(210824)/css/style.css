@@ -254,9 +254,8 @@ input[type="number"] {
   position: relative;
   padding-bottom: 16px;
   z-index: 1;
-  max-width: 600px;
-  margin-left: auto;
-  margin-right: auto;
+  text-align: center;
+  width: 100%;
 }
 .container.login-cont .wrap .login .top {
   font-size: 0px;
@@ -280,11 +279,15 @@ input[type="number"] {
   text-align: center;
   line-height: 52px;
 }
-.container.login-cont .wrap .login .input-inner {
+.container.login-cont .wrap .login .inner {
+  max-width: 600px;
+  display: inline-block;
+}
+.container.login-cont .wrap .login .inner .input-inner {
   padding: 16px;
   box-sizing: border-box;
 }
-.container.login-cont .wrap .login .input-inner .input-form {
+.container.login-cont .wrap .login .inner .input-inner .input-form {
   font-size: 0px;
   text-align: left;
   margin-top: 96px;
@@ -296,41 +299,34 @@ input[type="number"] {
   padding: 16px;
   box-sizing: border-box;
 }
-.container.login-cont .wrap .login .input-inner .input-form p,
-.container.login-cont .wrap .login .input-inner .input-form input {
+.container.login-cont .wrap .login .inner .input-inner .input-form p,
+.container.login-cont .wrap .login .inner .input-inner .input-form input {
   font-size: 14px;
   margin-bottom: 16px;
   vertical-align: top;
   font-weight: 700;
   color: #563640;
 }
-.container.login-cont .wrap .login .input-inner .input-form p:last-child,
-.container.login-cont .wrap .login .input-inner .input-form input:last-child {
-  margin-bottom: 0px;
-}
-.container.login-cont .wrap .login .input-inner .input-form p {
+.container.login-cont .wrap .login .inner .input-inner .input-form p {
   width: 30%;
-  height: 21px;
-  line-height: 21px;
   display: inline-block;
   margin-right: 5%;
-  padding-top: 8px;
-  padding-right: 0px;
-  padding-bottom: 8px;
-  padding-left: 0px;
   box-sizing: border-box;
+  vertical-align: middle;
+  word-break: keep-all;
 }
-.container.login-cont .wrap .login .input-inner .input-form input {
+.container.login-cont .wrap .login .inner .input-inner .input-form input {
   width: 65%;
   height: 40px;
   line-height: 40px;
   padding-left: 8px;
   box-sizing: border-box;
+  vertical-align: middle;
   display: inline-block;
   border: solid 1px lightgrey;
   border-radius: 3px;
 }
-.container.login-cont .wrap .login .btn {
+.container.login-cont .wrap .login .inner .btn {
   font-size: 14px;
   color: #563640;
   font-weight: 700;
@@ -346,8 +342,8 @@ input[type="number"] {
   text-align: center;
   margin-top: 60px;
 }
-.container.login-cont .wrap .login .notice,
-.container.login-cont .wrap .login .ft {
+.container.login-cont .wrap .login .inner .notice,
+.container.login-cont .wrap .login .inner .ft {
   font-size: 13px;
   line-height: 20px;
   color: #563640;
@@ -1264,6 +1260,7 @@ input[type="number"] {
   margin-top: 10px;
 }
 .container .store-popup .inner .menu-input .input-box label {
+  font-size: 0px;
   display: inline-block;
   width: 17.5%;
   min-width: 93px;
@@ -1291,11 +1288,11 @@ input[type="number"] {
   vertical-align: middle;
 }
 .container .store-popup .inner .menu-input .input-box label s {
-  font-size: 14px;
+  font-size: 13px;
   color: #563640;
   font-weight: 700;
   vertical-align: middle;
-  margin-left: 8px;
+  margin-left: 4px;
 }
 .container .store-popup .inner .store-nm,
 .container .store-popup .inner .store-lang,
@@ -1379,7 +1376,7 @@ input[type="number"] {
 .container .store-popup .inner .custom {
   border: 0 !important;
   display: inline-block;
-  width: 92px!important;
+  width: 100px!important;
   padding-left: 0px !important;
   color: #000 !important;
 }
