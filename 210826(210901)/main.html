@@ -1,0 +1,82 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>AVTARMARKET</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1><a href="/"><img src="images/pc/logo.png" alt="AVTARMARKET"></a></h1>
+      <label>
+        <input type="search" placeholder="Serch data for AVTAR" class="search">
+      </label>
+      <div class="top-bar">
+        <a>Market</a>
+        <a>Activity</a>
+        <a>Login</a>
+        <a><img src="images/pc/ico-2.png"></a>
+        <a><img src="images/pc/ico-3.png"></a>
+      </div>
+    </header>
+    <article>
+      <section class="main-visual">
+        <div class="m-cont">
+          <div class="main-copy">
+            <p class="tit">
+              BJ와 함께한 순간을 소유하세요!
+              <s>아프리카TV 의 디지털 콘텐츠 마켓플레이스</s>
+            </p>
+            <p class="sub-tit">Own a moment with BJ, Afreeca TV's digital content marketplace.</p>
+          </div>
+          <div class="m-btn">
+            <a href="">> Serch Data</a>
+            <a href="">> Make Contents</a>
+          </div>
+          <a href="" class="go-home">> Get featured on the homepage</a>
+        </div>
+        <div class="main-content">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <video muted playsinline>
+                  <source src="images/test.mp4" type="video/mp4">
+                </video>
+                <div class="profile">
+                  <img src="images/pc/profile-s.png">
+                  <div class="p-info">
+                    <p><s>Alto’s Odyssey</s> &nbsp; | &nbsp; Hong, Gildong</p>
+                    <p>AltosOdyssey@yahoo.com</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-pagination"></div>
+          </div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-button-next"></div>
+        </div>
+      </section>
+    </article>
+  </div>
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    const swiper = new Swiper('.swiper', {
+      pagination: {
+        el: '.swiper-pagination',
+      },
+      navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+      },
+    });
+  </script>
+</body>
+</html>
