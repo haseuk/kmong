@@ -1,0 +1,7 @@
+/* gnb font */
+@font-face { 
+	font-family: 'S-CoreDream-5medium'; 
+	font-style: normal;
+	src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_six@1.2/S-CoreDream-5Medium.woff') format('woff'); 
+	font-weight: 500;
+}
