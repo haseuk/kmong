@@ -7,21 +7,41 @@
   <title>Document</title>
   <link href="https://fonts.googleapis.com/css?family=Noto+Sans+KR&display=swap" rel="stylesheet">
   <style>
-    h1, p { margin: 0; }
+    body, h1, p { font-size:0; margin: 0; margin-block: 0;}
     textarea { outline: none; -webkit-appearance:none; -webkit-border-radius:0; border:0; resize:none; }
-    .popup { position: fixed; left: 0; top:0; width: 100%; height: 100%; display: none; font-family: "Noto Sans KR", sans-serif; }
+    .popup { position: fixed; left: 0; top:0; width: 100%; height: 100%; display: none; font-family: "Noto Sans KR", sans-serif; z-index: 100; }
     .popup.on { display: block; }
     .popup .dim { position: absolute; left: 0; top:0; width: 100%; height:100%; background: #000; opacity: 0.4; }
-    .popup .popup-inner { width: 100%; background: #fff; position: absolute; left:0; top:50%; transform: translateY(-50%); border-radius:2.778vw; }
-    .popup .popup-inner .wrap { padding:7.222vw 6.806vw 7.917vw; box-sizing: border-box; }
-    .popup .popup-inner .wrap h1 img { width:4.444vw; height: 4.444vw; display: inline-block; vertical-align:top; }
-    .popup .popup-inner .wrap h1 p { font-size:4.167vw; font-weight: 700; line-height: 1; display: inline-block; vertical-align: top; margin-left:2.222vw; }
-    .popup .popup-inner .wrap .cont .txt { font-size: 3.611vw; margin-top:7.5vw; }
-    .popup .popup-inner .wrap .cont textarea { font-size: 3.333vw; color:#404040; line-height:5.139vw; word-break: keep-all; font-family: "Noto Sans KR", sans-serif; width: 100%; border: 0.278vw solid #5d3d92; padding: 3.889vw; box-sizing: border-box; border-radius: 0.972vw; margin-top: 3.75vw; display: block; }
-    .popup .popup-inner .wrap .cont .notice { font-size: 3.333vw; color:#a0a0a0; margin-top: 2.778vw; }
-    .popup .popup-inner .wrap .cont .notice img { width: 2.778vw; height: 2.778vw; display: inline-block; }
-    .popup .popup-inner .enroll-btn { font-size: 4.722vw; color:#fff; width: 100%; height:15.833vw; line-height: 15.833vw; text-align: center; background: #5d3d92; border: 1px solid #000; box-sizing: border-box; display: block; border-bottom-left-radius: 2.778vw; border-bottom-right-radius: 2.778vw; cursor: pointer; }
-    .popup .popup-inner .close { width:3.889vw; height: 3.889vw; background: url("img/close.png"); background-size: contain; position: absolute; right: 6.806vw; top: 7.222vw; cursor: pointer; }
+    .popup .popup-inner { width: 720px; top:290px; border-radius:20px; position: absolute; background: #fff; left:50%; transform: translateX(-50%);}
+    .popup .popup-inner .wrap { padding:52px 49px; }
+    .popup .popup-inner .wrap h1 img { width:32px; height: 32px; display: inline-block; vertical-align:middle; }
+    .popup .popup-inner .wrap h1 p { font-size:30px; font-weight: 700; line-height: 32px; display: inline-block; vertical-align: middle; margin-left:15px; }
+    .popup .popup-inner .wrap .cont { margin-top:50px; }
+    .popup .popup-inner .wrap .cont .txt { font-size: 26px; }
+    .popup .popup-inner .wrap .cont textarea { font-size: 24px; color:#404040; line-height:38px; word-break: keep-all; font-family: "Noto Sans KR", sans-serif; width: 100%; border: 2px solid #5d3d92; padding: 27px; box-sizing: border-box; border-radius: 7px; margin-top: 25px; display: block; }
+    .popup .popup-inner .wrap .cont .notice { font-size: 24px; color:#a0a0a0; margin-top: 20px; }
+    .popup .popup-inner .wrap .cont .notice img { width: 20px; height: 20px; display: inline-block; }
+    .popup .popup-inner .enroll-btn { width: 100%; height:114px; line-height: 114px; text-align: center; background: #5d3d92; border: 1px solid #000; box-sizing: border-box; display: block; border-bottom-left-radius: 20px; border-bottom-right-radius: 20px; cursor: pointer; }
+    .popup .popup-inner .enroll-btn p { font-size: 34px; color:#fff; line-height: 32px; display: inline-block; vertical-align: middle; }
+    .popup .popup-inner .enroll-btn img { width: 32px; height: 32px; vertical-align: middle; margin-right: 10px; }
+    .popup .popup-inner .close { width:28px; height: 28px; background-image: url("img/close.png"); background-size: contain; background-repeat: no-repeat; position: absolute; right: 50px; top: 52px; cursor: pointer; }
+
+    @media screen and (max-width: 720px) {
+      .popup .popup-inner { width: 100%; background: #fff; position: absolute; left:0; top:50%; transform: translateY(-50%); border-radius:2.778vw; }
+      .popup .popup-inner .wrap { padding:7.222vw 6.806vw 7.917vw; box-sizing: border-box; }
+      .popup .popup-inner .wrap h1 img { width:4.444vw; height: 4.444vw; display: inline-block; vertical-align:top; }
+      .popup .popup-inner .wrap h1 p { font-size:4.167vw; font-weight: 700; line-height: 1; display: inline-block; vertical-align: top; margin-left:2.222vw; }
+      .popup .popup-inner .wrap .cont { margin-top:6.9vw; }
+      .popup .popup-inner .wrap .cont .txt { font-size: 3.611vw; }
+      .popup .popup-inner .wrap .cont textarea { font-size: 3.333vw; color:#404040; line-height:5.139vw; word-break: keep-all; font-family: "Noto Sans KR", sans-serif; width: 100%; border: 0.278vw solid #5d3d92; padding: 3.889vw; box-sizing: border-box; border-radius: 0.972vw; margin-top: 3.75vw; display: block; }
+      .popup .popup-inner .wrap .cont .notice { font-size: 3.333vw; color:#a0a0a0; margin-top: 2.778vw; }
+      .popup .popup-inner .wrap .cont .notice img { width: 2.778vw; height: 2.778vw; display: inline-block; }
+      .popup .popup-inner .enroll-btn { width: 100%; height:15.833vw; line-height: 15.833vw; text-align: center; background: #5d3d92; border: 1px solid #000; box-sizing: border-box; display: block; border-bottom-left-radius: 2.778vw; border-bottom-right-radius: 2.778vw; cursor: pointer; }
+      .popup .popup-inner .enroll-btn p { font-size: 4.722vw; color:#fff; line-height: 4.444vw; display: inline-block; vertical-align: middle; }
+      .popup .popup-inner .enroll-btn img { width:4.444vw; height: 4.444vw; display: inline-block; vertical-align:middle; }
+      .popup .popup-inner .close { width:3.889vw; height: 3.889vw; background-image: url("img/close.png"); background-size: contain; background-repeat: no-repeat; position: absolute; right: 6.806vw; top: 7.222vw; cursor: pointer; }
+    }
+
   </style>
 </head>
 <body>
@@ -36,7 +56,7 @@
           <p class="notice"><img src="img/ico-ex.png" alt=""> 인스타그램 링크는 등록 후 변경할 수 없습니다.</p>
         </div>
       </div>
-      <a class="enroll-btn">링크 등록</a>
+      <a class="enroll-btn"><img src="img/ico-ins.png" alt=""><p>링크 등록</p></a>
       <a class="close"></a>
     </div>
   </div>
