@@ -1,0 +1,1142 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta property="og:image" content="/images/thumb.jpg">
+  <link rel="icon" href="/img/icon_48x48.png">
+  <link rel="shortcut icon" href="/img/icon_72x72.png">
+  <link rel="apple-touch-icon-precomposed" href="/img/icon_144x144.png">
+  <link rel="apple-touch-icon-precomposed" sizes="144*144" rel="/img/icon_144x144.png">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <meta http-equiv="imagetoolbar" content="no">
+  <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+  <title>셀럽플러스</title>
+  <link rel="stylesheet" href="https://celebad.co.kr/css/default.css?ver=191202">
+  <link rel="stylesheet" href="https://celebad.co.kr/js/font-awesome/css/font-awesome.min.css?ver=191202">
+  <link rel="stylesheet" href="https://celebad.co.kr/js/swiper/swiper.min.css?ver=191202">
+  <!--[if lte IE 8]>
+  <script src="https://celebad.co.kr/js/html5.js"></script>
+  <![endif]-->
+  <script>
+    // 자바스크립트에서 사용하는 전역변수 선언
+    var g5_url       = "https://celebad.co.kr";
+    var g5_bbs_url   = "https://celebad.co.kr/bbs";
+    var g5_is_member = "";
+    var g5_is_admin  = "";
+    var g5_is_mobile = "";
+    var g5_bo_table  = "";
+    var g5_sca       = "";
+    var g5_editor    = "";
+    var g5_cookie_domain = "";
+    var g5_shop_url = "https://celebad.co.kr/shop";
+  </script>
+  <script src="https://celebad.co.kr/js/jquery-1.12.4.min.js?ver=191202"></script>
+  <script src="https://celebad.co.kr/js/jquery-migrate-1.4.1.min.js?ver=191202"></script>
+  <script src="https://celebad.co.kr/js/jquery.menu.js?ver=191202"></script>
+  <script src="https://celebad.co.kr/js/common.js?ver=191202"></script>
+  <script src="https://celebad.co.kr/js/wrest.js?ver=191202"></script>
+  <script src="https://celebad.co.kr/js/placeholders.min.js?ver=191202"></script>
+  <script src="https://celebad.co.kr/js/swiper/swiper.min.js?ver=191202"></script>
+</head>
+<body>
+<link rel="stylesheet" href="/js/swiper/swiper.min.css" />
+<script src="/js/swiper/swiper.min.js"></script>
+
+<style>
+  @media only screen and (max-width: 768px) { /* viewport width : 767 */
+    #hd_banner, #hd{display:none;}
+  }
+</style>
+
+<div id="hd_banner">
+  <!-- Slider main container -->
+  <div class="swiper-container hd-banner-container">
+    <!-- Additional required wrapper -->
+    <div class="swiper-wrapper">
+      <div class="swiper-slide"><img src="https://celebad.co.kr/data/file/ad_banner/thumb-3542486265_iVgrB9d0_65aa6025ae8f5d3c050d2ea8dcc5eca8179a8f97_1920x80.png" alt="정보좀여"></div>
+      <div class="swiper-slide"><img src="https://celebad.co.kr/data/file/ad_banner/thumb-3542486265_WpPL7bTg_fee05fbc34fc4b5d580ee6d23955a8b1dab919bb_1920x80.png" alt="상세입력이벤트"></div>
+      <div class="swiper-slide"><img src="https://celebad.co.kr/data/file/ad_banner/thumb-3542486265_xLseCmq2_ad8753cb450131c78910df65ed2bd8901601995d_1920x80.png" alt="리그램"></div>
+    </div>
+    <!-- If we need pagination -->
+    <div class="swiper-pagination hd-banner-pagination"></div>
+  </div>
+</div>
+
+<!-- 상단 시작 { -->
+<!-- } 상단 끝 -->
+
+<script>
+  $(function(){
+    $('.gnb_open').click(function(){
+      $('#mo_gnb').stop().fadeIn(200);
+    });
+    $('.gnb_close').click(function(){
+      $('#mo_gnb').stop().fadeOut(200);
+    });
+
+    $('.mb_menu li a').click(function(){
+      $('#mo_gnb').stop().fadeOut(200);
+    });
+  });
+</script>
+
+
+<div class="member_pop">
+  <div class="login_wrap">
+    <h1>로그인</h1>
+    <p>아이디와 비밀번호를 입력해주세요</p>
+    <form name="flogin" action="https://celebad.co.kr/bbs/login_check.php" onsubmit="return flogin_submit(this);" method="post">
+      <input type="hidden" name="url" value="%2Fadvert_pdf.php">
+
+      <fieldset id="login_fs">
+        <legend>회원로그인</legend>
+        <label for="login_id" class="sound_only">이메일 아이디<strong class="sound_only"> 필수</strong></label>
+        <input type="text" name="mb_id" id="login_id" required class="frm_input" size="20" maxLength="30" placeholder="이메일">
+        <label for="login_pw" class="sound_only">비밀번호<strong class="sound_only"> 필수</strong></label>
+        <input type="password" name="mb_password" id="login_pw" required class="frm_input" size="20" maxLength="20" placeholder="비밀번호" autocomplete="false">
+        <button type="submit" class="btn_submit">로그인</button>
+        <div id="login_info">
+          <!-- <div class="login_if_auto chk_box">
+            <input type="checkbox" name="auto_login" id="login_auto_login" class="selec_chk">
+            <label for="login_auto_login"><span></span> 자동로그인</label>
+          </div> -->
+          <div class="login_if_lpl">
+            <a href="https://celebad.co.kr/bbs/password_lost.php" target="_blank" id="login_password_lost">아이디·비밀번호 찾기</a>
+          </div>
+        </div>
+        <div class="btn_register">
+          <a href="https://celebad.co.kr/bbs/register_form.php?pass=1">광고주 즉시가입</a>
+          <span>자동견적서 / 추천 셀럽 리스트가 궁금하다면? </span>
+        </div>
+      </fieldset>
+    </form>
+    <div class="member_cls"><img src="/images/btn_login_close.png" alt="로그인창 닫기"></div>
+  </div>
+</div>
+
+<div class="charge_pop">
+  <div class="charge_wrap">
+    <h2>충전하기</h2>
+    <div class="celeb_money">
+      내 보유 셀럽머니
+      <strong>0원</strong>
+    </div>
+    <div class="charge_form">
+      <form id="fwrite" name="fwrite" action="/bbs/write_update.php" method="post" autocomplete="off" class="clearfix" onsubmit="return confirm('충전하시겠습니까?');">
+        <input type="hidden" name="bo_table" value="charge_adm">
+        <input type="hidden" name="wr_subject" value="()님의 충전 요청">
+        <input type="hidden" name="wr_content" value="()님의 충전 요청">
+        <input type="hidden" name="wr_name" value="">
+        <div class="formbox">
+          <label for="much"><img src="/images/charge_coin.png" alt="" class="img27"> 충전희망금액</label>
+          <select name="wr_1" id="wr_1" required>
+            <option value="">선택하세요</option>
+            <option value="10만 원">10만 원</option>
+            <option value="20만 원">20만 원</option>
+            <option value="50만 원">50만 원</option>
+            <option value="100만 원">100만 원</option>
+          </select>
+        </div>
+        <div class="formbox more">
+          <p><img src="/images/charge_geja.png" alt="" class="img27"> 계좌정보</p>
+          <div class="form_desc">
+            <small>* 입금 후 반드시 셀럽플러스 고객센터로 연락바랍니다.</small>
+            <p><strong>은행</strong> : 국민은행 <strong>계좌번호</strong> : 000000-00-000000 <strong>예금주</strong> : 셀럽플러스</p>
+          </div>
+        </div>
+        <div class="formbox">
+          <input type="checkbox" name="charge_agree" id="charge_agree" class="charge_chk" value="agree" required><label class="charge_chk2" for="charge_agree"></label>
+          <label for="charge_agree" class="agree_label">결제 내용을 확인하였고 <a href="#" class="cyakgwan_open">유료 서비스 약관</a>에 동의합니다.</label>
+        </div>
+        <input type="submit" value="충전하기" class="sub_btn">
+      </form>
+    </div>
+    <div class="charge_cls"><img src="/images/btn_member_close.png" alt="충전하기창 닫기"></div>
+  </div>
+  <div class="cyakgwan_pop">
+    <div class="cash_yakgwan">
+      <h2>유료 서비스 약관</h2>
+      <textarea readonly id="cyakgwan">유료 서비스 약관을 입력합니다.
+
+테스트</textarea>
+      <div class="cyakgwan_cls"><img src="/images/btn_member_close.png" alt="유료약관창 닫기"></div>
+    </div>
+  </div>
+</div>
+
+
+<script>
+  const headBanner = new Swiper('.hd-banner-container', {
+    speed: 400,
+    spaceBetween: 100,
+    effect: 'fade',
+    pagination: {
+      el: '.hd-banner-pagination',
+      type: 'bullets',
+    },
+  });
+
+  jQuery(function($){
+    // 회원창 열기
+    $(".btn_member").on("click", function(){
+      $(".member_pop").show();
+    });
+
+    // 회원창 닫기
+    $(document).mouseup(function (e){
+      var container = $(".member_pop");
+      if( container.has(e.target).length === 0)
+        container.hide();
+    });
+
+    // 회원창 닫기
+    $('.member_cls').click(function(){
+      $('.member_pop').hide();
+    });
+
+    // 충전하기창 열기
+    $(".btn_charge").on("click", function(){
+      $(".charge_pop").show();
+    });
+
+    // 충전하기창 닫기
+    $(document).mouseup(function (e){
+      var container = $(".charge_pop");
+      if( container.has(e.target).length === 0)
+        container.hide();
+    });
+
+    // 충전하기창 닫기
+    $('.charge_cls').click(function(){
+      $('.charge_pop').hide();
+    });
+
+    // 유료서비스 약관창 열고닫기
+    $('.cyakgwan_open').click(function(){
+      $('.cyakgwan_pop').show();
+    });
+
+    $('.cyakgwan_cls').click(function(){
+      $('.cyakgwan_pop').hide();
+    });
+    $(document).mouseup(function (f){
+      var container = $(".cyakgwan_pop");
+      if( container.has(f.target).length === 0)
+        container.hide();
+    });
+  });
+
+  function flogin_submit(f)
+  {
+    if( $( document.body ).triggerHandler( 'login_sumit', [f, 'flogin'] ) !== false ){
+      return true;
+    }
+    return false;
+  }
+</script>
+
+<hr>
+
+<!-- 콘텐츠 시작 { -->
+<div id="wrapper">
+
+  <script type="text/javascript" src="/datepicker/jquery-ui.min.js"></script>
+  <link rel="stylesheet" href="/datepicker/jquery-ui.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <style>
+
+    /*sub*/
+
+    /*sub*/
+    .container {max-width: 1200px;;padding-right: 0px;padding-left: 0px;margin-right: auto;margin-left: auto;}
+    .sub_box01 {position:relative;}
+    .sub_title {color:#181818;font-size:40px;text-align:center;line-height:1.3em;font-weight:bold;
+      padding:90px 0 45px;}
+
+
+    .overflow:after {display:block;clear:both;content:"";}
+    #advert_log .sub_tab {position:relative}
+    #advert_log .sub_tab {position:relative}
+    #advert_log .sub_tab ul {
+      zoom: 1;
+    }
+    #advert_log .sub_tab ul:after {}
+    #advert_log .sub_tab ul li {float:left;width:50%;}
+    #advert_log .sub_tab li a {
+      display: block;
+      position: relative;
+      height: 70px;
+      margin-left: -1px;
+      background-color: #fff;
+      border: 1px solid #fff;
+      border-bottom: 1px solid #000;
+      font-size: 18px;
+      color: #939393;
+      line-height: 68px;
+      text-align: center;
+      z-index: 1;
+    }
+    #advert_log .sub_tab li a.on {
+      margin: 0 0 0 -1px;
+      border: 1px solid #000;
+      background: #fff;
+      z-index: 2;
+      border-bottom-color: #fff;
+      color: #000;
+      font-weight: bold;
+    }
+    .sub01_part01 {padding:50px 0 70px;}
+
+    .log_top_wrap {position:relative;padding-bottom:48px;}
+    .log_top_wrap:after {display:block;clear:both;content:"";}
+
+    .round_box {float:left;position:relative;width:50%;}
+    .round_box_in { position:relative;border:1px solid #e2e2e2;border-radius:30px;padding-left:150px;}
+    .round_box01 {padding-right:10px;}
+    .round_box01 .round_box_in {padding-right:45px;}
+    .round_box02 {padding-left:10px;}
+    .left_roundbox {position:absolute;left:0;top:0;border-radius:30px;line-height:60px;width:150px;text-align:center;color:#fff;font-size:17px;
+      background-color:#633b97;}
+    #celeb_money {float:right;line-height:58px;font-size:20px;color:#000;font-weight:bold;}
+    .form_inner_box {float:left;}
+    .form_inner_box input.frm_date {
+      width: 160px;;
+      height: 58px;
+      background: #fff;
+      border: 0px solid #dee2e6;
+      padding-left: 22px;
+      font-size: 17px;
+      color:#c1c1c1;
+    }
+    .form_inner_box span {display:inline-block;   font-size: 17px;line-height:58px;
+      color:#c1c1c1;padding:0 5px;}
+    .submit_box {position:absolute;right:0;}
+    .this_submit {width:98px;line-height:60px;border-radius:30px;text-align:center;font-size:17px;border:0;background-color:#eaeaea}
+
+    .ad_gall_box {position:relative;;border-radius:20px;background-color:#f5f5f5;margin-bottom:55px;}
+    .ad_gall_box_in {display:table;padding:20px}
+    .ad_gall_img {display:table-cell;vertical-align:middle;}
+    .ad_gall_con {display:table-cell;vertical-align:middle;padding-left:25px;text-align:left;}
+    .ad_gall_date {font-size:16px;color:#6c2cbf;line-height:1.2em;padding-bottom:10px;}
+    .ad_gall_subject {font-size:20px;color:#000;line-height:1.2em;padding-bottom:15px;font-weight:500;}
+    .ad_gall_text li {float:left;border-left:1px solid #e3e3e3;padding-left:20px;line-height:20px;font-size:17px;font-weight:300}
+    .ad_gall_text li:first-child {padding-left:0;}
+    .ad_gall_text li span {font-weight:bold;display:inline-block;margin-right:12px}
+
+
+    .btn_box01 {text-align:Center;padding-top:36px;}
+
+    .down_btn01 {display:block;width:252px;height:60px;line-height:60px;background-image:url(/images/down_btn_bg01.png);background-repeat:no-repeat;background-position:Center;
+      text-align:Center;color:#fff;font-weight:500;font-size:17px;margin:0 auto;background-size:cover;
+    }
+
+    .ad_bar_wrap {position:relative;width:100%;height:100px;border-radius:50px;margin:15px 0;}
+    .ad_bar_wrap01 {background-image:url(/images/my_bar.png);background-repeat:no-repeat;background-size:cover;}
+    .ad_bar_box_in {display:table;width:100%;height:100px;background-image:url(/images/ad_bar_bg.png)}
+    .ad_bar_box {display:table-cell;position:relative;width:25%;text-align:Center;vertical-align:middle}
+    .ad_bar_wrap01 .ad_bar_box.bar_bg {
+      background-image: url(/images/my_line01.png);
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+    .ad_bar_wrap02 .ad_bar_box.bar_bg {
+      background-image: url(/images/my_line02.png);
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+    .ad_bar_wrap01 .ad_bar_box.bar_bg {background-color:unset;}
+    .ad_bar_text01 {font-size:16px;line-height:1.4em;}
+    .ad_bar_text02 {font-size:25px;line-height:1.4em;font-weight:bold}
+    .ad_bar_wrap01 .ad_bar_text01,.ad_bar_wrap01 .ad_bar_text02 {color:#fff;}
+
+    .ad_chart_wrap {position:relative;border:1px solid #633b97;padding:50px;}
+    .chart_title {color:#181818;font-size:30px;text-align:center;line-height:1.3em;font-weight:bold;}
+    .chart_tab {text-align:Center;padding:35px 0;}
+    .chart_tab ul {display:inline-block;}
+    .chart_tab ul li {float:left;padding:0 10px;}
+    .chart_tab ul li a {display:block;width:120px;line-height:42px;text-align:Center;color:#141414;border-radius:21px;background-color:#f4f4f4;font-size:15px;}
+    .chart_tab ul li a.on {color:#fff;background-color:#141414;}
+
+    .chart_box {display:none;}
+    .chart_box img {}
+    .chart_box.show {display:block;}
+
+    .sub01_celeb {width: 100%;background: #fafafa;padding: 70px 0 100px;}
+    .sub01_celeb_title {text-align: center;font-size: 30px;font-weight: bold;line-height: 1;margin-bottom: 60px;}
+    .sub01_total_fw {width: 590px;height: 60px;background: #fff;border: 1px solid #e2e2e2;border-radius: 30px;overflow: hidden;margin: 0 auto 50px;}
+    .sub01_total_fw dt {float: left;width: 150px;height: 58px;line-height: 58px;background: #633b97;border-radius: 30px;text-align: center;font-size: 17px;color: #fff;}
+    .sub01_total_fw dd {float: right;margin-right: 30px;line-height: 58px;font-size: 15px;}
+    .sub01_total_fw dd strong {font-size: 20px;}
+    .sub01_celeb_rank {margin-bottom: 50px;}
+    .sub01_celeb_rank li {float: left;width: 235px;height: 335px;border-radius: 20px;border: 1px solid #ebebeb;margin-right: 6px;overflow: hidden;}
+    .sub01_celeb_rank li:nth-child(1) {background: url(/images/advert_celeb_num1.png) no-repeat 14px 14px #fff;}
+    .sub01_celeb_rank li:nth-child(2) {background: url(/images/advert_celeb_num2.png) no-repeat 14px 14px #fff;}
+    .sub01_celeb_rank li:nth-child(3) {background: url(/images/advert_celeb_num3.png) no-repeat 14px 14px #fff;}
+    .sub01_celeb_rank li:nth-child(4) {background: url(/images/advert_celeb_num4.png) no-repeat 14px 14px #fff;}
+    .sub01_celeb_rank li:last-child {background: url(/images/advert_celeb_num5.png) no-repeat 14px 14px #fff;margin-right: 0;}
+    .sub01_celeb_rank .celeb_profile {width: 160px;height: 160px;margin: 40px auto 20px;border-radius: 50%;background: #ddd;}
+    .sub01_celeb_rank .celeb_name {text-align: center;font-size: 18px;font-weight: 500;line-height: 1;}
+    .sub01_celeb_rank .celeb_contribution {background: #f5f5f5;height: 75px;text-align: center;font-size: 16px;color: #a1a1a1;margin-top: 20px;font-weight: 400;padding-top: 12px;}
+    .sub01_celeb_rank .celeb_contribution strong {display: block;font-size: 20px;color: #633b97;}
+
+    .board_list table {border-collapse:collapse;width:100%;}
+    .board_list table thead th {padding:20px 0;background:#f6f6f6;border-top:1px solid #633b97;border-bottom:1px solid #d7d7d7;color:#848484;font-size:17px;
+      font-weight:500;
+    }
+    .board_list table tbody tr td {padding:20px 0;background:#fff;line-height:1.3em;border-bottom:1px solid #d7d7d7;text-align:center;font-size:17px;color:#000;font-weight:300;}
+    .board_list table tbody tr:last-child td {border-bottom:2px solid #633b97}
+
+    .board_list th.th_bg01 {
+      background-image: url(/images/board_top_th_bg.png);
+      background-repeat: no-repeat;
+      background-position: right center;
+    }
+
+    @media only screen and (max-width: 1280px) { /* viewport width : 768 */
+
+      .sub_title {font-size:3.13vw;padding:7.03vw 0 3.52vw;}
+      #advert_log .sub_tab li a {
+        height: 5.469vw;
+        font-size: 1.41vw;
+        line-height: 5.313vw;
+      }
+      .sub01_part01 {padding:3.906vw 0 5.469vw;}
+      .log_top_wrap {padding-bottom:3.750vw;}
+
+
+      .round_box {width:50%;}
+      .round_box_in { border:1px solid #e2e2e2;border-radius:2.344vw;padding-left:11.719vw;}
+      .round_box01 {padding-right:0.781vw;}
+      .round_box01 .round_box_in {padding-right:3.516vw;}
+      .round_box02 {padding-left:0.781vw;}
+      .left_roundbox {left:0;top:0;border-radius:2.344vw;line-height:4.688vw;width:11.719vw;font-size:1.328vw;
+      }
+      #celeb_money {line-height:4.531vw;font-size:1.563vw;}
+      .form_inner_box {}
+      .form_inner_box input.frm_date {
+        width: 12.500vw;;
+        height: 4.531vw;
+        background: #fff;
+        border: 0.000vw solid #dee2e6;
+        padding-left: 1.719vw;
+        font-size: 1.328vw;
+
+      }
+      .form_inner_box span {   font-size: 1.328vw;line-height:4.531vw;
+        padding:0 0.391vw;}
+      .this_submit {width:7.656vw;line-height:4.688vw;border-radius:2.344vw;font-size:1.328vw;border:0;background-color:#eaeaea}
+      .ad_gall_box {;border-radius:1.563vw;margin-bottom:4.297vw;}
+      .ad_gall_box_in {padding:1.563vw}
+      .ad_gall_img {width:12.500vw}
+      .ad_gall_con {padding-left:1.953vw;}
+      .ad_gall_date {font-size:1.250vw;line-height:1.2em;padding-bottom:0.781vw;}
+      .ad_gall_subject {font-size:1.563vw;line-height:1.2em;padding-bottom:1.172vw;}
+      .ad_gall_text li {border-left:1px solid #e3e3e3;padding-left:1.563vw;line-height:1.563vw;font-size:1.328vw;}
+      .ad_gall_text li span {margin-right:0.938vw}
+
+      .btn_box01 {padding-top:2.813vw;}
+
+      .down_btn01 {width:19.688vw;height:4.688vw;line-height:4.688vw;font-size:1.328vw;margin:0 auto;}
+
+
+      .ad_bar_wrap {width:100%;height:7.813vw;border-radius:3.906vw;margin:1.172vw 0;}
+      .ad_bar_wrap01 {background-image:url(/images/my_bar.png);}
+      .ad_bar_wrap02 {border:1px solid #d9d9d9}
+      .ad_bar_box_in {width:100%;height:7.813vw;background-image:url(/images/ad_bar_bg.png)}
+      .ad_bar_box {width:25%;vertical-align:middle}
+
+
+      .ad_bar_wrap01 .ad_bar_box.bar_bg {}
+      .ad_bar_text01 {font-size:1.250vw;line-height:1.4em;}
+      .ad_bar_text02 {font-size:1.953vw;line-height:1.4em;font-weight:bold}
+      .ad_bar_wrap01 .ad_bar_text01,.ad_bar_wrap01 .ad_bar_text02 {}
+
+      .ad_chart_wrap {border:1px solid #633b97;padding:3.9063vw 1.9531vw;}
+      .chart_title {font-size:2.344vw;line-height:1.3em;}
+      .chart_tab {padding:2.734vw 0;}
+      .chart_tab ul {}
+      .chart_tab ul li {padding:0 0.781vw;}
+      .chart_tab ul li a {width:9.375vw;line-height:3.281vw;border-radius:1.641vw;font-size:1.172vw;}
+
+
+      .sub01_celeb {width: 100%;background: #fafafa;padding: 5.4688vw 0 7.8125vw;}
+      .sub01_celeb_title {font-size: 2.3438vw;line-height: 1;margin-bottom: 4.6875vw;}
+      .sub01_total_fw {width: 46.0938vw;height: 4.6875vw;background: #fff;border: 0.0781vw solid #e2e2e2;border-radius: 2.3438vw;margin: 0 auto 3.9063vw;}
+      .sub01_total_fw dt {width: 11.7188vw;height: 4.5313vw;line-height: 4.5313vw;background: #633b97;border-radius: 2.3438vw;font-size: 1.3281vw;}
+      .sub01_total_fw dd {margin-right: 2.3438vw;line-height: 4.5313vw;font-size: 1.1719vw;}
+      .sub01_total_fw dd strong {font-size: 1.5625vw;}
+      .sub01_celeb_rank {margin-bottom: 3.9063vw;}
+      .sub01_celeb_rank li {width: 18.3594vw;height: 26.1719vw;border-radius: 1.5625vw;border: 0.0781vw solid #ebebeb;margin-right: 0.4688vw;}
+      .sub01_celeb_rank li:nth-child(1) {background: url(/images/advert_celeb_num1.png) no-repeat 1.0938vw 1.0938vw #fff;}
+      .sub01_celeb_rank li:nth-child(2) {background: url(/images/advert_celeb_num2.png) no-repeat 1.0938vw 1.0938vw #fff;}
+      .sub01_celeb_rank li:nth-child(3) {background: url(/images/advert_celeb_num3.png) no-repeat 1.0938vw 1.0938vw #fff;}
+      .sub01_celeb_rank li:nth-child(4) {background: url(/images/advert_celeb_num4.png) no-repeat 1.0938vw 1.0938vw #fff;}
+      .sub01_celeb_rank li:last-child {background: url(/images/advert_celeb_num5.png) no-repeat 1.0938vw 1.0938vw #fff;margin-right: 0;}
+      .sub01_celeb_rank .celeb_profile {width: 12.5000vw;height: 12.5000vw;margin: 3.1250vw auto 1.5625vw;border-radius: 50%;background: #ddd;}
+      .sub01_celeb_rank .celeb_name {font-size: 1.4063vw;line-height: 1;}
+      .sub01_celeb_rank .celeb_contribution {background: #f5f5f5;height: 5.8594vw;font-size: 1.2500vw;margin-top: 1.5625vw;padding-top: 0.9375vw;}
+      .sub01_celeb_rank .celeb_contribution strong {font-size: 1.5625vw;}
+
+      .board_list table thead th {padding:1.563vw 0;background:#f6f6f6;border-top:1px solid #633b97;font-size:1.328vw;}
+      .board_list table tbody tr td {padding:1.563vw 0;font-size:1.328vw;}
+      .board_list table tbody tr:last-child td {border-bottom:0.156vw solid #633b97}
+
+    }
+
+
+    @media only screen and (max-width: 768px) { /* viewport width : 768 */
+      .sub_title {font-size:5.208vw;line-height:1.3em;padding:11.719vw 0 5.859vw;}
+      #advert_log .sub_tab li a {
+        height: 9.115vw;
+        margin-left: -1px;
+        font-size: 2.344vw;
+        line-height: 8.854vw;
+      }
+      #advert_log .sub_tab li a.on {
+      }
+      .sub01_part01 {padding:6.510vw 0 9.115vw;}
+
+      .log_top_wrap {padding-bottom:6.250vw;}
+      .log_top_wrap:after {clear:both;}
+      .round_box {float:none;margin:10px auto;width:100%;}
+      .round_box_in { border:1px solid #e2e2e2;border-radius:3.906vw;padding-left:19.531vw;}
+      .round_box01 {padding-right:0;}
+      .round_box01 .round_box_in {padding-right:5.859vw;}
+      .round_box02 {padding-left:0;}
+      .left_roundbox {left:0;top:0;border-radius:3.906vw;line-height:7.813vw;width:19.531vw;font-size:2.214vw;
+      }
+      #celeb_money {line-height:7.552vw;font-size:2.604vw;}
+      .form_inner_box {}
+      .form_inner_box input.frm_date {
+        width: 20.833vw;;
+        height: 7.552vw;
+        background: #fff;
+        border: 0.000vw solid #dee2e6;
+        padding-left: 2.865vw;
+        font-size: 2.214vw;
+
+      }
+      .form_inner_box span {   font-size: 2.214vw;line-height:7.552vw;
+        padding:0 0.651vw;}
+      .submit_box {right:0;}
+      .this_submit {width:12.760vw;line-height:7.813vw;border-radius:3.906vw;font-size:2.214vw;border:0;background-color:#eaeaea}
+
+      .ad_gall_box {;border-radius:2.604vw;margin-bottom:7.161vw;}
+      .ad_gall_box_in {padding:2.604vw}
+      .ad_gall_img {}
+      .ad_gall_con {padding-left:3.255vw;}
+      .ad_gall_date {font-size:2.083vw;line-height:1.2em;padding-bottom:1.302vw;}
+      .ad_gall_subject {font-size:2.604vw;line-height:1.2em;padding-bottom:1.953vw;}
+      .ad_gall_text li {border-left:1px solid #e3e3e3;padding-left:2.604vw;line-height:2.604vw;font-size:2.214vw;font-weight:300}
+      .ad_gall_text li:first-child {padding-left:0;}
+      .ad_gall_text li span {margin-right:1.563vw}
+
+      .btn_box01 {padding-top:4.688vw;}
+
+      .down_btn01 {width:32.813vw;height:7.813vw;line-height:7.813vw;background-image:url(/images/down_btn_bg01.png);
+        font-size:2.214vw;margin:0 auto;
+      }
+
+
+      .ad_bar_wrap {width:100%;height:13.021vw;border-radius:6.510vw;margin:1.953vw 0;}
+      .ad_bar_wrap01 {background-image:url(/images/my_bar.png);}
+      .ad_bar_wrap02 {border:1px solid #d9d9d9}
+      .ad_bar_box_in {width:100%;height:13.021vw;background-image:url(/images/ad_bar_bg.png)}
+      .ad_bar_box {width:25%;vertical-align:middle}
+      .ad_bar_wrap01 .ad_bar_box.bar_bg {}
+      .ad_bar_text01 {font-size:2.083vw;line-height:1.4em;}
+      .ad_bar_text02 {font-size:3.255vw;line-height:1.4em;font-weight:bold}
+      .ad_bar_wrap01 .ad_bar_text01,.ad_bar_wrap01 .ad_bar_text02 {}
+
+      .ad_chart_wrap {border:1px solid #633b97;padding:3.9063vw 1.9531vw;}
+      .chart_title {font-size:3.906vw;line-height:1.3em;}
+      .chart_tab {padding:4.557vw 0;}
+      .chart_tab ul {}
+      .chart_tab ul li {padding:0 1.302vw;}
+      .chart_tab ul li a {width:15.625vw;line-height:5.469vw;border-radius:2.734vw;font-size:1.953vw;}
+
+
+      .sub01_celeb {padding: 9.1146vw 0 13.0208vw;}
+      .sub01_celeb_title {font-size: 4.1667vw;margin-bottom: 7.8125vw;}
+      .sub01_total_fw {width: 100%;height: 9.1146vw;border-radius: 4.4271vw;margin: 0 auto 6.5104vw;}
+      .sub01_total_fw dt {width: 19.5313vw;height: 8.8542vw;line-height: 8.8542vw;border-radius: 4.4271vw;font-size: 3.1250vw;}
+      .sub01_total_fw dd {margin-right: 3.9063vw;line-height: 8.8542vw;font-size: 2.6042vw;}
+      .sub01_total_fw dd strong {font-size: 3.6458vw;}
+      .sub01_celeb_rank {width: 100%;overflow-x: scroll;margin-bottom: 6.5104vw;}
+      .sub01_celeb_rank {
+        -ms-overflow-style: none; /* IE and Edge */
+        scrollbar-width: none; /* Firefox */
+      }
+      .sub01_celeb_rank::-webkit-scrollbar {
+        display: none; /* Chrome, Safari, Opera*/
+      }
+      .sub01_celeb_rank ul {width: 169.2708vw;}
+      .sub01_celeb_rank li {width: 32.5521vw;height: 46.8750vw;border-radius: 2.6042vw;margin-right: 1.3021vw;}
+      .sub01_celeb_rank li:nth-child(1) {background: url(/images/advert_celeb_num1.png) no-repeat 1.8229vw 1.8229vw #fff;}
+      .sub01_celeb_rank li:nth-child(2) {background: url(/images/advert_celeb_num2.png) no-repeat 1.8229vw 1.8229vw #fff;}
+      .sub01_celeb_rank li:nth-child(3) {background: url(/images/advert_celeb_num3.png) no-repeat 1.8229vw 1.8229vw #fff;}
+      .sub01_celeb_rank li:nth-child(4) {background: url(/images/advert_celeb_num4.png) no-repeat 1.8229vw 1.8229vw #fff;}
+      .sub01_celeb_rank li:last-child {background: url(/images/advert_celeb_num5.png) no-repeat 1.8229vw 1.8229vw #fff;}
+      .sub01_celeb_rank .celeb_profile {width: 22.1354vw;height: 22.1354vw;margin: 5.2083vw auto 2.6042vw;}
+      .sub01_celeb_rank .celeb_name {font-size: 2.8646vw;}
+      .sub01_celeb_rank .celeb_contribution {height: 11.1979vw;font-size: 2.6042vw;margin-top: 2.6042vw;padding-top: 1.8229vw;}
+      .sub01_celeb_rank .celeb_contribution strong {font-size: 3.1250vw;}
+
+      .board_list table {width:100%;}
+      .board_list table thead th {padding:2.604vw 0;background:#f6f6f6;border-top:1px solid #633b97;border-bottom:1px solid #d7d7d7;font-size:2.214vw;}
+      .board_list table tbody tr td {padding:2.604vw 0;background:#fff;line-height:1.3em;border-bottom:1px solid #d7d7d7;font-size:2.214vw;letter-spacing:-0.9px;word-break:keep-all;}
+      .board_list table tbody tr:last-child td {border-bottom:0.260vw solid #633b97}
+      .board_list th.th_bg01 {background-image: url(/images/board_top_th_bg.png);}
+
+    }
+
+
+  </style>
+
+
+
+<!-- ******* 캠페인 09.14 ******* -->
+  <style>
+    .campaign.logo { text-align: center; margin-bottom: 30px; }
+    h3.campaign { font-size: 30px; margin-bottom: 20px; }
+    .ad_bar_wrap { background:none; border:none; }
+    .ad_bar_box_in { max-height: 100px; height: 8.333vw; background-image: url("https://celebad.co.kr/images/ad_bar_bg.png"); background-size: contain; background-repeat: no-repeat; }
+    .campaign-best { margin-bottom: 40px; }
+    .campaign-best .campaign-box { font-size: 0; text-align: center; }
+    .campaign-best .campaign-box .cell { width: 32%; text-align: center; display: inline-block; vertical-align: top; margin-right:2%; }
+    .campaign-best .campaign-box .cell:last-child { margin-right:0; }
+    .campaign-best .campaign-box .cell p { font-size: 25px; margin: 10px 0; }
+    .campaign-best .campaign-box .cell img { width: 100%; }
+    .campaign-best .campaign-box .cell .summary { text-align: left; padding-left: 25px; box-sizing: border-box; }
+    .campaign-best .campaign-box .cell .summary p { font-size: 20px; line-height: 1.4; margin: 0; }
+    @media screen and (max-width: 1280px) {
+      h3.campaign { font-size: 2.44vw; }
+      .ad_bar_wrap { height: auto;}
+      .campaign-best .campaign-box .cell p { font-size: 18px; }
+      .campaign-best .campaign-box .cell .summary { padding-left: 2vw; }
+      .campaign-best .campaign-box .cell .summary p { font-size: 15px; }
+    }
+    @media screen and (max-width: 768px) {
+      h3.campaign { font-size: 3.906vw; }
+      .campaign-best .campaign-box .cell p { font-size: 15px; }
+      .campaign-best .campaign-box .cell .summary p { font-size: 12px;}
+    }
+  </style>
+  <div class="sub_wrap" id="advert_log">
+    <div class="sub01_part01">
+      <div class="container">
+        <h1 class="campaign logo"><img src="https://celebad.co.kr/images/hd_logo.png" alt=""></h1>
+        <h3 class="campaign">캠페인 내용</h3>
+        <div class="ad_gall_box">
+          <div class="ad_gall_box_in overflow">
+            <div class="ad_gall_img"></div>
+            <div class="ad_gall_con">
+              <div class="ad_gall_date"> ~ </div>
+              <div class="ad_gall_subject"></div>
+              <div class="ad_gall_text">
+                <ul class="overflow">
+                  <li>
+                    <span>광고 예산</span> 0원
+                  </li>
+                  <li>
+                    <span>일 광고 예산</span> 0원
+                  </li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+        <!-- ******* 캠페인 09.14 추가 ******* -->
+        <div class="campaign-best">
+          <h3 class="campaign">캠페인 BEST</h3>
+          <div class="campaign-box">
+            <div class="cell">
+              <p>도달 1위</p>
+              <img src="https://celebad.co.kr/images/celeb_mix_img01.jpg" alt=""><!-- ******* 이미지 들어갈 자리 ******* -->
+              <p>도달수 <span>000</span></p>
+              <div class="summary">
+                <p>좋아요 <span>000</span></p>
+                <p>댓글수 <span>000</span></p>
+                <p>반응율 <span>000</span></p>
+              </div>
+            </div>
+            <div class="cell">
+              <p>인터렉션 1위</p>
+              <img src="https://celebad.co.kr/images/celeb_mix_img01.jpg" alt=""><!-- ******* 이미지 들어갈 자리 ******* -->
+              <p>도달수 <span>000</span></p>
+              <div class="summary">
+                <p>좋아요 <span>000</span></p>
+                <p>댓글수 <span>000</span></p>
+                <p>반응율 <span>000</span></p>
+              </div>
+            </div>
+            <div class="cell">
+              <p>ER(반응률) 1위</p>
+              <img src="https://celebad.co.kr/images/celeb_mix_img01.jpg" alt=""><!-- ******* 이미지 들어갈 자리 ******* -->
+              <p>도달수 <span>000</span></p>
+              <div class="summary">
+                <p>좋아요 <span>000</span></p>
+                <p>댓글수 <span>000</span></p>
+                <p>반응율 <span>000</span></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- ******* 캠페인 09.14 추가 ******* -->
+
+        <div class="ad_bar_wrap ad_bar_wrap01">
+          <div class="ad_bar_box_in">
+            <div class="ad_bar_box bar_bg">
+              <div class="ad_bar_text01">조회수</div>
+              <div class="ad_bar_text02">0</div>
+            </div>
+            <div class="ad_bar_box bar_bg">
+              <div class="ad_bar_text01">참여인원</div>
+              <div class="ad_bar_text02">0</div>
+            </div>
+            <div class="ad_bar_box bar_bg">
+              <div class="ad_bar_text01">팔로워</div>
+              <div class="ad_bar_text02">0</div>
+            </div>
+            <div class="ad_bar_box bar_bg">
+              <div class="ad_bar_text01">반응률</div>
+              <div class="ad_bar_text02">NAN%</div>
+            </div>
+          </div>
+        </div>
+        <div class="ad_bar_wrap ad_bar_wrap02">
+          <div class="ad_bar_box_in">
+            <div class="ad_bar_box bar_bg">
+              <div class="ad_bar_text01">좋아요</div>
+              <div class="ad_bar_text02">0</div>
+            </div>
+            <div class="ad_bar_box bar_bg">
+              <div class="ad_bar_text01">댓글</div>
+              <div class="ad_bar_text02">0</div>
+            </div>
+            <div class="ad_bar_box bar_bg">
+              <div class="ad_bar_text01">게시물</div>
+              <div class="ad_bar_text02">0</div>
+            </div>
+            <div class="ad_bar_box bar_bg">
+              <div class="ad_bar_text01">도달</div>
+              <div class="ad_bar_text02">0</div>
+            </div>
+          </div>
+        </div>
+        <div class="ad_chart_wrap">
+          <div class="chart_title">캠페인 기간 데이터</div>
+          <div class="chart_tab">
+            <ul>
+              <li><a class="on" href="javascript:;;" show_chart="chart01">도달</a></li>
+              <li><a href="javascript:;;" show_chart="chart02">조회</a></li>
+              <li><a href="javascript:;;" show_chart="chart03">반응</a></li>
+            </ul>
+          </div>
+          <div class="show_chart">
+            <div class="chart_box chart01 show">
+              <canvas id="chart_no1"></canvas>
+            </div>
+            <div class="chart_box chart02">
+              <canvas id="chart_no2"></canvas>
+            </div>
+            <div class="chart_box chart03">
+              <canvas id="chart_no3"></canvas>
+            </div>
+          </div>
+        </div>
+
+
+
+
+      </div>
+    </div>
+
+
+    <div class="sub01_celeb">
+      <div class="container">
+        <div class="sub01_celeb_title">참여 셀럽 리스트</div>
+
+        <div class="sub01_total_fw">
+          <dl class="clearfix">
+            <dt>총 팔로워 수</dt>
+            <dd><strong>0</strong> 명</dd>
+          </dl>
+        </div>
+
+        <div class="sub01_celeb_rank">
+          <ul class="clearfix">
+          </ul>
+        </div>
+
+        <div class="sub01_celeb_list board_list">
+          <table>
+            <thead>
+            <tr>
+              <th>No</th>
+              <th>참여셀럽</th>
+              <th>인스타그램 URL</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="sub01_celeb">
+      <div class="container">
+        <div class="sub01_celeb_title">좋아요 TOP 5</div>
+
+        <div class="sub01_total_fw">
+          <dl class="clearfix">
+            <dt>총 팔로워 수</dt>
+            <dd><strong>0</strong> 명</dd>
+          </dl>
+        </div>
+
+        <div class="sub01_celeb_rank">
+          <ul class="clearfix">
+          </ul>
+        </div>
+
+        <div class="sub01_celeb_list board_list">
+          <table>
+            <thead>
+            <tr>
+              <th>No</th>
+              <th>참여셀럽</th>
+              <th>인스타그램 URL</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+    <div class="sub01_celeb">
+      <div class="container">
+        <div class="sub01_celeb_title">댓글 TOP 5</div>
+
+        <div class="sub01_total_fw">
+          <dl class="clearfix">
+            <dt>총 팔로워 수</dt>
+            <dd><strong>0</strong> 명</dd>
+          </dl>
+        </div>
+
+        <div class="sub01_celeb_rank">
+          <ul class="clearfix">
+          </ul>
+        </div>
+
+        <div class="sub01_celeb_list board_list">
+          <table>
+            <thead>
+            <tr>
+              <th>No</th>
+              <th>참여셀럽</th>
+              <th>인스타그램 URL</th>
+            </tr>
+            </thead>
+            <tbody>
+            </tbody>
+          </table>
+
+        </div>
+      </div>
+    </div>
+
+
+  </div>
+  <script>
+
+    var chart1 = document.getElementById('chart_no1');
+
+    const data1 = {
+      labels: [
+      ],
+
+      datasets: [
+        {
+          label: '신규',
+          data: [
+          ],
+          borderColor: "#ff1cb3",
+          yAxisID: 'y',
+        },
+        {
+          label: '누적',
+          data: [
+          ],
+          borderColor: "#761aef",
+          yAxisID: 'y',
+        },
+      ]
+    };
+
+    new Chart(chart1, {
+      type: 'line',
+      data: data1,
+      options: {
+        responsive: true,
+        interaction: {
+          mode: 'index',
+          intersect: false,
+        },
+        stacked: false,
+        plugins: {
+          title: {
+            display: true,
+          }
+        },
+        scales: {
+          y: {
+            type: 'linear',
+            display: true,
+            position: 'left',
+          },
+        }
+      },
+    });
+
+    var chart2 = document.getElementById('chart_no2');
+
+    const data2 = {
+      labels: [
+      ],
+
+      datasets: [
+        {
+          label: '신규',
+          data: [
+          ],
+          borderColor: "#ff1cb3",
+          yAxisID: 'y',
+        },
+        {
+          label: '누적',
+          data: [
+          ],
+          borderColor: "#761aef",
+          yAxisID: 'y',
+        },
+      ]
+    };
+
+
+    new Chart(chart2, {
+      type: 'line',
+      data: data2,
+      options: {
+        responsive: true,
+        interaction: {
+          mode: 'index',
+          intersect: false,
+        },
+        stacked: false,
+        plugins: {
+          title: {
+            display: true,
+          }
+        },
+        scales: {
+          y: {
+            type: 'linear',
+            display: true,
+            position: 'left',
+          },
+        }
+      },
+    });
+
+
+
+    var chart3 = document.getElementById('chart_no3');
+
+    const data3 = {
+      labels: [
+      ],
+
+      datasets: [
+        {
+          label: '신규',
+          data: [
+          ],
+          borderColor: "#ff1cb3",
+          yAxisID: 'y',
+        },
+        {
+          label: '누적',
+          data: [
+          ],
+          borderColor: "#761aef",
+          yAxisID: 'y',
+        },
+      ]
+    };
+
+
+    new Chart(chart3, {
+      type: 'line',
+      data: data3,
+      options: {
+        responsive: true,
+        interaction: {
+          mode: 'index',
+          intersect: false,
+        },
+        stacked: false,
+        plugins: {
+          title: {
+            display: true,
+          }
+        },
+        scales: {
+          y: {
+            type: 'linear',
+            display: true,
+            position: 'left',
+          },
+        }
+      },
+    });
+
+
+
+
+
+    $(".chart_tab ul li a").click(function () {
+      var show_this= $(this).attr('show_chart');
+      $(".chart_tab ul li a").stop().removeClass("on");
+      $(this).addClass("on");
+      $(".chart_box").stop().removeClass("show");
+      //$(".chart_box").stop().fadeOut(10);
+      $("." + show_this).addClass("show");
+
+    });
+
+    $( "#start_date" ).datepicker({
+      closeText: "CLOSE",
+      prevText: "이전달",
+      nextText: "다음달",
+      currentText: "TODAY",
+      monthNames: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      monthNamesShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      dayNames: ["SUN","MON","TUE","WED","THU","FRI","SAT"],
+      dayNamesShort: ["SUN","MON","TUE","WED","THU","FRI","SAT"],
+      dayNamesMin: ["SUN","MON","TUE","WED","THU","FRI","SAT"],
+      weekHeader: "Wk",
+      dateFormat: "yy-mm-dd",
+      firstDay: 0,
+      isRTL: false,
+      showMonthAfterYear: true,
+      yearSuffix: "",
+      onSelect: function(selected) {
+        $("#end_date").datepicker("option","minDate", selected)
+      }
+
+      //beforeShowDay: noSundays,
+
+    });
+    $( "#end_date" ).datepicker({
+      closeText: "CLOSE",
+      prevText: "이전달",
+      nextText: "다음달",
+      currentText: "TODAY",
+      monthNames: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      monthNamesShort: ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"],
+      dayNames: ["SUN","MON","TUE","WED","THU","FRI","SAT"],
+      dayNamesShort: ["SUN","MON","TUE","WED","THU","FRI","SAT"],
+      dayNamesMin: ["SUN","MON","TUE","WED","THU","FRI","SAT"],
+      weekHeader: "Wk",
+      dateFormat: "yy-mm-dd",
+      firstDay: 0,
+      isRTL: false,
+      showMonthAfterYear: true,
+      yearSuffix: "",
+      onSelect: function(selected) {
+        $("#start_date").datepicker("option","maxDate", selected)
+      }
+      //beforeShowDay: noSundays,
+
+    });
+  </script>
+
+
+
+
+</div>
+<!-- } 콘텐츠 끝 -->
+
+<!-- 하단 시작 { -->
+<div id="ft">
+
+  <div id="ft_wr">
+    <div id="ft_logo"><img src="/images/ft_logo.png" alt="셀럽플러스"></div>
+    <div id="ft_company">
+      <h2>사이트 정보</h2>
+      <p class="ft_info">
+        <span>주식회사 셀럽애드</span>
+        <span>대표이사 Eric Chae</span>
+        <span class="noafter">사업자 등록번호 645-86-02090</span>
+        <span class="modown">주소 강남구 테헤란로 521, 29층(삼성동, 파르나스타워)</span>
+      </p>
+      <div id="ft_copy">
+        <a href = "https://celebad.co.kr/bbs/content.php?co_id=provision_ad2" target = "_blank" > 이용 약관 보기 </a> | <a href = "https://celebad.co.kr/bbs/content.php?co_id=privacy" target = "_blank" >개인정보 취급 방침</a> |      Copyright &copy; CELEB PLUS. All rights reserved.</div>
+    </div>
+  </div>
+  <!-- <div id="ft_catch"><img src="https://celebad.co.kr/img/ft_logo.png" alt="그누보드5"></div> -->
+
+  <!-- <button type="button" id="top_btn">
+    <i class="fa fa-arrow-up" aria-hidden="true"></i><span class="sound_only">상단으로</span>
+  </button> -->
+  <script>
+    $(function() {
+      $("#top_btn").on("click", function() {
+        $("html, body").animate({scrollTop:0}, '500');
+        return false;
+      });
+    });
+  </script>
+</div>
+
+
+<!-- } 하단 끝 -->
+
+<script>
+  $(function() {
+    // 폰트 리사이즈 쿠키있으면 실행
+    font_resize("container", get_cookie("ck_font_resize_rmv_class"), get_cookie("ck_font_resize_add_class"));
+  });
+</script>
+
+
+
+<!-- ie6,7에서 사이드뷰가 게시판 목록에서 아래 사이드뷰에 가려지는 현상 수정 -->
+<!--[if lte IE 7]>
+<script>
+  $(function() {
+    var $sv_use = $(".sv_use");
+    var count = $sv_use.length;
+
+    $sv_use.each(function() {
+      $(this).css("z-index", count);
+      $(this).css("position", "relative");
+      count = count - 1;
+    });
+  });
+</script>
+<![endif]-->
+
+
+</body>
+</html>
