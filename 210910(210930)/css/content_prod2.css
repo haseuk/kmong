@@ -697,6 +697,13 @@
 .sub0105 .v4 .v4-inner[data-view="4"] .view4 {
   display: block;
 }
+.sub01052 .v1 {
+  margin-bottom: 53px;
+  padding: 0;
+}
+.sub01052 .v1 img {
+  border: 4px solid #1f7ce5;
+}
 @media screen and (max-width: 1234px) {
   .contents_prod2 .cont-visual .product_list2 li a {
     padding-bottom: 50px;
@@ -784,7 +791,7 @@
     padding: 0;
   }
   .sub0105 .v1 img {
-    border: 0.32vw solid #1f7ce5;
+    border: 4px solid #1f7ce5;
   }
   .sub0105 .v1 .txt-box {
     left: 5.9vw;
