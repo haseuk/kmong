@@ -13,6 +13,8 @@
 .contents_prod2 img {
   width: 100%;
   backface-visibility: hidden;
+  display: block;
+  margin: 0 auto;
 }
 .contents_prod2 .cont-visual {
   max-width: 1250px;
@@ -1005,10 +1007,12 @@
   font-size: 19px;
   font-weight: 300;
 }
-.sub01052 .v5 ul li img {
+.sub01052 .v5 ul li {
   width: 250px;
+}
+.sub01052 .v5 ul li img {
+  width: auto;
   height: 72px;
-  margin-left: 15px;
 }
 .sub01052 .v6 img {
   width: 337px;
@@ -1429,6 +1433,11 @@
     height: 9.5vw;
     margin-bottom: 3.2vw;
   }
+  .sub01052 .v6 img {
+    width: 27vw;
+    height: 9.5vw;
+    margin-bottom: 3.2vw;
+  }
   .sub01052 .v6 .box .box-inner .sub-tit {
     margin-bottom: 2.8vw;
   }
@@ -1740,8 +1749,9 @@
     font-size: 16px;
   }
   .sub01052 .box .box-inner img {
-    width: 54.75vw;
-    height: 29.75vw;
+    width: auto;
+    height: 23.75vw;
+    margin-bottom: 0;
   }
   .sub01052 .box .box-inner .txt {
     font-size: 16px;
@@ -1882,7 +1892,7 @@
     display: block;
     margin-bottom: 5vw;
     text-align: left;
-    padding-left: 8vw;
+    padding-left: 12vw;
     box-sizing: border-box;
   }
   .sub0102 .v1 ul li img {
@@ -1992,7 +2002,7 @@
     font-size: 4.5vw;
   }
   .sub0105 .v1 .txt-box .txt {
-    font-size: 2.8vw;
+    font-size: 3vw;
   }
   .sub0105 .v2 .inner img {
     width: 90%;
@@ -2155,8 +2165,8 @@
   .sub01052 .v3 .txt-box .btns a,
   .sub01052 .v8 .txt-box .btns a {
     font-size: 3vw;
-    height: 7.3vw;
-    line-height: 7.3vw;
+    height: 8.3vw;
+    line-height: 8.3vw;
     vertical-align: middle;
   }
   .sub01052 .v3 .txt-box .btns a:nth-child(1),
@@ -2181,8 +2191,8 @@
   }
   .sub01052 .box .box-inner .btns a {
     font-size: 3vw;
-    height: 7.3vw;
-    line-height: 7.3vw;
+    height: 8.3vw;
+    line-height: 8.3vw;
     vertical-align: middle;
   }
   .sub01052 .box .box-inner .btns a:nth-child(1) {
@@ -2201,19 +2211,18 @@
     width: 50%;
   }
   .sub01052 .v5 ul li img {
-    width: 53.75vw;
-    height: 15.48vw;
-    margin-left: calc(50% + 3vw);
-    transform: translateX(-50%);
+    height: 14.48vw;
   }
   .sub01052 .v5 ul li p.tit {
-    font-size: 5vw;
-  }
-  .sub01052 .v5 ul li p.txt {
     font-size: 4vw;
   }
-  .sub01052 .v5 ul {
-    padding: 0 6vw 10vw;
+  .sub01052 .v5 ul li p.txt {
+    font-size: 3vw;
+  }
+  .sub01052 .v6 > img {
+    width: auto;
+    height: 10vw;
+    margin-bottom: 10vw;
   }
   .sub01052 .v7 ul {
     display: block;
@@ -2225,7 +2234,7 @@
     margin: 0 0 7vw;
   }
   .sub01052 .v7 ul li img {
-    height: 14vw;
+    height: 18vw;
   }
   .sub01052 .v7 ul li .tit {
     font-size: 3.5vw;
@@ -2252,8 +2261,8 @@
   }
   .sub01052 .v8 .txt-box .btns a {
     font-size: 3vw;
-    height: 7.3vw;
-    line-height: 7.3vw;
+    height: 8.3vw;
+    line-height: 8.3vw;
     vertical-align: middle;
   }
   .sub01052 .v8 .txt-box .btns a:nth-child(1) {
