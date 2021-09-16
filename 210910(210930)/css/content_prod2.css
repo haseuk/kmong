@@ -1085,6 +1085,70 @@
 .sub01052 .v9 img:nth-child(2) {
   width: 921px;
 }
+.sub01053 .cont-sub01053 {
+  font-size: 0;
+  max-width: 1250px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 85px 0;
+  box-sizing: border-box;
+}
+.sub01053 .v1 {
+  padding-bottom: 0;
+}
+.sub01053 .v1 .img {
+  position: relative;
+}
+.sub01053 .v1 .img p {
+  font-size: 25px;
+  font-weight: 700;
+  color: #fff;
+  position: absolute;
+  left: 50%;
+  margin-top: 20px;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+.sub01053 .v2 ul li {
+  display: inline-block;
+  width: 328px;
+  vertical-align: top;
+  margin-right: 100px;
+}
+.sub01053 .v2 ul li:last-child {
+  margin-right: 0;
+}
+.sub01053 .v2 ul li img {
+  width: auto;
+  height: 152px;
+  margin-bottom: 30px;
+}
+.sub01053 .v2 ul li p {
+  color: #303030;
+}
+.sub01053 .v2 ul li p.tit {
+  font-size: 25px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 15px;
+}
+.sub01053 .v2 ul li p.txt {
+  font-size: 17px;
+  line-height: 1.5;
+  height: 50px;
+  vertical-align: top;
+  margin-bottom: 20px;
+}
+.sub01053 .v2 ul li .box-txt {
+  font-size: 20px;
+  color: #45403c;
+  width: 328px;
+  height: 52px;
+  line-height: 52px;
+  margin-bottom: 5px;
+  border: 1px solid #cecdcd;
+  border-radius: 4px;
+}
 @media screen and (max-width: 1234px) {
   .contents_prod2 .cont-visual .product_list2 li a {
     padding-bottom: 50px;
