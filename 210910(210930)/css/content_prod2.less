@@ -355,7 +355,7 @@
   .cont-sub01053 { font-size: 0; max-width: 1250px; margin: 0 auto; text-align: center; padding: 85px 0; box-sizing: border-box;
     h3 { font-size: 36px; color:#000; font-weight: 700; margin-bottom: 80px; }
   }
-  .v1 { padding-bottom: 0;
+  .v1 { padding: 0;
     .img { position: relative;
       p { font-size: 25px; font-weight: 700; color:#fff; position: absolute; left: 50%; margin-top: 20px; top:50%; transform: translate(-50%,-50%); }
     }
@@ -397,14 +397,14 @@
       }
     }
   }
-  .v6 {
+  .v6 { padding-bottom: 0;
     .summary-wrap {
       .table-wrap { margin-bottom: 1px;
-        .t-hd { background:#305593; width: 100%;
+        .t-hd { background:#305593; width: 100%; z-index: 1;
           ul {
             li { font-size:20px; color:#fff; font-weight: 700; height:60px; line-height: 60px; display: inline-block; vertical-align: middle; text-align: center;
-              a { font-size: 18px; color:#fff; width:158px; height:39px; line-height:39px; display: inline-block; border: 1px solid #f1f1f1; border-radius: 4px;
-                &:after { content:'자세히 보기'}
+              .detail-btn { font-size: 18px; color:#fff; width:158px; height:39px; line-height:39px; display: inline-block; border: 1px solid #f1f1f1; border-radius: 4px; cursor: pointer; z-index: 10; box-sizing: border-box;
+                &:after { content:'자세히 보기'; pointer-events: none; }
               }
               &:nth-child(1) { font-size: 25px; width: 55%; padding-left: 35px; box-sizing: border-box; text-align: left; }
               &:nth-child(2) { width: 15%; }
@@ -413,7 +413,7 @@
             }
           }
         }
-        .table { height: 0; opacity: 0; transition: all 1s;
+        .table { height: 0; opacity: 0; pointer-events: none;
           table { border-collapse: collapse; table-layout: fixed;
             tr { border: 1px solid #d7d7d7; box-sizing: border-box; border-left: 0; border-right: 0;
               td { font-size: 18px; color:#2e3139; line-height: 46px;
@@ -426,16 +426,34 @@
             }
           }
         }
-        &.on { margin-bottom: 15px;
-          .t-hd {
-            ul {
-              li {
-                a:after { content:'펼침 닫기';}
-              }
-            }
-          }
-          .table { height: auto; opacity: 1;}
-        }
+      }
+      &[data-list="1"] .table-wrap1 {
+        .t-hd ul li a:after { content:'펼침 닫기'; }
+        .table { height:auto; opacity: 1; }
+      }
+      &[data-list="2"] .table-wrap2 {
+        .t-hd ul li a:after { content:'펼침 닫기'; }
+        .table { height:auto; opacity: 1; }
+      }
+      &[data-list="3"] .table-wrap3 {
+        .t-hd ul li a:after { content:'펼침 닫기'; }
+        .table { height:auto; opacity: 1; }
+      }
+      &[data-list="4"] .table-wrap4 {
+        .t-hd ul li a:after { content:'펼침 닫기'; }
+        .table { height:auto; opacity: 1; }
+      }
+      &[data-list="5"] .table-wrap5 {
+        .t-hd ul li a:after { content:'펼침 닫기'; }
+        .table { height:auto; opacity: 1; }
+      }
+      &[data-list="6"] .table-wrap6 {
+        .t-hd ul li a:after { content:'펼침 닫기'; }
+        .table { height:auto; opacity: 1; }
+      }
+      &[data-list="7"] .table-wrap7 {
+        .t-hd ul li a:after { content:'펼침 닫기'; }
+        .table { height:auto; opacity: 1; }
       }
     }
   }
@@ -651,7 +669,80 @@
       }
     }
   }
+
+  //sub01053 *****************************
+  .sub01053 {
+    .cont-sub01053 { padding: 60px 0; box-sizing: border-box;
+      h3 { font-size: 2.9vw; margin-bottom: 60px; }
+    }
+    .v1 { padding: 0;
+      .img {
+        p { font-size: 2vw; }
+      }
+    }
+    .v2 {
+      ul { padding: 0 5vw;
+        li { width:26.6vw; margin-right: 3vw;
+          img { height:12.3vw;}
+          p {
+            &.tit { font-size: 2vw; }
+            &.txt { font-size: 1.4vw; height:4vw; }
+          }
+          .box-txt { font-size: 1.4vw; width:26.6vw; height: 4.2vw; line-height: 4.2vw; }
+        }
+      }
+    }
+    .v3, .v5 { width:100%; padding:60px 5vw;
+      img { height: 18vw; margin:0 1vw; vertical-align: middle; }
+      .txt-box { margin-left: 2vw; width:45vw; vertical-align: middle;
+        p { font-size: 1.8vw; text-indent: -1vw; margin:  0 0 0.7vw 1vw;
+          &:last-child { margin-bottom: 0;}
+          .web { display: none; }
+        }
+      }
+    }
+    .v4 {
+      ul { padding: 0 5vw;
+        li { margin: 0 2vw 5vw;
+          img { height: 23vw; }
+          p {
+            &.tit { font-size: 2.3vw; }
+            &.txt { font-size: 1.5vw; }
+          }
+        }
+      }
+    }
+    .v6 { padding-bottom: 0;
+      .summary-wrap {
+        .table-wrap {
+          .t-hd {
+            ul {
+              li { font-size:1.16vw; height:4.7vw; line-height: 4.7vw;
+                .detail-btn { font-size: 1.5vw;  width:80%; height:3.2vw; line-height:3.2vw;  }
+                &:nth-child(1) { font-size: 2vw; padding-left: 2.8vw; width: 55vw; }
+                &:nth-child(2) { width: 14vw; }
+                &:nth-child(3) { width: 14vw; }
+                &:nth-child(4) { width: 15vw; }
+              }
+            }
+          }
+          .table {
+            table {
+              tr {
+                td { font-size: 1.5vw; line-height: 3.7vw;
+                  &:first-child { padding-left: 2.8vw;}
+                  &:last-child { padding-left: 7vw; }
+                  img { height: 1.3vw; }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
+
 @media screen and (max-width: 800px) {
   .location { display: none; }
 
@@ -812,9 +903,9 @@
       }
     }
     .v8 {
-      img { width: 41.7vw; height: 43.4vw; }
-      .txt-box { margin-left: 6.8vw;
-        p {
+      img { width: 41.7vw; height: 43.4vw; display: block; }
+      .txt-box { margin:5vw 0 0 0; display: inline-block; width:auto;
+        p { text-align: center;
           &.txt { font-size: 14px; }
           &.sub-txt { font-size: 15px; }
         }
@@ -980,7 +1071,7 @@
 
   //sub01052 *****************************
   .sub01052 {
-    .cont-sub01052 { padding-bottom: 10vw;
+    .cont-sub01052 { padding: 10vw 6vw;
       .v-sub-tit { font-size: 18px; padding: 0 2vw; }
     }
     .v1 { padding-top: 0;
@@ -1063,6 +1154,88 @@
       }
     }
     .v9 { padding-bottom: 0; }
+  }
+
+  //sub01053 *****************************
+  .sub01053 {
+    .cont-sub01053 { padding: 10vw 6vw;
+      h3 { font-size: 5vw; margin-bottom: 5vw; }
+    }
+    .v1 { padding: 0;
+      .img { width:auto; height: 61vw;
+        img { width:auto; height: 61vw; margin-left: 50%; transform: translateX(-50%); }
+        p { font-size: 3vw; width:100%; }
+      }
+    }
+    .v2 {
+      ul { padding: 0;
+        li { width:auto; margin:0 0 4.8vw; display: block; text-align: left;
+          img { height: 20vw; display: inline-block; vertical-align: middle; }
+          .txt-box { display: inline-block; vertical-align: middle; margin-left: 6vw; }
+          p {
+            &.tit { font-size: 4vw; margin-bottom: 2.4vw; }
+            &.txt { font-size: 3vw; height:auto; margin-bottom: 2vw; }
+          }
+          .box-txt { text-align: center; height: 6vw; line-height: 6vw; font-size: 3vw; }
+          &:nth-child(2) .txt-box { margin-left: 4.6vw; }
+        }
+      }
+    }
+    .v3, .v5 {
+      img { height: 35vw; }
+      .txt-box { margin: 5vw 0 0 0; width:100%;
+        p { font-size: 3vw; text-indent: -1vw; margin:  0 0 2vw 1vw;
+          &:last-child { margin-bottom: 0;}
+          .web { display: none; }
+        }
+      }
+    }
+    .v4 {
+      ul { padding: 0 5vw;
+        li { margin: 0 2vw 5vw;
+          img { height: 25vw; }
+          p {
+            &.tit { font-size: 3.5vw; }
+            &.txt { font-size: 2.5vw; }
+          }
+        }
+      }
+    }
+    .v5 {
+      ul {
+        li { margin: 0;
+          img { height: 10vw; }
+        }
+      }
+    }
+    .v6 { padding-bottom: 0;
+      .summary-wrap {
+        .table-wrap {
+          .t-hd {
+            ul {
+              li { font-size:2.5vw; height:10vw; line-height: 10vw;
+                .detail-btn { font-size: 2.5vw;  width:100%; height:5vw; line-height:5vw;  }
+                &:nth-child(1) { font-size: 3vw; padding-left: 2.8vw; width: 40vw; }
+                &:nth-child(2) { width: 14vw; }
+                &:nth-child(3) { width: 14vw; }
+                &:nth-child(4) { width: 15vw; }
+              }
+            }
+          }
+          .table {
+            table {
+              tr {
+                td { font-size: 2.5vw; line-height: 3vw; padding: 1vw 0;
+                  &:first-child { padding-left: 2.8vw;}
+                  &:last-child { padding-left: 7vw; }
+                  img { height: 1.3vw; }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
   }
 }
 
