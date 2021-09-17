@@ -1093,6 +1093,12 @@
   padding: 85px 0;
   box-sizing: border-box;
 }
+.sub01053 .cont-sub01053 h3 {
+  font-size: 36px;
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 80px;
+}
 .sub01053 .v1 {
   padding-bottom: 0;
 }
@@ -1148,6 +1154,171 @@
   margin-bottom: 5px;
   border: 1px solid #cecdcd;
   border-radius: 4px;
+}
+.sub01053 .v3,
+.sub01053 .v5 {
+  max-width: none;
+  background: #f5f5f5;
+}
+.sub01053 .v3 img,
+.sub01053 .v5 img {
+  width: auto;
+  height: 262px;
+  display: inline-block;
+  margin: 0 10px;
+  vertical-align: top;
+}
+.sub01053 .v3 .txt-box,
+.sub01053 .v5 .txt-box {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 40px;
+}
+.sub01053 .v3 .txt-box p,
+.sub01053 .v5 .txt-box p {
+  font-size: 22px;
+  color: #2e3139;
+  line-height: 1.3;
+  text-indent: -12px;
+  margin: 0 0 23px 12px;
+  text-align: left;
+}
+.sub01053 .v4 ul {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+.sub01053 .v4 ul li {
+  display: inline-block;
+  vertical-align: top;
+  margin: 0 30px 110px;
+}
+.sub01053 .v4 ul li img {
+  width: auto;
+  height: 288px;
+}
+.sub01053 .v4 ul li p {
+  color: #2e3139;
+}
+.sub01053 .v4 ul li p.tit {
+  font-size: 28px;
+  font-weight: 700;
+  margin-top: 20px;
+}
+.sub01053 .v4 ul li p.txt {
+  font-size: 18px;
+  margin-top: 10px;
+}
+.sub01053 .v5 ul {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+.sub01053 .v5 ul li {
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 26px;
+}
+.sub01053 .v5 ul li img {
+  width: auto;
+  height: 70px;
+}
+.sub01053 .v6 .summary-wrap .table-wrap {
+  margin-bottom: 1px;
+}
+.sub01053 .v6 .summary-wrap .table-wrap .t-hd {
+  background: #305593;
+  width: 100%;
+}
+.sub01053 .v6 .summary-wrap .table-wrap .t-hd ul li {
+  font-size: 20px;
+  color: #fff;
+  font-weight: 700;
+  height: 60px;
+  line-height: 60px;
+  display: inline-block;
+  vertical-align: middle;
+  text-align: center;
+}
+.sub01053 .v6 .summary-wrap .table-wrap .t-hd ul li a {
+  font-size: 18px;
+  color: #fff;
+  width: 158px;
+  height: 39px;
+  line-height: 39px;
+  display: inline-block;
+  border: 1px solid #f1f1f1;
+  border-radius: 4px;
+}
+.sub01053 .v6 .summary-wrap .table-wrap .t-hd ul li a:after {
+  content: '자세히 보기';
+}
+.sub01053 .v6 .summary-wrap .table-wrap .t-hd ul li:nth-child(1) {
+  font-size: 25px;
+  width: 55%;
+  padding-left: 35px;
+  box-sizing: border-box;
+  text-align: left;
+}
+.sub01053 .v6 .summary-wrap .table-wrap .t-hd ul li:nth-child(2) {
+  width: 15%;
+}
+.sub01053 .v6 .summary-wrap .table-wrap .t-hd ul li:nth-child(3) {
+  width: 15%;
+}
+.sub01053 .v6 .summary-wrap .table-wrap .t-hd ul li:nth-child(4) {
+  width: 15%;
+}
+.sub01053 .v6 .summary-wrap .table-wrap .table {
+  height: 0;
+  opacity: 0;
+  transition: all 1s;
+}
+.sub01053 .v6 .summary-wrap .table-wrap .table table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.sub01053 .v6 .summary-wrap .table-wrap .table table tr {
+  border: 1px solid #d7d7d7;
+  box-sizing: border-box;
+  border-left: 0;
+  border-right: 0;
+}
+.sub01053 .v6 .summary-wrap .table-wrap .table table tr td {
+  font-size: 18px;
+  color: #2e3139;
+  line-height: 46px;
+}
+.sub01053 .v6 .summary-wrap .table-wrap .table table tr td:first-child {
+  text-align: left;
+  padding-left: 35px;
+  box-sizing: border-box;
+}
+.sub01053 .v6 .summary-wrap .table-wrap .table table tr td:last-child {
+  text-align: left;
+  padding-left: 86px;
+  box-sizing: border-box;
+}
+.sub01053 .v6 .summary-wrap .table-wrap .table table tr td img {
+  width: auto;
+  height: 16px;
+  display: inline-block;
+}
+.sub01053 .v6 .summary-wrap .table-wrap .table table tr:nth-child(odd) {
+  background: #fafafa;
+}
+.sub01053 .v6 .summary-wrap .table-wrap .table table tr:last-of-type {
+  border-bottom: 1px solid #000;
+}
+.sub01053 .v6 .summary-wrap .table-wrap.on {
+  margin-bottom: 15px;
+}
+.sub01053 .v6 .summary-wrap .table-wrap.on .t-hd ul li a:after {
+  content: '펼침 닫기';
+}
+.sub01053 .v6 .summary-wrap .table-wrap.on .table {
+  height: auto;
+  opacity: 1;
 }
 @media screen and (max-width: 1234px) {
   .contents_prod2 .cont-visual .product_list2 li a {
