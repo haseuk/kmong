@@ -1,0 +1,123 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/font.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-m.css">
+<!--  <link rel="stylesheet" href="css/docs.theme.min.css">-->
+<!--  <link rel="stylesheet" href="css/owl.theme.default.min.css">-->
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="wrap">
+      <div class="page page4">
+        <h1>도박</h1>
+        <section>
+          <img src="images/p4-img1.png" alt="">
+          <div class="coins">
+            <div class="coin win"><img src="images/coin-f.png" alt=""></div>
+            <div class="coin fail"><img src="images/coin-b.png" alt=""></div>
+            <div class="coin"><img src="images/coin-b.png" alt=""></div>
+          </div>
+          <div class="btns">
+            <a class="btn">앞</a>
+            <a class="btn">뒤</a>
+          </div>
+        </section>
+        <section>
+          <div class="utv"></div>
+        </section>
+        <section>
+          <div class="owl-carousel owl-theme">
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+          </div>
+        </section>
+      </div>
+    </div>
+
+    <div class="popup p2">
+      <div class="dim"></div>
+      <div class="popup-inner">
+        <img src="images/p2-popup.png" alt="">
+        <div class="btns">
+          <a class="y" onclick="yes()"></a>
+          <a class="n" onclick="no()"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-popup">
+      <div class="dim"></div>
+      <div class="popup-inner">
+        <img src="images/app-pop.png" alt="">
+        <div class="user">
+          <label>
+            <input type="text">
+          </label>
+          <label>
+            <input type="text">
+          </label>
+        </div>
+        <label>
+          <input type="file">
+        </label>
+        <a class="application" onclick="application()"></a>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function() {
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        items: 1,
+        nav: true,
+        loop: true,
+      });
+    });
+
+    let p2 = document.querySelector('.popup.p2');
+    function openPopup() {
+      p2.classList.add('on');
+    }
+    function yes() {
+      close();
+    }
+    function no() {
+      close();
+    }
+    function close() {
+      p2.classList.remove('on');
+    }
+
+    let app = document.querySelector('.app-popup');
+    function openApp() {
+      app.classList.add('on');
+    }
+    function application() {
+      app.classList.remove('on');
+    }
+
+  </script>
+
+
+</body>
+</html>

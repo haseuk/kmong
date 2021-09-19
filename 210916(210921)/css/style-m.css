@@ -445,6 +445,8 @@
   }
   .container .wrap .page2 section .scroll {
     position: relative;
+    width: 100%;
+    overflow-x: scroll;
   }
   .container .wrap .page2 section .scroll .img1 {
     width: 156.25vw;
@@ -562,6 +564,194 @@
     width: 29.296875vw;
     height: 11.06770833vw;
     transform: translateX(-50%);
+  }
+  .container .wrap .page3 {
+    max-width: 156.25vw;
+  }
+  .container .wrap .page3 section .tit {
+    font-size: 2.86458333vw;
+    color: #002b99;
+    line-height: 3.125vw;
+    vertical-align: middle;
+    text-align: left;
+  }
+  .container .wrap .page3 section .tit img {
+    display: inline-block;
+    width: 3.125vw;
+    height: 3.125vw;
+    vertical-align: top;
+    margin-right: 1.30208333vw;
+  }
+  .container .wrap .page3 section .scroll {
+    position: relative;
+    width: 100%;
+    overflow-x: scroll;
+    margin-top: 3.64583333vw;
+  }
+  .container .wrap .page3 section .scroll .img1 {
+    width: 156.25vw;
+    height: 82.94270833vw;
+    margin-top: 0vw;
+  }
+  .container .wrap .page3 section .scroll .txt-box {
+    position: absolute;
+    left: 0vw;
+    top: 0vw;
+    right: auto;
+    bottom: auto;
+    width: 156.25vw;
+    height: auto;
+  }
+  .container .wrap .page3 section .scroll .txt-box .txt-inner {
+    position: absolute;
+    left: 0vw;
+    width: 42.31770833vw;
+    padding-top: 1.30208333vw;
+    padding-right: 1.30208333vw;
+    padding-bottom: 1.30208333vw;
+    padding-left: 1.30208333vw;
+    box-sizing: border-box;
+  }
+  .container .wrap .page3 section .scroll .txt-box .txt-inner .name {
+    font-size: 2.34375vw;
+    line-height: 5.33854167vw;
+    text-align: center;
+    font-weight: 500;
+  }
+  .container .wrap .page3 section .scroll .txt-box .txt-inner .txt {
+    font-size: 2.08333333vw;
+    color: #555;
+    padding-top: 1.04166667vw;
+    line-height: 3.64583333vw;
+    font-weight: 300;
+    text-align: left;
+  }
+  .container .wrap .page3 section .scroll .txt-box .txt-inner.inner1 {
+    top: 0vw;
+  }
+  .container .wrap .page3 section .scroll .txt-box .txt-inner.inner2 {
+    top: 27.99479167vw;
+  }
+  .container .wrap .page3 section .scroll .txt-box .txt-inner.inner3 {
+    top: 45.05208333vw;
+  }
+  .container .wrap .page3 section .scroll .txt-box .txt-inner.inner4 {
+    top: 69.27083333vw;
+  }
+  .container .wrap .page3 section .scroll .txt-box .txt-inner.inner5 {
+    left: 113.93229167vw;
+    top: 9.11458333vw;
+    right: auto;
+    bottom: auto;
+  }
+  .container .wrap .page3 section .scroll .txt-box .txt-inner.inner6 {
+    left: 113.93229167vw;
+    top: 26.04166667vw;
+    right: auto;
+    bottom: auto;
+  }
+  .container .wrap .page3 section .scroll .txt-box .txt-inner.inner7 {
+    left: 113.93229167vw;
+    top: 43.22916667vw;
+    right: auto;
+    bottom: auto;
+  }
+  .container .wrap .page3 section .scroll .txt-box .txt-inner.inner8 {
+    left: 113.93229167vw;
+    top: 60.28645833vw;
+    right: auto;
+    bottom: auto;
+  }
+  .container .wrap .page3 section .ex {
+    border: 1px solid #d5d5d5;
+    border-radius: 1.04166667vw;
+    padding-top: 6.90104167vw;
+    padding-right: 0vw;
+    padding-bottom: 6.90104167vw;
+    padding-left: 0vw;
+    box-sizing: border-box;
+    margin-top: 3.90625vw;
+  }
+  .container .wrap .page3 section .ex a {
+    font-size: 2.34375vw;
+    font-weight: 500;
+    color: #d5d5d5;
+    background-color: #535353;
+    line-height: 5.078125vw;
+    margin-top: 0.52083333vw;
+    margin-right: 1.04166667vw;
+    margin-bottom: 0.52083333vw;
+    margin-left: 1.04166667vw;
+    border-radius: 2.60416667vw;
+    padding-top: 0vw;
+    padding-right: 3.515625vw;
+    padding-bottom: 0vw;
+    padding-left: 3.515625vw;
+    box-sizing: border-box;
+    display: inline-block;
+  }
+  .container .wrap .page3 section .noti {
+    font-size: 2.60416667vw;
+    margin-top: 3.25520833vw;
+    font-weight: 500;
+  }
+  .container .wrap .page4 section {
+    position: relative;
+  }
+  .container .wrap .page4 section .coins {
+    position: absolute;
+    left: 50%;
+    bottom: 18.88020833vw;
+    right: auto;
+    top: auto;
+    transform: translateX(-50%);
+    width: 100%;
+  }
+  .container .wrap .page4 section .coins .coin {
+    display: inline-block;
+    margin-top: 0vw;
+    margin-right: 1.30208333vw;
+    margin-bottom: 0vw;
+    margin-left: 1.30208333vw;
+    position: relative;
+    vertical-align: top;
+    width: 16.015625vw;
+    height: 16.015625vw;
+  }
+  .container .wrap .page4 section .coins .coin:after {
+    content: '';
+    display: block;
+    background-size: contain;
+    background-repeat: no-repeat;
+    position: absolute;
+    left: 0.78125vw;
+    top: 0.78125vw;
+    right: auto;
+    bottom: auto;
+    width: 14.453125vw;
+    height: 14.453125vw;
+  }
+  .container .wrap .page4 section .coins .coin.win:after {
+    background-image: url('../images/win.png');
+  }
+  .container .wrap .page4 section .coins .coin.fail:after {
+    background-image: url('../images/fail.png');
+  }
+  .container .wrap .page4 section .btns {
+    width: 37.890625vw;
+    height: 8.984375vw;
+    position: absolute;
+    left: 50%;
+    bottom: 5.98958333vw;
+    right: auto;
+    top: auto;
+    transform: translateX(-50%);
+  }
+  .container .wrap .page4 section .btns a {
+    width: 50%;
+    height: 8.984375vw;
+    display: inline-block;
+    vertical-align: top;
   }
   .container .popup {
     position: fixed;

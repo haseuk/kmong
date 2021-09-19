@@ -91,7 +91,7 @@
 
       .page2 {
         section {
-          .scroll { .rel;
+          .scroll { .rel; .wf; overflow-x: scroll;
             .img1 { .wh(1200,424); .mt(10); .ml(0); transform: none;}
             .part { .abs; .wh(225,85); .ib; .lt(170,269); }
           }
@@ -129,6 +129,52 @@
         }
         section {
           .p2-img2 + a { .abs; .lb(50%,30); .wh(225,85); transform: translateX(-50%);  }
+        }
+      }
+
+      .page3 { .max-w(1200);
+        section {
+          .tit { .fs(22); color:#002b99; .lh(24); .vam; .tl;
+            img { .ib; .wh(24,24); .vat; .mr(10); }
+          }
+        }
+        section {
+          .scroll { .rel; .wf; overflow-x: scroll; .mt(28);
+            .img1 { .wh(1200,637); .mt(0); }
+            .txt-box { .abs; .lt; .w(1200); height: auto;
+              .txt-inner { .abs; .l(0); .w(325); .p(10,10); .-box;
+                .name { .fs(18); .lh(41); .tc; .medium; }
+                .txt { .fs(16); color:#555; .pt(8); .lh(28); .light; .tl; }
+                &.inner1 { .t(0); }
+                &.inner2 { .t(215); }
+                &.inner3 { .t(346); }
+                &.inner4 { .t(532); }
+                &.inner5 { .lt(875,70); }
+                &.inner6 { .lt(875,200); }
+                &.inner7 { .lt(875,332); }
+                &.inner8 { .lt(875,463); }
+              }
+            }
+          }
+          .ex { .-a(#d5d5d5); .br(8); .p(53,0); .-box; .mt(30);
+            a { .fs(18); .medium; color:#d5d5d5; .bgc(#535353); .lh(39); .m(4,8); .br(20); .p(0,27); .-box; .ib; }
+          }
+          .noti { .fs(20); .mt(25); .medium; }
+        }
+      }
+
+      .page4 {
+        section { .rel;
+          .coins { .abs; .lb(50%,145); transform: translateX(-50%); .wf;
+            .coin { .ib; .m(0,10); .rel; .vat; .wh(123,123);
+              &:after { .cnt; .contain; .no-repeat; .abs; .lt(6,6); .wh(111,111); }
+              &.win:after { .bg('../images/win.png'); }
+              &.fail:after { .bg('../images/fail.png'); }
+            }
+          }
+          .btns { .wh(291,69); .abs; .lb(50%,46); transform: translateX(-50%);
+            a { .wh(50%,69); .ib; .vat; }
+          }
         }
       }
     }

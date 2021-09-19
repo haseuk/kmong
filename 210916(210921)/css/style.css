@@ -46,8 +46,19 @@ input {
   margin-bottom: 72px;
   font-weight: 500;
 }
+.container .wrap .page h1 span {
+  font-size: 25px;
+  font-weight: 300;
+}
+.container .wrap .page .scroll {
+  width: 100%;
+  overflow-x: scroll;
+}
 .container .wrap .page .utv {
   margin-top: 58px;
+  margin-right: 0px;
+  margin-bottom: 58px;
+  margin-left: 0px;
   width: 100%;
   height: 557px;
   border-radius: 14px;
@@ -110,19 +121,26 @@ input {
   margin-top: -120px;
   position: relative;
 }
-.container .wrap .page1 section .find img {
-  margin-left: 50%;
-  transform: translateX(-50%);
+.container .wrap .page1 section .find .scroll {
+  position: relative;
 }
-.container .wrap .page1 section .find .chk-box {
+.container .wrap .page1 section .find .scroll img {
+  width: 1200px;
+  height: 536px;
+  margin-left: 0px;
+  transform: none;
+}
+.container .wrap .page1 section .find .scroll .chk-box {
+  width: 1200px;
+  height: 132px;
   position: absolute;
-  left: 50%;
+  left: 0px;
   top: 280px;
   right: auto;
   bottom: auto;
-  transform: translateX(-50%);
+  transform: none;
 }
-.container .wrap .page1 section .find .chk-box a {
+.container .wrap .page1 section .find .scroll .chk-box a {
   width: 180px;
   height: 140px;
   display: inline-block;
@@ -132,10 +150,10 @@ input {
   right: auto;
   bottom: auto;
 }
-.container .wrap .page1 section .find .chk-box a:nth-child(1) {
+.container .wrap .page1 section .find .scroll .chk-box a:nth-child(1) {
   margin-left: -490px;
 }
-.container .wrap .page1 section .find .chk-box a:nth-child(1).on:after {
+.container .wrap .page1 section .find .scroll .chk-box a:nth-child(1).on:after {
   content: '';
   display: block;
   display: inline-block;
@@ -150,10 +168,10 @@ input {
   width: 96px;
   height: 84px;
 }
-.container .wrap .page1 section .find .chk-box a:nth-child(2) {
+.container .wrap .page1 section .find .scroll .chk-box a:nth-child(2) {
   margin-left: -283px;
 }
-.container .wrap .page1 section .find .chk-box a:nth-child(2).on:after {
+.container .wrap .page1 section .find .scroll .chk-box a:nth-child(2).on:after {
   content: '';
   display: block;
   display: inline-block;
@@ -168,10 +186,10 @@ input {
   width: 96px;
   height: 84px;
 }
-.container .wrap .page1 section .find .chk-box a:nth-child(3) {
+.container .wrap .page1 section .find .scroll .chk-box a:nth-child(3) {
   margin-left: -82px;
 }
-.container .wrap .page1 section .find .chk-box a:nth-child(3).on:after {
+.container .wrap .page1 section .find .scroll .chk-box a:nth-child(3).on:after {
   content: '';
   display: block;
   display: inline-block;
@@ -186,10 +204,10 @@ input {
   width: 96px;
   height: 84px;
 }
-.container .wrap .page1 section .find .chk-box a:nth-child(4) {
+.container .wrap .page1 section .find .scroll .chk-box a:nth-child(4) {
   margin-left: 112px;
 }
-.container .wrap .page1 section .find .chk-box a:nth-child(4).on:after {
+.container .wrap .page1 section .find .scroll .chk-box a:nth-child(4).on:after {
   content: '';
   display: block;
   display: inline-block;
@@ -204,10 +222,10 @@ input {
   width: 96px;
   height: 84px;
 }
-.container .wrap .page1 section .find .chk-box a:nth-child(5) {
+.container .wrap .page1 section .find .scroll .chk-box a:nth-child(5) {
   margin-left: 305px;
 }
-.container .wrap .page1 section .find .chk-box a:nth-child(5).on:after {
+.container .wrap .page1 section .find .scroll .chk-box a:nth-child(5).on:after {
   content: '';
   display: block;
   display: inline-block;
@@ -448,18 +466,25 @@ input {
   position: relative;
   overflow: hidden;
 }
-.container .wrap .page2 section .img1 {
-  margin-top: 10px;
-  margin-left: 50%;
-  transform: translateX(-50%);
+.container .wrap .page2 section .scroll {
+  position: relative;
+  width: 100%;
+  overflow-x: scroll;
 }
-.container .wrap .page2 section .part {
+.container .wrap .page2 section .scroll .img1 {
+  width: 1200px;
+  height: 424px;
+  margin-top: 10px;
+  margin-left: 0px;
+  transform: none;
+}
+.container .wrap .page2 section .scroll .part {
   position: absolute;
   width: 225px;
   height: 85px;
   display: inline-block;
   left: 170px;
-  top: 294px;
+  top: 269px;
   right: auto;
   bottom: auto;
 }
@@ -555,6 +580,197 @@ input {
   width: 225px;
   height: 85px;
   transform: translateX(-50%);
+}
+.container .wrap .page3 {
+  max-width: 1200px;
+}
+.container .wrap .page3 section .tit {
+  font-size: 22px;
+  color: #002b99;
+  line-height: 24px;
+  vertical-align: middle;
+  text-align: left;
+}
+.container .wrap .page3 section .tit img {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  vertical-align: top;
+  margin-right: 10px;
+}
+.container .wrap .page3 section {
+  position: relative;
+}
+.container .wrap .page3 section .scroll {
+  position: relative;
+  width: 100%;
+  overflow-x: scroll;
+  margin-top: 28px;
+}
+.container .wrap .page3 section .scroll .img1 {
+  width: 1200px;
+  height: 637px;
+  margin-top: 0px;
+}
+.container .wrap .page3 section .scroll .txt-box {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: auto;
+  bottom: auto;
+  width: 1200px;
+  height: auto;
+}
+.container .wrap .page3 section .scroll .txt-box .txt-inner {
+  position: absolute;
+  left: 0px;
+  width: 325px;
+  padding-top: 10px;
+  padding-right: 10px;
+  padding-bottom: 10px;
+  padding-left: 10px;
+  box-sizing: border-box;
+}
+.container .wrap .page3 section .scroll .txt-box .txt-inner .name {
+  font-size: 18px;
+  line-height: 41px;
+  text-align: center;
+  font-weight: 500;
+}
+.container .wrap .page3 section .scroll .txt-box .txt-inner .txt {
+  font-size: 16px;
+  color: #555;
+  padding-top: 8px;
+  line-height: 28px;
+  font-weight: 300;
+  text-align: left;
+}
+.container .wrap .page3 section .scroll .txt-box .txt-inner.inner1 {
+  top: 0px;
+}
+.container .wrap .page3 section .scroll .txt-box .txt-inner.inner2 {
+  top: 215px;
+}
+.container .wrap .page3 section .scroll .txt-box .txt-inner.inner3 {
+  top: 346px;
+}
+.container .wrap .page3 section .scroll .txt-box .txt-inner.inner4 {
+  top: 532px;
+}
+.container .wrap .page3 section .scroll .txt-box .txt-inner.inner5 {
+  left: 875px;
+  top: 70px;
+  right: auto;
+  bottom: auto;
+}
+.container .wrap .page3 section .scroll .txt-box .txt-inner.inner6 {
+  left: 875px;
+  top: 200px;
+  right: auto;
+  bottom: auto;
+}
+.container .wrap .page3 section .scroll .txt-box .txt-inner.inner7 {
+  left: 875px;
+  top: 332px;
+  right: auto;
+  bottom: auto;
+}
+.container .wrap .page3 section .scroll .txt-box .txt-inner.inner8 {
+  left: 875px;
+  top: 463px;
+  right: auto;
+  bottom: auto;
+}
+.container .wrap .page3 section .ex {
+  border: 1px solid #d5d5d5;
+  border-radius: 8px;
+  padding-top: 53px;
+  padding-right: 0px;
+  padding-bottom: 53px;
+  padding-left: 0px;
+  box-sizing: border-box;
+  margin-top: 30px;
+}
+.container .wrap .page3 section .ex a {
+  font-size: 18px;
+  font-weight: 500;
+  color: #d5d5d5;
+  background-color: #535353;
+  line-height: 39px;
+  margin-top: 4px;
+  margin-right: 8px;
+  margin-bottom: 4px;
+  margin-left: 8px;
+  border-radius: 20px;
+  padding-top: 0px;
+  padding-right: 27px;
+  padding-bottom: 0px;
+  padding-left: 27px;
+  box-sizing: border-box;
+  display: inline-block;
+}
+.container .wrap .page3 section .noti {
+  font-size: 20px;
+  margin-top: 25px;
+  font-weight: 500;
+}
+.container .wrap .page4 section {
+  position: relative;
+}
+.container .wrap .page4 section .coins {
+  position: absolute;
+  left: 50%;
+  bottom: 172px;
+  right: auto;
+  top: auto;
+  transform: translateX(-50%);
+  width: 100%;
+}
+.container .wrap .page4 section .coins .coin {
+  display: inline-block;
+  margin-top: 0px;
+  margin-right: 20px;
+  margin-bottom: 0px;
+  margin-left: 20px;
+  position: relative;
+  vertical-align: top;
+  width: 156px;
+  height: 156px;
+}
+.container .wrap .page4 section .coins .coin:after {
+  content: '';
+  display: block;
+  background-size: contain;
+  background-repeat: no-repeat;
+  position: absolute;
+  left: 6px;
+  top: 6px;
+  right: auto;
+  bottom: auto;
+  width: 144px;
+  height: 144px;
+}
+.container .wrap .page4 section .coins .coin.win:after {
+  background-image: url('../images/win.png');
+}
+.container .wrap .page4 section .coins .coin.fail:after {
+  background-image: url('../images/fail.png');
+}
+.container .wrap .page4 section .btns {
+  width: 360px;
+  height: 92px;
+  position: absolute;
+  left: 50%;
+  bottom: 55px;
+  right: auto;
+  top: auto;
+  transform: translateX(-50%);
+}
+.container .wrap .page4 section .btns a {
+  width: 50%;
+  height: 92px;
+  display: inline-block;
+  vertical-align: top;
 }
 .container .popup {
   position: fixed;
