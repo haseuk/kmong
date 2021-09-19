@@ -177,6 +177,15 @@
           }
         }
       }
+
+      .page5 {
+        section {
+          .scroll { .rel;
+            .img1 { .wh(1200,806); .mt(60); }
+            .btn { .abs; .wh(170,74); .ib; .lt(555,569); }
+          }
+        }
+      }
     }
 
     .popup { .fix; z-index: 10; .lt; .f; .hide;
@@ -200,6 +209,13 @@
           &::file-selector-button { visibility: hidden; .ml(-50); }
         }
         a { .wh(169,62); .abs; .lb(50%,70); transform: translate(-50%,-50%); }
+      }
+      &.on { .block; }
+    }
+    .com-popup { .fix; z-index: 10; .lt; .f; .hide;
+      .dim { .abs; .lt; opacity: 0.7; .f; .bgc(#000); }
+      .popup-inner { .w(95%); height:auto; .abs; .lt(50%,50%); transform: translate(-50%,-50%);
+        img { .f; }
       }
       &.on { .block; }
     }

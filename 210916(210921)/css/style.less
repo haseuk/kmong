@@ -180,6 +180,15 @@ input { outline: none; }
         }
       }
     }
+
+    .page5 {
+      section {
+        .scroll { .rel;
+          .img1 { .wh(1200,806); .mt(60); }
+          .btn { .abs; .wh(170,74); .ib; .lt(555,569); }
+        }
+      }
+    }
   }
 
   .popup { .fix; z-index: 10; .lt; .f; .hide;
@@ -203,6 +212,13 @@ input { outline: none; }
         &::file-selector-button { visibility: hidden; .ml(-50); }
       }
       a { .wh(225,85); .abs; .lb(50%,90); transform: translate(-50%,-50%); }
+    }
+    &.on { .block; }
+  }
+  .com-popup { .fix; z-index: 10; .lt; .f; .hide;
+    .dim { .abs; .lt; opacity: 0.7; .f; .bgc(#000); }
+    .popup-inner { .abs; .lt(50%,50%); transform: translate(-50%,-50%);
+      img { .wh(978,1008); }
     }
     &.on { .block; }
   }

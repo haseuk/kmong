@@ -772,6 +772,24 @@ input {
   display: inline-block;
   vertical-align: top;
 }
+.container .wrap .page5 section .scroll {
+  position: relative;
+}
+.container .wrap .page5 section .scroll .img1 {
+  width: 1200px;
+  height: 806px;
+  margin-top: 60px;
+}
+.container .wrap .page5 section .scroll .btn {
+  position: absolute;
+  width: 170px;
+  height: 74px;
+  display: inline-block;
+  left: 555px;
+  top: 569px;
+  right: auto;
+  bottom: auto;
+}
 .container .popup {
   position: fixed;
   z-index: 10;
@@ -908,6 +926,43 @@ input {
   transform: translate(-50%, -50%);
 }
 .container .app-popup.on {
+  display: block;
+}
+.container .com-popup {
+  position: fixed;
+  z-index: 10;
+  left: 0px;
+  top: 0px;
+  right: auto;
+  bottom: auto;
+  width: 100%;
+  height: 100%;
+  display: none;
+}
+.container .com-popup .dim {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  right: auto;
+  bottom: auto;
+  opacity: 0.7;
+  width: 100%;
+  height: 100%;
+  background-color: #000;
+}
+.container .com-popup .popup-inner {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+}
+.container .com-popup .popup-inner img {
+  width: 978px;
+  height: 1008px;
+}
+.container .com-popup.on {
   display: block;
 }
 /*# sourceMappingURL=style.css.map */
