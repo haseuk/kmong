@@ -929,7 +929,7 @@ input {
   display: block;
 }
 .container .com-popup {
-  position: fixed;
+  position: absolute;
   z-index: 10;
   left: 0px;
   top: 0px;
@@ -940,7 +940,7 @@ input {
   display: none;
 }
 .container .com-popup .dim {
-  position: absolute;
+  position: fixed;
   left: 0px;
   top: 0px;
   right: auto;
@@ -953,10 +953,10 @@ input {
 .container .com-popup .popup-inner {
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 100px;
   right: auto;
   bottom: auto;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
 }
 .container .com-popup .popup-inner img {
   width: 978px;

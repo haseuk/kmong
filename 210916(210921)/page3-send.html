@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /*base*/
+    html {
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      width: 100%;
+      height: 100%;
+      -webkit-text-size-adjust: none;
+      word-wrap: break-word;
+      -webkit-tap-highlight-color: transparent;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      max-height: 1000000px;
+    }
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+    img,
+    table,
+    tr,
+    td,
+    textArea,
+    iframe,
+    fieldset {
+      border: 0;
+    }
+    legend,
+    caption {
+      display: none;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: normal;
+    }
+    table {
+      width: 100%;
+      border: 0;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+    table th {
+      font-weight: normal;
+    }
+    textarea {
+      -webkit-appearance: none;
+      -webkit-border-radius: 0;
+      border: 0;
+      resize: none;
+    }
+    li {
+      list-style: none;
+    }
+    hr {
+      border: none;
+      height: 0;
+    }
+    i {
+      font-style: normal;
+    }
+    s {
+      text-decoration: none;
+    }
+    em {
+      font-style: normal;
+    }
+    a {
+      cursor: pointer;
+      color: inherit;
+      text-decoration: none;
+    }
+    img {
+      vertical-align: middle;
+    }
+    /* base - input */
+    button {
+      border: 0;
+      cursor: pointer;
+    }
+    input,
+    select {
+      -webkit-appearance: none;
+      -webkit-border-radius: 0;
+      vertical-align: middle;
+    }
+    select::-ms-expand {
+      display: none;
+    }
+    input:checked[type="checkbox"] {
+      background-color: #666;
+      -webkit-appearance: checkbox;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+    }
+    input[type="submit"] {
+      cursor: pointer;
+    }
+  </style>
+  <style>
+    @font-face{
+      font-family: GmarketSans;
+      font-style: normal;
+      font-weight: 300;
+      src: url("fonts/GmarketSansLight.otf") format("opentype"),
+      url("fonts/GmarketSansLight.woff2") format("woff2");
+    }
+    @font-face{
+      font-family: GmarketSans;
+      font-style: normal;
+      font-weight: 500;
+      src: url("fonts/GmarketSansMedium.otf") format("opentype"),
+      url("fonts/GmarketSansMedium.woff2") format("woff2");
+    }
+    @font-face{
+      font-family: GmarketSans;
+      font-style: normal;
+      font-weight: 700;
+      src: url("fonts/GmarketSansBold.otf") format("opentype"),
+      url("fonts/GmarketSansBold.woff2") format("woff2");
+    }
+    /*pc*/
+    html {
+      font-size: 16px;
+      font-family: GmarketSans, sans-serif;
+    }
+    img {
+      backface-visibility: hidden;
+      display: block;
+      margin: 0 auto;
+      width: auto;
+    }
+    p {
+      color: #333;
+    }
+    a {
+      cursor: pointer;
+    }
+    input {
+      outline: none;
+    }
+    .container .pc {
+      display: block;
+    }
+    .container .mo {
+      display: none;
+    }
+    .container .wrap {
+      font-size: 0px;
+      text-align: center;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .container .wrap .page {
+      padding-top: 52px;
+      padding-right: 0px;
+      padding-bottom: 52px;
+      padding-left: 0px;
+      box-sizing: border-box;
+    }
+    .container .wrap .page h1 {
+      font-size: 35px;
+      line-height: 58px;
+      margin-bottom: 72px;
+      font-weight: 500;
+    }
+    .container .wrap .page h1 span {
+      font-size: 25px;
+      font-weight: 300;
+    }
+    .container .wrap .page .scroll {
+      width: 100%;
+      overflow-x: scroll;
+    }
+    .container .wrap .page .utv {
+      margin-top: 58px;
+      margin-right: 0px;
+      margin-bottom: 58px;
+      margin-left: 0px;
+      width: 100%;
+      height: 557px;
+      border-radius: 14px;
+      background-color: #eee;
+    }
+    .container .wrap .page .owl-carousel {
+      width: 524px;
+      height: 524px;
+      box-shadow: 0 0 39px -3px rgba(0, 0, 0, 0.33);
+      display: inline-block;
+      position: relative;
+    }
+    .container .wrap .page .owl-carousel .owl-item {
+      width: 100%;
+      height: 100%;
+    }
+    .container .wrap .page .owl-carousel .owl-nav {
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      right: auto;
+      bottom: auto;
+      transform: translateY(-50%);
+      margin: 0px;
+    }
+    .container .wrap .page .owl-carousel .owl-nav button {
+      width: 99px;
+      height: 99px;
+      position: absolute;
+      left: 50%;
+      top: 0px;
+      right: auto;
+      bottom: auto;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+    .container .wrap .page .owl-carousel .owl-nav button.owl-prev {
+      background-repeat: no-repeat;
+      background-image: url('images/p2-p-arr.png');
+      background-size: contain;
+      margin-left: -383px;
+    }
+    .container .wrap .page .owl-carousel .owl-nav button.owl-next {
+      background-repeat: no-repeat;
+      background-image: url('images/p2-n-arr.png');
+      background-size: contain;
+      margin-left: 280px;
+    }
+    .container .wrap .page3 {
+      max-width: 1200px;
+    }
+    .container .wrap .page3 section .tit {
+      font-size: 22px;
+      color: #002b99;
+      line-height: 24px;
+      vertical-align: middle;
+      text-align: left;
+    }
+    .container .wrap .page3 section .tit img {
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      vertical-align: top;
+      margin-right: 10px;
+    }
+    .container .wrap .page3 section {
+      position: relative;
+    }
+    .container .wrap .page3 section .scroll {
+      position: relative;
+      width: 100%;
+      overflow-x: scroll;
+      margin-top: 28px;
+    }
+    .container .wrap .page3 section .scroll .img1 {
+      width: 1200px;
+      height: 637px;
+      margin-top: 0px;
+    }
+    .container .wrap .page3 section .scroll .txt-box {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: auto;
+      bottom: auto;
+      width: 1200px;
+      height: auto;
+    }
+    .container .wrap .page3 section .scroll .txt-box .txt-inner {
+      position: absolute;
+      left: 0px;
+      width: 325px;
+      padding-top: 10px;
+      padding-right: 10px;
+      padding-bottom: 10px;
+      padding-left: 10px;
+      box-sizing: border-box;
+    }
+    .container .wrap .page3 section .scroll .txt-box .txt-inner .name {
+      font-size: 18px;
+      line-height: 41px;
+      text-align: center;
+      font-weight: 500;
+    }
+    .container .wrap .page3 section .scroll .txt-box .txt-inner .txt {
+      font-size: 16px;
+      color: #555;
+      padding-top: 8px;
+      line-height: 28px;
+      font-weight: 300;
+      text-align: left;
+    }
+    .container .wrap .page3 section .scroll .txt-box .txt-inner.inner1 {
+      top: 0px;
+    }
+    .container .wrap .page3 section .scroll .txt-box .txt-inner.inner2 {
+      top: 215px;
+    }
+    .container .wrap .page3 section .scroll .txt-box .txt-inner.inner3 {
+      top: 346px;
+    }
+    .container .wrap .page3 section .scroll .txt-box .txt-inner.inner4 {
+      top: 532px;
+    }
+    .container .wrap .page3 section .scroll .txt-box .txt-inner.inner5 {
+      left: 875px;
+      top: 70px;
+      right: auto;
+      bottom: auto;
+    }
+    .container .wrap .page3 section .scroll .txt-box .txt-inner.inner6 {
+      left: 875px;
+      top: 200px;
+      right: auto;
+      bottom: auto;
+    }
+    .container .wrap .page3 section .scroll .txt-box .txt-inner.inner7 {
+      left: 875px;
+      top: 332px;
+      right: auto;
+      bottom: auto;
+    }
+    .container .wrap .page3 section .scroll .txt-box .txt-inner.inner8 {
+      left: 875px;
+      top: 463px;
+      right: auto;
+      bottom: auto;
+    }
+    .container .wrap .page3 section .ex {
+      border: 1px solid #d5d5d5;
+      border-radius: 8px;
+      padding-top: 53px;
+      padding-right: 0px;
+      padding-bottom: 53px;
+      padding-left: 0px;
+      box-sizing: border-box;
+      margin-top: 30px;
+    }
+    .container .wrap .page3 section .ex a {
+      font-size: 18px;
+      font-weight: 500;
+      color: #d5d5d5;
+      background-color: #535353;
+      line-height: 39px;
+      margin-top: 4px;
+      margin-right: 8px;
+      margin-bottom: 4px;
+      margin-left: 8px;
+      border-radius: 20px;
+      padding-top: 0px;
+      padding-right: 27px;
+      padding-bottom: 0px;
+      padding-left: 27px;
+      box-sizing: border-box;
+      display: inline-block;
+    }
+    .container .wrap .page3 section .noti {
+      font-size: 20px;
+      margin-top: 25px;
+      font-weight: 500;
+    }
+
+    /*mobile*/
+    @media screen and (max-width: 768px) {
+      .container .pc {
+        display: none;
+      }
+      .container .mo {
+        display: block;
+      }
+      .container img {
+        width: 100%;
+      }
+      .container .wrap {
+        max-width: 100vw;
+      }
+      .container .wrap .page {
+        padding-top: 6.77083333vw;
+        padding-right: 3.90625vw;
+        padding-bottom: 6.77083333vw;
+        padding-left: 3.90625vw;
+        box-sizing: border-box;
+      }
+      .container .wrap .page h1 {
+        font-size: 4.55729167vw;
+        line-height: 7.55208333vw;
+        margin-bottom: 9.375vw;
+        font-weight: 500;
+      }
+      .container .wrap .page .scroll {
+        width: 100%;
+        overflow-x: scroll;
+      }
+      .container .wrap .page .utv {
+        margin-top: 7.55208333vw;
+        width: 100%;
+        height: 72.52604167vw;
+        border-radius: 1.82291667vw;
+        background-color: #eee;
+      }
+      .container .wrap .page .owl-carousel {
+        width: 68.22916667vw;
+        height: 68.22916667vw;
+        box-shadow: 0 0 39px -3px rgba(0, 0, 0, 0.33);
+        display: inline-block;
+        position: relative;
+      }
+      .container .wrap .page .owl-carousel .owl-item {
+        width: 100%;
+        height: 100%;
+      }
+      .container .wrap .page .owl-carousel .owl-nav {
+        width: 100%;
+        position: absolute;
+        left: 0vw;
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translateY(-50%);
+        margin: 0vw;
+      }
+      .container .wrap .page .owl-carousel .owl-nav button {
+        width: 12.890625vw;
+        height: 12.890625vw;
+        position: absolute;
+        left: 50%;
+        top: 0vw;
+        right: auto;
+        bottom: auto;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+      }
+      .container .wrap .page .owl-carousel .owl-nav button.owl-prev {
+        background-repeat: no-repeat;
+        background-image: url('images/p2-p-arr.png');
+        background-size: contain;
+        margin-left: -45.96354167vw;
+      }
+      .container .wrap .page .owl-carousel .owl-nav button.owl-next {
+        background-repeat: no-repeat;
+        background-image: url('images/p2-n-arr.png');
+        background-size: contain;
+        margin-left: 33.46354167vw;
+      }
+      .container .wrap .page3 {
+        max-width: 156.25vw;
+      }
+      .container .wrap .page3 section .tit {
+        font-size: 2.86458333vw;
+        color: #002b99;
+        line-height: 3.125vw;
+        vertical-align: middle;
+        text-align: left;
+      }
+      .container .wrap .page3 section .tit img {
+        display: inline-block;
+        width: 3.125vw;
+        height: 3.125vw;
+        vertical-align: top;
+        margin-right: 1.30208333vw;
+      }
+      .container .wrap .page3 section .scroll {
+        position: relative;
+        width: 100%;
+        overflow-x: scroll;
+        margin-top: 3.64583333vw;
+      }
+      .container .wrap .page3 section .scroll .img1 {
+        width: 156.25vw;
+        height: 82.94270833vw;
+        margin-top: 0vw;
+      }
+      .container .wrap .page3 section .scroll .txt-box {
+        position: absolute;
+        left: 0vw;
+        top: 0vw;
+        right: auto;
+        bottom: auto;
+        width: 156.25vw;
+        height: auto;
+      }
+      .container .wrap .page3 section .scroll .txt-box .txt-inner {
+        position: absolute;
+        left: 0vw;
+        width: 42.31770833vw;
+        padding-top: 1.30208333vw;
+        padding-right: 1.30208333vw;
+        padding-bottom: 1.30208333vw;
+        padding-left: 1.30208333vw;
+        box-sizing: border-box;
+      }
+      .container .wrap .page3 section .scroll .txt-box .txt-inner .name {
+        font-size: 2.34375vw;
+        line-height: 5.33854167vw;
+        text-align: center;
+        font-weight: 500;
+      }
+      .container .wrap .page3 section .scroll .txt-box .txt-inner .txt {
+        font-size: 2.08333333vw;
+        color: #555;
+        padding-top: 1.04166667vw;
+        line-height: 3.64583333vw;
+        font-weight: 300;
+        text-align: left;
+      }
+      .container .wrap .page3 section .scroll .txt-box .txt-inner.inner1 {
+        top: 0vw;
+      }
+      .container .wrap .page3 section .scroll .txt-box .txt-inner.inner2 {
+        top: 27.99479167vw;
+      }
+      .container .wrap .page3 section .scroll .txt-box .txt-inner.inner3 {
+        top: 45.05208333vw;
+      }
+      .container .wrap .page3 section .scroll .txt-box .txt-inner.inner4 {
+        top: 69.27083333vw;
+      }
+      .container .wrap .page3 section .scroll .txt-box .txt-inner.inner5 {
+        left: 113.93229167vw;
+        top: 9.11458333vw;
+        right: auto;
+        bottom: auto;
+      }
+      .container .wrap .page3 section .scroll .txt-box .txt-inner.inner6 {
+        left: 113.93229167vw;
+        top: 26.04166667vw;
+        right: auto;
+        bottom: auto;
+      }
+      .container .wrap .page3 section .scroll .txt-box .txt-inner.inner7 {
+        left: 113.93229167vw;
+        top: 43.22916667vw;
+        right: auto;
+        bottom: auto;
+      }
+      .container .wrap .page3 section .scroll .txt-box .txt-inner.inner8 {
+        left: 113.93229167vw;
+        top: 60.28645833vw;
+        right: auto;
+        bottom: auto;
+      }
+      .container .wrap .page3 section .ex {
+        border: 1px solid #d5d5d5;
+        border-radius: 1.04166667vw;
+        padding-top: 6.90104167vw;
+        padding-right: 0vw;
+        padding-bottom: 6.90104167vw;
+        padding-left: 0vw;
+        box-sizing: border-box;
+        margin-top: 3.90625vw;
+      }
+      .container .wrap .page3 section .ex a {
+        font-size: 2.34375vw;
+        font-weight: 500;
+        color: #d5d5d5;
+        background-color: #535353;
+        line-height: 5.078125vw;
+        margin-top: 0.52083333vw;
+        margin-right: 1.04166667vw;
+        margin-bottom: 0.52083333vw;
+        margin-left: 1.04166667vw;
+        border-radius: 2.60416667vw;
+        padding-top: 0vw;
+        padding-right: 3.515625vw;
+        padding-bottom: 0vw;
+        padding-left: 3.515625vw;
+        box-sizing: border-box;
+        display: inline-block;
+      }
+      .container .wrap .page3 section .noti {
+        font-size: 2.60416667vw;
+        margin-top: 3.25520833vw;
+        font-weight: 500;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <div class="wrap">
+      <div class="page page3">
+        <h1>알코올중독(성인)<br> <span>-알코올이 뇌에 미치는 영향-</span></h1>
+        <section>
+          <p class="tit"><img src="images/sq-arr.png" alt="">알코올이 외에 미치는 영향</p>
+        </section>
+        <section>
+          <div class="scroll">
+            <img src="images/brain.png" alt="" class="img1">
+            <div class="txt-box">
+              <div class="txt-inner inner1">
+                <div class="name">⑤</div>
+                <p class="txt">
+                  - 학습, 판단 등 고도의 정신 작용 주관<br>
+                  - 논리적으로 생각하지 못함<br>
+                  - 집중력이 저하되고 산만해짐<br>
+                  - 사소한 일도 참지 못함
+                </p>
+              </div>
+              <div class="txt-inner inner2">
+                <div class="name">⑥</div>
+                <p class="txt">
+                  - 혀가 꼬부라짐
+                </p>
+              </div>
+              <div class="txt-inner inner3">
+                <div class="name">⑦</div>
+                <p class="txt">
+                  - 감정적으로 바뀜<br>
+                  - 노래실력이 떨어짐<br>
+                  - 성욕을 참지 못하거나 성기능 장애
+                </p>
+              </div>
+              <div class="txt-inner inner4">
+                <div class="name">⑧</div>
+                <p class="txt">
+                  - 필름이 끊김
+                </p>
+              </div>
+              <div class="txt-inner inner5">
+                <div class="name">①</div>
+                <p class="txt">
+                  - 반대쪽 몸의 감각이 없어진다
+                </p>
+              </div>
+              <div class="txt-inner inner6">
+                <div class="name">②</div>
+                <p class="txt">
+                  - 말할 때 단어가 생각나지 않음
+                </p>
+              </div>
+              <div class="txt-inner inner7">
+                <div class="name">③</div>
+                <p class="txt">
+                  - 비틀비틀 걸음, 혀가 꼬부라짐
+                </p>
+              </div>
+              <div class="txt-inner inner8">
+                <div class="name">④</div>
+                <p class="txt">
+                  - 호흡마비로 사망
+                </p>
+            </div>
+            </div>
+          </div>
+          <div class="ex">
+            <a>전두엽</a>
+            <a>마루엽</a>
+            <a>브로카</a>
+            <a>베로니카영역</a>
+            <br>
+            <a>변연계</a>
+            <a>소뇌</a>m
+            <a>해마</a>
+            <a>숨뇌</a>
+          </div>
+          <p class="noti">&#60;보기&#60; 중 ①~③ 해당 칸에 차례대로 알맞은 단어를 누르세요.</p>
+        </section>
+      </div>
+    </div>
+  </div>
+</body>
+</html>

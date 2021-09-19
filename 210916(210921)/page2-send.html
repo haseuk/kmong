@@ -1,0 +1,993 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /*base*/
+    html {
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      width: 100%;
+      height: 100%;
+      -webkit-text-size-adjust: none;
+      word-wrap: break-word;
+      -webkit-tap-highlight-color: transparent;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      max-height: 1000000px;
+    }
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+    img,
+    table,
+    tr,
+    td,
+    textArea,
+    iframe,
+    fieldset {
+      border: 0;
+    }
+    legend,
+    caption {
+      display: none;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: normal;
+    }
+    table {
+      width: 100%;
+      border: 0;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+    table th {
+      font-weight: normal;
+    }
+    textarea {
+      -webkit-appearance: none;
+      -webkit-border-radius: 0;
+      border: 0;
+      resize: none;
+    }
+    li {
+      list-style: none;
+    }
+    hr {
+      border: none;
+      height: 0;
+    }
+    i {
+      font-style: normal;
+    }
+    s {
+      text-decoration: none;
+    }
+    em {
+      font-style: normal;
+    }
+    a {
+      cursor: pointer;
+      color: inherit;
+      text-decoration: none;
+    }
+    img {
+      vertical-align: middle;
+    }
+    /* base - input */
+    button {
+      border: 0;
+      cursor: pointer;
+    }
+    input,
+    select {
+      -webkit-appearance: none;
+      -webkit-border-radius: 0;
+      vertical-align: middle;
+    }
+    select::-ms-expand {
+      display: none;
+    }
+    input:checked[type="checkbox"] {
+      background-color: #666;
+      -webkit-appearance: checkbox;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+    }
+    input[type="submit"] {
+      cursor: pointer;
+    }
+  </style>
+  <style>
+    @font-face{
+      font-family: GmarketSans;
+      font-style: normal;
+      font-weight: 300;
+      src: url("fonts/GmarketSansLight.otf") format("opentype"),
+      url("fonts/GmarketSansLight.woff2") format("woff2");
+    }
+    @font-face{
+      font-family: GmarketSans;
+      font-style: normal;
+      font-weight: 500;
+      src: url("fonts/GmarketSansMedium.otf") format("opentype"),
+      url("fonts/GmarketSansMedium.woff2") format("woff2");
+    }
+    @font-face{
+      font-family: GmarketSans;
+      font-style: normal;
+      font-weight: 700;
+      src: url("fonts/GmarketSansBold.otf") format("opentype"),
+      url("fonts/GmarketSansBold.woff2") format("woff2");
+    }
+    /*pc*/
+    html {
+      font-size: 16px;
+      font-family: GmarketSans, sans-serif;
+    }
+    img {
+      backface-visibility: hidden;
+      display: block;
+      margin: 0 auto;
+      width: auto;
+    }
+    p {
+      color: #333;
+    }
+    a {
+      cursor: pointer;
+    }
+    input {
+      outline: none;
+    }
+    .container .pc {
+      display: block;
+    }
+    .container .mo {
+      display: none;
+    }
+    .container .wrap {
+      font-size: 0px;
+      text-align: center;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .container .wrap .page {
+      padding-top: 52px;
+      padding-right: 0px;
+      padding-bottom: 52px;
+      padding-left: 0px;
+      box-sizing: border-box;
+    }
+    .container .wrap .page h1 {
+      font-size: 35px;
+      line-height: 58px;
+      margin-bottom: 72px;
+      font-weight: 500;
+    }
+    .container .wrap .page h1 span {
+      font-size: 25px;
+      font-weight: 300;
+    }
+    .container .wrap .page .scroll {
+      width: 100%;
+      overflow-x: scroll;
+    }
+    .container .wrap .page .utv {
+      margin-top: 58px;
+      margin-right: 0px;
+      margin-bottom: 58px;
+      margin-left: 0px;
+      width: 100%;
+      height: 557px;
+      border-radius: 14px;
+      background-color: #eee;
+    }
+    .container .wrap .page .owl-carousel {
+      width: 524px;
+      height: 524px;
+      box-shadow: 0 0 39px -3px rgba(0, 0, 0, 0.33);
+      display: inline-block;
+      position: relative;
+    }
+    .container .wrap .page .owl-carousel .owl-item {
+      width: 100%;
+      height: 100%;
+    }
+    .container .wrap .page .owl-carousel .owl-nav {
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      right: auto;
+      bottom: auto;
+      transform: translateY(-50%);
+      margin: 0px;
+    }
+    .container .wrap .page .owl-carousel .owl-nav button {
+      width: 99px;
+      height: 99px;
+      position: absolute;
+      left: 50%;
+      top: 0px;
+      right: auto;
+      bottom: auto;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+    .container .wrap .page .owl-carousel .owl-nav button.owl-prev {
+      background-repeat: no-repeat;
+      background-image: url('images/p2-p-arr.png');
+      background-size: contain;
+      margin-left: -383px;
+    }
+    .container .wrap .page .owl-carousel .owl-nav button.owl-next {
+      background-repeat: no-repeat;
+      background-image: url('images/p2-n-arr.png');
+      background-size: contain;
+      margin-left: 280px;
+    }
+    .container .wrap .page2 section {
+      position: relative;
+      overflow: hidden;
+    }
+    .container .wrap .page2 section .scroll {
+      position: relative;
+      width: 100%;
+      overflow-x: scroll;
+    }
+    .container .wrap .page2 section .scroll .img1 {
+      width: 1200px;
+      height: 424px;
+      margin-top: 10px;
+      margin-left: 0px;
+      transform: none;
+    }
+    .container .wrap .page2 section .scroll .part {
+      position: absolute;
+      width: 225px;
+      height: 85px;
+      display: inline-block;
+      left: 170px;
+      top: 269px;
+      right: auto;
+      bottom: auto;
+    }
+    .container .wrap .page2 section .tit {
+      font-size: 34px;
+      margin-top: 20px;
+      font-weight: 500;
+    }
+    .container .wrap .page2 section .txt {
+      font-size: 18px;
+      margin-top: 15px;
+      font-weight: 300;
+    }
+    .container .wrap .page2 section .q {
+      width: 652px;
+      height: 652px;
+      background-image: url('images/q-img.png');
+      background-size: contain;
+      background-repeat: no-repeat;
+      display: inline-block;
+      position: relative;
+    }
+    .container .wrap .page2 section .q .q-inner {
+      position: absolute;
+      right: 80px;
+      top: 460px;
+      left: auto;
+      bottom: auto;
+    }
+    .container .wrap .page2 section .q .q-inner label input[type=radio] + i {
+      width: 22px;
+      height: 22px;
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      left: auto;
+      bottom: auto;
+    }
+    .container .wrap .page2 section .q .q-inner label input[type=radio]:checked + i {
+      width: 25px;
+      height: 23px;
+      display: inline-block;
+      position: absolute;
+      right: 0px;
+      top: 0px;
+      left: auto;
+      bottom: auto;
+      background-repeat: no-repeat;
+      background-image: url('images/q-chk.png');
+      background-size: contain;
+    }
+    .container .wrap .page2 section .q .q-inner label input {
+      display: none;
+    }
+    .container .wrap .page2 section .q .q-inner label:nth-child(2) input[type=radio] + i {
+      top: 32px;
+    }
+    .container .wrap .page2 section .q .q-inner label:nth-child(3) input[type=radio] + i {
+      top: 62px;
+    }
+    .container .wrap .page2 section .q .q-inner label:nth-child(4) input[type=radio] + i {
+      top: 92px;
+    }
+    .container .wrap .page2 section .q .on-pop {
+      margin-top: 250px;
+      position: relative;
+      display: none;
+    }
+    .container .wrap .page2 section .q .on-pop p {
+      font-size: 15px;
+      color: #fff;
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      right: auto;
+      bottom: auto;
+      transform: translate(-50%, -50%);
+      margin-top: 40px;
+    }
+    .container .wrap .page2 section .q.y-on .y-on-pop {
+      display: block;
+    }
+    .container .wrap .page2 section .q.n-on .n-on-pop {
+      display: block;
+    }
+    .container .wrap .page2 section .p2-img2 + a {
+      position: absolute;
+      left: 50%;
+      bottom: 30px;
+      right: auto;
+      top: auto;
+      width: 225px;
+      height: 85px;
+      transform: translateX(-50%);
+    }
+    .container .popup {
+      position: fixed;
+      z-index: 10;
+      left: 0px;
+      top: 0px;
+      right: auto;
+      bottom: auto;
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+    .container .popup .dim {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: auto;
+      bottom: auto;
+      opacity: 0.7;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+    }
+    .container .popup .popup-inner {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      right: auto;
+      bottom: auto;
+      transform: translate(-50%, -50%);
+    }
+    .container .popup .popup-inner .btns {
+      position: absolute;
+      left: 50%;
+      bottom: 124px;
+      right: auto;
+      top: auto;
+      transform: translateX(-50%);
+    }
+    .container .popup .popup-inner .btns a {
+      width: 130px;
+      height: 130px;
+      margin-top: 0px;
+      margin-right: 12px;
+      margin-bottom: 0px;
+      margin-left: 12px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    .container .popup.on {
+      display: block;
+    }
+    .container .app-popup {
+      position: fixed;
+      z-index: 10;
+      left: 0px;
+      top: 0px;
+      right: auto;
+      bottom: auto;
+      width: 100%;
+      height: 100%;
+      display: none;
+    }
+    .container .app-popup .dim {
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      right: auto;
+      bottom: auto;
+      opacity: 0.7;
+      width: 100%;
+      height: 100%;
+      background-color: #000;
+    }
+    .container .app-popup .popup-inner {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+      right: auto;
+      bottom: auto;
+      transform: translate(-50%, -50%);
+    }
+    .container .app-popup .popup-inner .user {
+      position: absolute;
+      left: 50%;
+      top: 136px;
+      right: auto;
+      bottom: auto;
+      width: 390px;
+      margin-left: -115px;
+    }
+    .container .app-popup .popup-inner .user input {
+      font-size: 25px;
+      width: 390px;
+      height: 80px;
+      line-height: 80px;
+      padding-left: 20px;
+      box-sizing: border-box;
+      margin-bottom: 20px;
+      border: 0;
+      background: transparent;
+    }
+    .container .app-popup .popup-inner label input[type=file] {
+      position: absolute;
+      left: 50%;
+      bottom: 300px;
+      right: auto;
+      top: auto;
+      transform: translate(-50%, -50%);
+      width: 70px;
+      height: 70px;
+      cursor: pointer;
+      font-size: 0px;
+    }
+    .container .app-popup .popup-inner label input[type=file]::-webkit-file-upload-button {
+      visibility: hidden;
+      margin-left: -50px;
+    }
+    .container .app-popup .popup-inner label input[type=file]::-ms-browse {
+      visibility: hidden;
+      margin-left: -50px;
+    }
+    .container .app-popup .popup-inner label input[type=file]::file-selector-button {
+      visibility: hidden;
+      margin-left: -50px;
+    }
+    .container .app-popup .popup-inner a {
+      width: 225px;
+      height: 85px;
+      position: absolute;
+      left: 50%;
+      bottom: 90px;
+      right: auto;
+      top: auto;
+      transform: translate(-50%, -50%);
+    }
+    .container .app-popup.on {
+      display: block;
+    }
+
+    /*mobile*/
+    @media screen and (max-width: 768px) {
+      .container .pc {
+        display: none;
+      }
+      .container .mo {
+        display: block;
+      }
+      .container img {
+        width: 100%;
+      }
+      .container .wrap {
+        max-width: 100vw;
+      }
+      .container .wrap .page {
+        padding-top: 6.77083333vw;
+        padding-right: 3.90625vw;
+        padding-bottom: 6.77083333vw;
+        padding-left: 3.90625vw;
+        box-sizing: border-box;
+      }
+      .container .wrap .page h1 {
+        font-size: 4.55729167vw;
+        line-height: 7.55208333vw;
+        margin-bottom: 9.375vw;
+        font-weight: 500;
+      }
+      .container .wrap .page .scroll {
+        width: 100%;
+        overflow-x: scroll;
+      }
+      .container .wrap .page .utv {
+        margin-top: 7.55208333vw;
+        width: 100%;
+        height: 72.52604167vw;
+        border-radius: 1.82291667vw;
+        background-color: #eee;
+      }
+      .container .wrap .page .owl-carousel {
+        width: 68.22916667vw;
+        height: 68.22916667vw;
+        box-shadow: 0 0 39px -3px rgba(0, 0, 0, 0.33);
+        display: inline-block;
+        position: relative;
+      }
+      .container .wrap .page .owl-carousel .owl-item {
+        width: 100%;
+        height: 100%;
+      }
+      .container .wrap .page .owl-carousel .owl-nav {
+        width: 100%;
+        position: absolute;
+        left: 0vw;
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translateY(-50%);
+        margin: 0vw;
+      }
+      .container .wrap .page .owl-carousel .owl-nav button {
+        width: 12.890625vw;
+        height: 12.890625vw;
+        position: absolute;
+        left: 50%;
+        top: 0vw;
+        right: auto;
+        bottom: auto;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+      }
+      .container .wrap .page .owl-carousel .owl-nav button.owl-prev {
+        background-repeat: no-repeat;
+        background-image: url('images/p2-p-arr.png');
+        background-size: contain;
+        margin-left: -45.96354167vw;
+      }
+      .container .wrap .page .owl-carousel .owl-nav button.owl-next {
+        background-repeat: no-repeat;
+        background-image: url('images/p2-n-arr.png');
+        background-size: contain;
+        margin-left: 33.46354167vw;
+      }
+      .container .wrap .page2 section .scroll {
+        position: relative;
+        width: 100%;
+        overflow-x: scroll;
+      }
+      .container .wrap .page2 section .scroll .img1 {
+        width: 156.25vw;
+        height: 55.20833333vw;
+        margin-top: 1.30208333vw;
+        margin-left: 0vw;
+        transform: none;
+      }
+      .container .wrap .page2 section .scroll .part {
+        position: absolute;
+        width: 29.296875vw;
+        height: 11.06770833vw;
+        display: inline-block;
+        left: 22.13541667vw;
+        top: 35.02604167vw;
+        right: auto;
+        bottom: auto;
+      }
+      .container .wrap .page2 section .tit {
+        font-size: 4.42708333vw;
+        margin-top: 2.60416667vw;
+        font-weight: 500;
+      }
+      .container .wrap .page2 section .txt {
+        font-size: 2.34375vw;
+        margin-top: 1.953125vw;
+        font-weight: 300;
+      }
+      .container .wrap .page2 section .q {
+        width: 84.89583333vw;
+        height: 84.89583333vw;
+        background-image: url('images/q-img.png');
+        background-size: contain;
+        background-repeat: no-repeat;
+        display: inline-block;
+        position: relative;
+      }
+      .container .wrap .page2 section .q .q-inner {
+        position: absolute;
+        right: 10.41666667vw;
+        top: 59.89583333vw;
+        left: auto;
+        bottom: auto;
+      }
+      .container .wrap .page2 section .q .q-inner label input[type=radio] + i {
+        width: 2.86458333vw;
+        height: 2.86458333vw;
+        display: inline-block;
+        position: absolute;
+        right: 0vw;
+        top: 0vw;
+        left: auto;
+        bottom: auto;
+      }
+      .container .wrap .page2 section .q .q-inner label input[type=radio]:checked + i {
+        width: 3.25520833vw;
+        height: 2.99479167vw;
+        display: inline-block;
+        position: absolute;
+        right: 0vw;
+        top: 0vw;
+        left: auto;
+        bottom: auto;
+        background-repeat: no-repeat;
+        background-image: url('images/q-chk.png');
+        background-size: contain;
+      }
+      .container .wrap .page2 section .q .q-inner label input {
+        display: none;
+      }
+      .container .wrap .page2 section .q .q-inner label:nth-child(2) input[type=radio] + i {
+        top: 4.16666667vw;
+      }
+      .container .wrap .page2 section .q .q-inner label:nth-child(3) input[type=radio] + i {
+        top: 8.07291667vw;
+      }
+      .container .wrap .page2 section .q .q-inner label:nth-child(4) input[type=radio] + i {
+        top: 11.97916667vw;
+      }
+      .container .wrap .page2 section .q .on-pop {
+        display: inline-block;
+        margin-top: 32.55208333vw;
+        position: relative;
+        display: none;
+      }
+      .container .wrap .page2 section .q .on-pop img {
+        width: 30.98958333vw;
+        height: 19.27083333vw;
+        margin-left: auto;
+        margin-right: auto;
+      }
+      .container .wrap .page2 section .q .on-pop p {
+        font-size: 1.953125vw;
+        color: #fff;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+        margin-top: 5.20833333vw;
+      }
+      .container .wrap .page2 section .q.y-on .y-on-pop {
+        display: block;
+      }
+      .container .wrap .page2 section .q.n-on .n-on-pop {
+        display: block;
+      }
+      .container .wrap .page2 section .p2-img2 + a {
+        position: absolute;
+        left: 50%;
+        bottom: 3.90625vw;
+        right: auto;
+        top: auto;
+        width: 29.296875vw;
+        height: 11.06770833vw;
+        transform: translateX(-50%);
+      }
+      .container .popup {
+        position: fixed;
+        z-index: 10;
+        left: 0vw;
+        top: 0vw;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+      .container .popup .dim {
+        position: absolute;
+        left: 0vw;
+        top: 0vw;
+        right: auto;
+        bottom: auto;
+        opacity: 0.7;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+      }
+      .container .popup .popup-inner {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+        width: 95%;
+      }
+      .container .popup .popup-inner .btns {
+        position: absolute;
+        left: 50%;
+        bottom: 11.97916667vw;
+        right: auto;
+        top: auto;
+        transform: translateX(-50%);
+      }
+      .container .popup .popup-inner .btns a {
+        width: 11.06770833vw;
+        height: 13.02083333vw;
+        margin-top: 0vw;
+        margin-right: 1.5625vw;
+        margin-bottom: 0vw;
+        margin-left: 1.5625vw;
+        display: inline-block;
+        vertical-align: top;
+      }
+      .container .popup.on {
+        display: block;
+      }
+      .container .app-popup {
+        position: fixed;
+        z-index: 10;
+        left: 0vw;
+        top: 0vw;
+        right: auto;
+        bottom: auto;
+        width: 100%;
+        height: 100%;
+        display: none;
+      }
+      .container .app-popup .dim {
+        position: absolute;
+        left: 0vw;
+        top: 0vw;
+        right: auto;
+        bottom: auto;
+        opacity: 0.7;
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+      }
+      .container .app-popup .popup-inner {
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translate(-50%, -50%);
+        width: 95%;
+      }
+      .container .app-popup .popup-inner .user {
+        position: absolute;
+        left: 50%;
+        top: 13.28125vw;
+        right: auto;
+        bottom: auto;
+        width: 37.890625vw;
+        margin-left: -10.9375vw;
+      }
+      .container .app-popup .popup-inner .user input {
+        font-size: 3.25520833vw;
+        width: 37.890625vw;
+        height: 7.5vw;
+        line-height: 7.5vw;
+        padding-left: 2.60416667vw;
+        box-sizing: border-box;
+        margin-bottom: 2.21354167vw;
+        border: 0;
+        background: transparent;
+      }
+      .container .app-popup .popup-inner label input[type=file] {
+        position: absolute;
+        left: 50%;
+        bottom: 26.953125vw;
+        right: auto;
+        top: auto;
+        transform: translate(-50%, -50%);
+        width: 9.11458333vw;
+        height: 9.11458333vw;
+        cursor: pointer;
+        font-size: 0vw;
+      }
+      .container .app-popup .popup-inner label input[type=file]::-webkit-file-upload-button {
+        visibility: hidden;
+        margin-left: -6.51041667vw;
+      }
+      .container .app-popup .popup-inner label input[type=file]::-ms-browse {
+        visibility: hidden;
+        margin-left: -6.51041667vw;
+      }
+      .container .app-popup .popup-inner label input[type=file]::file-selector-button {
+        visibility: hidden;
+        margin-left: -6.51041667vw;
+      }
+      .container .app-popup .popup-inner a {
+        width: 22.00520833vw;
+        height: 8.07291667vw;
+        position: absolute;
+        left: 50%;
+        bottom: 9.11458333vw;
+        right: auto;
+        top: auto;
+        transform: translate(-50%, -50%);
+      }
+      .container .app-popup.on {
+        display: block;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="wrap">
+      <div class="page page2">
+        <h1>청소년 알코올중독예방교육</h1>
+        <section>
+          <div class="owl-carousel owl-theme">
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+          </div>
+        </section>
+        <section>
+          <div class="scroll">
+            <img src="images/p2-img1.png" alt="" class="img1">
+            <a class="part" onclick="openPopup()">참여하기</a>
+          </div>
+          <p class="tit">만화로 배우는 음주 거절법</p>
+          <p class="txt">말풍선 안에 들어갈 내용을 고르세요.</p>
+          <div class="q y-on"> <!-- y-on 은 정답 / n-on은 오답-->
+            <div class="q-inner">
+              <label>
+                <input type="radio" name="q" value="a" checked>
+                <i></i>
+              </label>
+              <label>
+                <input type="radio" name="q" value="b">
+                <i></i>
+              </label>
+              <label>
+                <input type="radio" name="q" value="b">
+                <i></i>
+              </label>
+              <label>
+                <input type="radio" name="q" value="b">
+                <i></i>
+              </label>
+            </div>
+
+            <div class="y-on-pop on-pop">
+              <img src="images/yes.png" alt="">
+              <p>정답입니다</p>
+            </div>
+            <div class="n-on-pop on-pop">
+              <img src="images/nono.png" alt="">
+              <p>오답입니다</p>
+            </div>
+          </div>
+        </section>
+        <section>
+          <img src="images/p2-img2.png" alt="" class="p2-img2">
+          <a class="appl" onclick="openApp()">응모하기</a>
+        </section>
+      </div>
+    </div>
+
+    <div class="popup p2">
+      <div class="dim"></div>
+      <div class="popup-inner">
+        <img src="images/p2-popup.png" alt="">
+        <div class="btns">
+          <a class="y" onclick="yes()"></a>
+          <a class="n" onclick="no()"></a>
+        </div>
+      </div>
+    </div>
+
+    <div class="app-popup">
+      <div class="dim"></div>
+      <div class="popup-inner">
+        <img src="images/app-pop.png" alt="">
+        <div class="user">
+          <label>
+            <input type="text">
+          </label>
+          <label>
+            <input type="text">
+          </label>
+        </div>
+        <label>
+          <input type="file">
+        </label>
+        <a class="application" onclick="application()"></a>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function() {
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        items: 1,
+        nav: true,
+        loop: true,
+      });
+    });
+
+    let p2 = document.querySelector('.popup.p2');
+    function openPopup() {
+      p2.classList.add('on');
+    }
+    function yes() {
+      close();
+    }
+    function no() {
+      close();
+    }
+    function close() {
+      p2.classList.remove('on');
+    }
+
+    let app = document.querySelector('.app-popup');
+    function openApp() {
+      app.classList.add('on');
+    }
+    function application() {
+      app.classList.remove('on');
+    }
+
+  </script>
+
+
+</body>
+</html>

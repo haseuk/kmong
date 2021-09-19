@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+  <style>
+    /*base*/
+    html {
+      width: 100%;
+      height: 100%;
+    }
+    body {
+      width: 100%;
+      height: 100%;
+      -webkit-text-size-adjust: none;
+      word-wrap: break-word;
+      -webkit-tap-highlight-color: transparent;
+    }
+    * {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+      max-height: 1000000px;
+    }
+    article,
+    aside,
+    details,
+    figcaption,
+    figure,
+    footer,
+    header,
+    menu,
+    nav,
+    section {
+      display: block;
+    }
+    img,
+    table,
+    tr,
+    td,
+    textArea,
+    iframe,
+    fieldset {
+      border: 0;
+    }
+    legend,
+    caption {
+      display: none;
+    }
+    h1,
+    h2,
+    h3,
+    h4,
+    h5,
+    h6 {
+      font-weight: normal;
+    }
+    table {
+      width: 100%;
+      border: 0;
+      border-spacing: 0;
+      border-collapse: collapse;
+    }
+    table th {
+      font-weight: normal;
+    }
+    textarea {
+      -webkit-appearance: none;
+      -webkit-border-radius: 0;
+      border: 0;
+      resize: none;
+    }
+    li {
+      list-style: none;
+    }
+    hr {
+      border: none;
+      height: 0;
+    }
+    i {
+      font-style: normal;
+    }
+    s {
+      text-decoration: none;
+    }
+    em {
+      font-style: normal;
+    }
+    a {
+      cursor: pointer;
+      color: inherit;
+      text-decoration: none;
+    }
+    img {
+      vertical-align: middle;
+    }
+    /* base - input */
+    button {
+      border: 0;
+      cursor: pointer;
+    }
+    input,
+    select {
+      -webkit-appearance: none;
+      -webkit-border-radius: 0;
+      vertical-align: middle;
+    }
+    select::-ms-expand {
+      display: none;
+    }
+    input:checked[type="checkbox"] {
+      background-color: #666;
+      -webkit-appearance: checkbox;
+    }
+    input[type="search"]::-webkit-search-cancel-button {
+      -webkit-appearance: none;
+    }
+    input[type="submit"] {
+      cursor: pointer;
+    }
+  </style>
+  <style>
+    @font-face{
+      font-family: GmarketSans;
+      font-style: normal;
+      font-weight: 300;
+      src: url("fonts/GmarketSansLight.otf") format("opentype"),
+      url("fonts/GmarketSansLight.woff2") format("woff2");
+    }
+    @font-face{
+      font-family: GmarketSans;
+      font-style: normal;
+      font-weight: 500;
+      src: url("fonts/GmarketSansMedium.otf") format("opentype"),
+      url("fonts/GmarketSansMedium.woff2") format("woff2");
+    }
+    @font-face{
+      font-family: GmarketSans;
+      font-style: normal;
+      font-weight: 700;
+      src: url("fonts/GmarketSansBold.otf") format("opentype"),
+      url("fonts/GmarketSansBold.woff2") format("woff2");
+    }
+    /*pc*/
+    html {
+      font-size: 16px;
+      font-family: GmarketSans, sans-serif;
+    }
+    img {
+      backface-visibility: hidden;
+      display: block;
+      margin: 0 auto;
+      width: auto;
+    }
+    p {
+      color: #333;
+    }
+    a {
+      cursor: pointer;
+    }
+    input {
+      outline: none;
+    }
+    .container .pc {
+      display: block;
+    }
+    .container .mo {
+      display: none;
+    }
+    .container .wrap {
+      font-size: 0px;
+      text-align: center;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .container .wrap .page {
+      padding-top: 52px;
+      padding-right: 0px;
+      padding-bottom: 52px;
+      padding-left: 0px;
+      box-sizing: border-box;
+    }
+    .container .wrap .page h1 {
+      font-size: 35px;
+      line-height: 58px;
+      margin-bottom: 72px;
+      font-weight: 500;
+    }
+    .container .wrap .page h1 span {
+      font-size: 25px;
+      font-weight: 300;
+    }
+    .container .wrap .page .scroll {
+      width: 100%;
+      overflow-x: scroll;
+    }
+    .container .wrap .page .utv {
+      margin-top: 58px;
+      margin-right: 0px;
+      margin-bottom: 58px;
+      margin-left: 0px;
+      width: 100%;
+      height: 557px;
+      border-radius: 14px;
+      background-color: #eee;
+    }
+    .container .wrap .page .owl-carousel {
+      width: 524px;
+      height: 524px;
+      box-shadow: 0 0 39px -3px rgba(0, 0, 0, 0.33);
+      display: inline-block;
+      position: relative;
+    }
+    .container .wrap .page .owl-carousel .owl-item {
+      width: 100%;
+      height: 100%;
+    }
+    .container .wrap .page .owl-carousel .owl-nav {
+      width: 100%;
+      position: absolute;
+      left: 0px;
+      top: 50%;
+      right: auto;
+      bottom: auto;
+      transform: translateY(-50%);
+      margin: 0px;
+    }
+    .container .wrap .page .owl-carousel .owl-nav button {
+      width: 99px;
+      height: 99px;
+      position: absolute;
+      left: 50%;
+      top: 0px;
+      right: auto;
+      bottom: auto;
+      background-repeat: no-repeat;
+      transform: translateY(-50%);
+    }
+    .container .wrap .page .owl-carousel .owl-nav button.owl-prev {
+      background-repeat: no-repeat;
+      background-image: url('images/p2-p-arr.png');
+      background-size: contain;
+      margin-left: -383px;
+    }
+    .container .wrap .page .owl-carousel .owl-nav button.owl-next {
+      background-repeat: no-repeat;
+      background-image: url('images/p2-n-arr.png');
+      background-size: contain;
+      margin-left: 280px;
+    }
+    .container .wrap .page4 section {
+      position: relative;
+    }
+    .container .wrap .page4 section .coins {
+      position: absolute;
+      left: 50%;
+      bottom: 172px;
+      right: auto;
+      top: auto;
+      transform: translateX(-50%);
+      width: 100%;
+    }
+    .container .wrap .page4 section .coins .coin {
+      display: inline-block;
+      margin-top: 0px;
+      margin-right: 20px;
+      margin-bottom: 0px;
+      margin-left: 20px;
+      position: relative;
+      vertical-align: top;
+      width: 156px;
+      height: 156px;
+    }
+    .container .wrap .page4 section .coins .coin:after {
+      content: '';
+      display: block;
+      background-size: contain;
+      background-repeat: no-repeat;
+      position: absolute;
+      left: 6px;
+      top: 6px;
+      right: auto;
+      bottom: auto;
+      width: 144px;
+      height: 144px;
+    }
+    .container .wrap .page4 section .coins .coin.win:after {
+      background-image: url('images/win.png');
+    }
+    .container .wrap .page4 section .coins .coin.fail:after {
+      background-image: url('images/fail.png');
+    }
+    .container .wrap .page4 section .btns {
+      width: 360px;
+      height: 92px;
+      position: absolute;
+      left: 50%;
+      bottom: 55px;
+      right: auto;
+      top: auto;
+      transform: translateX(-50%);
+    }
+    .container .wrap .page4 section .btns a {
+      width: 50%;
+      height: 92px;
+      display: inline-block;
+      vertical-align: top;
+    }
+    /*mobile*/
+    @media screen and (max-width: 768px) {
+      .container .pc {
+        display: none;
+      }
+      .container .mo {
+        display: block;
+      }
+      .container img {
+        width: 100%;
+      }
+      .container .wrap {
+        max-width: 100vw;
+      }
+      .container .wrap .page {
+        padding-top: 6.77083333vw;
+        padding-right: 3.90625vw;
+        padding-bottom: 6.77083333vw;
+        padding-left: 3.90625vw;
+        box-sizing: border-box;
+      }
+      .container .wrap .page h1 {
+        font-size: 4.55729167vw;
+        line-height: 7.55208333vw;
+        margin-bottom: 9.375vw;
+        font-weight: 500;
+      }
+      .container .wrap .page .scroll {
+        width: 100%;
+        overflow-x: scroll;
+      }
+      .container .wrap .page .utv {
+        margin-top: 7.55208333vw;
+        width: 100%;
+        height: 72.52604167vw;
+        border-radius: 1.82291667vw;
+        background-color: #eee;
+      }
+      .container .wrap .page .owl-carousel {
+        width: 68.22916667vw;
+        height: 68.22916667vw;
+        box-shadow: 0 0 39px -3px rgba(0, 0, 0, 0.33);
+        display: inline-block;
+        position: relative;
+      }
+      .container .wrap .page .owl-carousel .owl-item {
+        width: 100%;
+        height: 100%;
+      }
+      .container .wrap .page .owl-carousel .owl-nav {
+        width: 100%;
+        position: absolute;
+        left: 0vw;
+        top: 50%;
+        right: auto;
+        bottom: auto;
+        transform: translateY(-50%);
+        margin: 0vw;
+      }
+      .container .wrap .page .owl-carousel .owl-nav button {
+        width: 12.890625vw;
+        height: 12.890625vw;
+        position: absolute;
+        left: 50%;
+        top: 0vw;
+        right: auto;
+        bottom: auto;
+        background-repeat: no-repeat;
+        transform: translateY(-50%);
+      }
+      .container .wrap .page .owl-carousel .owl-nav button.owl-prev {
+        background-repeat: no-repeat;
+        background-image: url('images/p2-p-arr.png');
+        background-size: contain;
+        margin-left: -45.96354167vw;
+      }
+      .container .wrap .page .owl-carousel .owl-nav button.owl-next {
+        background-repeat: no-repeat;
+        background-image: url('images/p2-n-arr.png');
+        background-size: contain;
+        margin-left: 33.46354167vw;
+      }
+      .container .wrap .page4 section {
+        position: relative;
+      }
+      .container .wrap .page4 section .coins {
+        position: absolute;
+        left: 50%;
+        bottom: 18.88020833vw;
+        right: auto;
+        top: auto;
+        transform: translateX(-50%);
+        width: 100%;
+      }
+      .container .wrap .page4 section .coins .coin {
+        display: inline-block;
+        margin-top: 0vw;
+        margin-right: 1.30208333vw;
+        margin-bottom: 0vw;
+        margin-left: 1.30208333vw;
+        position: relative;
+        vertical-align: top;
+        width: 16.015625vw;
+        height: 16.015625vw;
+      }
+      .container .wrap .page4 section .coins .coin:after {
+        content: '';
+        display: block;
+        background-size: contain;
+        background-repeat: no-repeat;
+        position: absolute;
+        left: 0.78125vw;
+        top: 0.78125vw;
+        right: auto;
+        bottom: auto;
+        width: 14.453125vw;
+        height: 14.453125vw;
+      }
+      .container .wrap .page4 section .coins .coin.win:after {
+        background-image: url('images/win.png');
+      }
+      .container .wrap .page4 section .coins .coin.fail:after {
+        background-image: url('images/fail.png');
+      }
+      .container .wrap .page4 section .btns {
+        width: 37.890625vw;
+        height: 8.984375vw;
+        position: absolute;
+        left: 50%;
+        bottom: 5.98958333vw;
+        right: auto;
+        top: auto;
+        transform: translateX(-50%);
+      }
+      .container .wrap .page4 section .btns a {
+        width: 50%;
+        height: 8.984375vw;
+        display: inline-block;
+        vertical-align: top;
+      }
+    }
+  </style>
+  <link rel="stylesheet" href="css/owl.carousel.css">
+  <script src="js/jquery.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="wrap">
+      <div class="page page4">
+        <h1>도박</h1>
+        <section>
+          <img src="images/p4-img1.png" alt="">
+          <div class="coins">
+            <div class="coin win"><img src="images/coin-f.png" alt=""></div>
+            <div class="coin fail"><img src="images/coin-b.png" alt=""></div>
+            <div class="coin"><img src="images/coin-b.png" alt=""></div>
+          </div>
+          <div class="btns">
+            <a class="btn">앞</a>
+            <a class="btn">뒤</a>
+          </div>
+        </section>
+        <section>
+          <div class="utv"></div>
+        </section>
+        <section>
+          <div class="owl-carousel owl-theme">
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+            <div class="item"><img src="images/drag.png" alt=""></div>
+          </div>
+        </section>
+      </div>
+    </div>
+  </div>
+  <script>
+    $(document).ready(function() {
+      var owl = $('.owl-carousel');
+      owl.owlCarousel({
+        items: 1,
+        nav: true,
+        loop: true,
+      });
+    });
+  </script>
+</body>
+</html>
