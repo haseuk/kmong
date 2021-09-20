@@ -780,15 +780,52 @@ input {
   height: 806px;
   margin-top: 60px;
 }
-.container .wrap .page5 section .scroll .btn {
+.container .wrap .page5 section .scroll .cell {
   position: absolute;
-  width: 170px;
-  height: 74px;
-  display: inline-block;
-  left: 555px;
-  top: 569px;
+  left: 412px;
+  top: 330px;
   right: auto;
   bottom: auto;
+  width: 504px;
+}
+.container .wrap .page5 section .scroll .cell table {
+  border-collapse: collapse;
+  table-layout: fixed;
+}
+.container .wrap .page5 section .scroll .cell table tr td {
+  cursor: pointer;
+}
+.container .wrap .page5 section .scroll .cell table tr td a {
+  display: block;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+.container .wrap .page5 section .scroll .cell table tr td a.on:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 60px;
+  border: 2px solid #f21c40;
+  display: inline-block;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  border-radius: 50%;
+  transform: translate(-50%, -50%);
+}
+.container .wrap .page5 section .scroll .cell table tr:nth-child(1) {
+  height: 88px;
+}
+.container .wrap .page5 section .scroll .cell table tr:nth-child(2),
+.container .wrap .page5 section .scroll .cell table tr:nth-child(3),
+.container .wrap .page5 section .scroll .cell table tr:nth-child(4) {
+  height: 76px;
+}
+.container .wrap .page5 section .scroll .cell table tr:nth-child(5) {
+  height: 83px;
 }
 .container .popup {
   position: fixed;

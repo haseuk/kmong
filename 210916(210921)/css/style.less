@@ -185,7 +185,20 @@ input { outline: none; }
       section {
         .scroll { .rel;
           .img1 { .wh(1200,806); .mt(60); }
-          .btn { .abs; .wh(170,74); .ib; .lt(555,569); }
+          .cell { .abs; .lt(412,330); .w(504);
+            table { border-collapse: collapse; table-layout: fixed;
+              tr {
+                td {  .pointer;
+                  a { .block; .f; .rel;
+                    &.on:after { .cnt; .wh(60,60); .-a(#f21c40,2px); .ib; .abs; .lt(50%,50%); .br(50%); transform: translate(-50%,-50%); }
+                  }
+                }
+                &:nth-child(1) { .h(88); }
+                &:nth-child(2), &:nth-child(3), &:nth-child(4) { .h(76); }
+                &:nth-child(5) { .h(83); }
+              }
+            }
+          }
         }
       }
     }
