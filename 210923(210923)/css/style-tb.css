@@ -1,0 +1,131 @@
+/*--------------------------------------------------------------------------------------------------------------
+*  Template
+*--------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 601px) {
+  .mo {
+    display: none;
+  }
+  .tb {
+    display: inline-block;
+  }
+  .pc {
+    display: none;
+  }
+  .container .wrap {
+    padding-bottom: 5vw;
+    box-sizing: border-box;
+  }
+  .container .wrap .img1 {
+    background-repeat: no-repeat;
+    background-image: url('../img/tb-img1.png');
+    background-size: contain;
+    height: 50vw;
+  }
+  .container .wrap article {
+    padding: 0vw;
+  }
+  .container .wrap article section {
+    text-align: left;
+    margin-top: 8vw;
+    zoom: 1;
+  }
+  .container .wrap article section:after {
+    content: '';
+    display: block;
+    clear: both;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  .container .wrap article section .img2 {
+    background-repeat: no-repeat;
+    background-image: url('../img/tb-img2.png');
+    background-size: contain;
+    width: 62vw;
+    height: 39.7vw;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .container .wrap article section .img3 {
+    background-repeat: no-repeat;
+    background-image: url('../img/tb-img3.png');
+    background-size: contain;
+    width: 50vw;
+    height: 31.3vw;
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+  }
+  .container .wrap article section .img4 {
+    background-repeat: no-repeat;
+    background-image: url('../img/tb-img4.png');
+    background-size: contain;
+    width: 50vw;
+    height: 31.3vw;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .container .wrap article section.sec3 {
+    display: block;
+    margin-top: 0vw;
+  }
+  .container .wrap article section.sec3 .txt-wrap2 {
+    padding-left: 6vw;
+  }
+  .container .wrap .img5 {
+    background-repeat: no-repeat;
+    background-image: url('../img/tb-img5.png');
+    background-size: contain;
+    width: 100vw;
+    height: 50vw;
+    margin-top: 8vw;
+    margin-right: 0vw;
+    margin-bottom: 2vw;
+    margin-left: 0vw;
+  }
+  .container .wrap .txt-wrap {
+    width: 38vw;
+    margin-bottom: 0vw;
+    display: inline-block;
+    vertical-align: middle;
+    padding-top: 3vw;
+    padding-right: 0vw;
+    padding-bottom: 3vw;
+    padding-left: 2.5vw;
+    box-sizing: border-box;
+    background-color: #feefe4;
+  }
+  .container .wrap .txt-wrap .tit {
+    font-size: 4vw;
+    margin-top: 0vw;
+    margin-right: 0vw;
+    margin-bottom: 0.5vw;
+    margin-left: 0vw;
+  }
+  .container .wrap .txt-wrap .tit s {
+    color: #930c71;
+  }
+  .container .wrap .txt-wrap .txt {
+    font-size: 1.5vw;
+    line-height: 2vw;
+  }
+  .container .wrap .txt-wrap .txt s {
+    margin-bottom: 1.5vw;
+    display: inline-block;
+  }
+  .container .wrap .txt-wrap .txt span {
+    color: #e37d1b;
+  }
+  .container .wrap .txt-wrap.txt-wrap2 {
+    width: 50vw;
+    height: 31.3vw;
+    background: transparent;
+    padding-left: 11vw;
+    box-sizing: border-box;
+  }
+  .container .wrap .txt-wrap3 {
+    width: auto;
+    background: transparent;
+  }
+}
+/*# sourceMappingURL=style-tb.css.map */

@@ -1,0 +1,90 @@
+/*--------------------------------------------------------------------------------------------------------------
+*  Template
+*--------------------------------------------------------------------------------------------------------------*/
+img {
+  display: block;
+  backface-visibility: hidden;
+}
+html {
+  font-family: Notokr, sans-serif;
+}
+.mo {
+  display: inline-block;
+}
+.tb {
+  display: none;
+}
+.pc {
+  display: none;
+}
+.container {
+  font-size: 0vw;
+  text-align: center;
+}
+.container .wrap {
+  padding-bottom: 8.33333333vw;
+  box-sizing: border-box;
+}
+.container .wrap .img1 {
+  background-repeat: no-repeat;
+  background-image: url('../img/sm-img1.png');
+  background-size: contain;
+  height: 66.66666667vw;
+}
+.container .wrap article {
+  padding-top: 0vw;
+  padding-right: 3.33333333vw;
+  padding-bottom: 0vw;
+  padding-left: 3.33333333vw;
+  box-sizing: border-box;
+  margin-top: 6.66666667vw;
+}
+.container .wrap article section .img2 {
+  background-repeat: no-repeat;
+  background-image: url('../img/sm-img2.png');
+  background-size: contain;
+  height: 59.83333333vw;
+}
+.container .wrap article section .img3 {
+  background-repeat: no-repeat;
+  background-image: url('../img/sm-img3.png');
+  background-size: contain;
+  height: 46.66666667vw;
+}
+.container .wrap article section.sec3 {
+  display: none;
+}
+.container .wrap .img5 {
+  background-repeat: no-repeat;
+  background-image: url('../img/sm-img4.png');
+  background-size: contain;
+  height: 83.33333333vw;
+  margin-bottom: 3.33333333vw;
+}
+.container .wrap .txt-wrap {
+  margin-bottom: 4.16666667vw;
+}
+.container .wrap .txt-wrap .tit {
+  font-size: 6.66666667vw;
+  font-weight: 700;
+  color: #e37d1b;
+  margin-top: 1.83333333vw;
+  margin-right: 0vw;
+  margin-bottom: 1.16666667vw;
+  margin-left: 0vw;
+}
+.container .wrap .txt-wrap .tit s {
+  color: #930c71;
+}
+.container .wrap .txt-wrap .txt {
+  font-size: 2.5vw;
+  line-height: 3.33333333vw;
+}
+.container .wrap .txt-wrap .txt s {
+  margin-bottom: 1.66666667vw;
+  display: inline-block;
+}
+.container .wrap .txt-wrap .txt span {
+  color: #e37d1b;
+}
+/*# sourceMappingURL=style.css.map */

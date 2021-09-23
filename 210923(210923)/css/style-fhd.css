@@ -1,0 +1,141 @@
+/*--------------------------------------------------------------------------------------------------------------
+*  Template
+*--------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 1401px) {
+  .mo {
+    display: none;
+  }
+  .tb {
+    display: inline-block;
+  }
+  .pc {
+    display: none;
+  }
+  .container .wrap .img1 {
+    background-repeat: no-repeat;
+    background-image: url('../img/fhd-img1.png');
+    background-size: contain;
+    width: 100vw;
+    height: 26.04166667vw;
+  }
+  .container .wrap article {
+    position: relative;
+  }
+  .container .wrap article:after {
+    content: '';
+    display: block;
+    display: inline-block;
+    position: absolute;
+    left: 0vw;
+    top: 2.60416667vw;
+    right: auto;
+    bottom: auto;
+    background-color: #feefe4;
+    width: 100%;
+    height: 20.83333333vw;
+    z-index: -1;
+  }
+  .container .wrap article section {
+    max-width: 67.70833333vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5.20833333vw;
+    zoom: 1;
+  }
+  .container .wrap article section:after {
+    content: '';
+    display: block;
+    clear: both;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  .container .wrap article section .img2 {
+    background-repeat: no-repeat;
+    background-image: url('../img/fhd-img2.png');
+    background-size: contain;
+    width: 40.625vw;
+    height: 26.04166667vw;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .container .wrap article section .img3 {
+    background-repeat: no-repeat;
+    background-image: url('../img/fhd-img3.png');
+    background-size: contain;
+    width: 45.15625vw;
+    height: 22.55208333vw;
+    display: inline-block;
+    vertical-align: middle;
+    float: right;
+  }
+  .container .wrap article section .img4 {
+    background-repeat: no-repeat;
+    background-image: url('../img/fhd-img4.png');
+    background-size: contain;
+    width: 28.80208333vw;
+    height: 22.55208333vw;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .container .wrap article section.sec2 .txt-wrap {
+    width: 22.55208333vw;
+    padding-left: 0vw;
+  }
+  .container .wrap article section.sec3 {
+    display: block;
+    margin-top: 0vw;
+  }
+  .container .wrap article section.sec3 .txt-wrap2 {
+    width: 38.90625vw;
+    padding-top: 0vw;
+    padding-right: 0vw;
+    padding-bottom: 1.5625vw;
+    padding-left: 5.05208333vw;
+  }
+  .container .wrap .img5 {
+    background-repeat: no-repeat;
+    background-image: url('../img/fhd-img5.png');
+    background-size: contain;
+    width: 100vw;
+    height: 26.04166667vw;
+    margin-top: 5.20833333vw;
+    margin-right: 0vw;
+    margin-bottom: 1.5625vw;
+    margin-left: 0vw;
+  }
+  .container .wrap .txt-wrap {
+    width: 27.08333333vw;
+    padding-top: 1.5625vw;
+    padding-right: 0vw;
+    padding-bottom: 1.5625vw;
+    padding-left: 2.34375vw;
+  }
+  .container .wrap .txt-wrap .tit {
+    font-size: 2.60416667vw;
+    margin-bottom: 1.30208333vw;
+  }
+  .container .wrap .txt-wrap .txt {
+    font-size: 1.04166667vw;
+    line-height: 1.5625vw;
+  }
+  .container .wrap .txt-wrap .txt s {
+    margin-bottom: 1.30208333vw;
+    display: inline-block;
+  }
+  .container .wrap .txt-wrap .txt span {
+    color: #e37d1b;
+  }
+  .container .wrap .txt-wrap.txt-wrap2 {
+    width: 26.04166667vw;
+    height: 16.30208333vw;
+    background: transparent;
+    padding-left: 5.72916667vw;
+    box-sizing: border-box;
+  }
+  .container .wrap .txt-wrap3 {
+    width: auto;
+    background: transparent;
+  }
+}
+/*# sourceMappingURL=style-fhd.css.map */
