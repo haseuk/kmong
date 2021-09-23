@@ -422,6 +422,102 @@
   line-height: 1.2;
   margin-top: 20px;
 }
+.sub0102.sub01022 .cont-sub0102 h3 {
+  font-size: 30px;
+  line-height: 42px;
+  margin: 80px 0 29px;
+  color: #000;
+  font-weight: 700;
+}
+.sub0102.sub01022 .v1:after {
+  display: none;
+}
+.sub0102.sub01022 .v1 .v1-top {
+  margin-bottom: 0;
+}
+.sub0102.sub01022 .v1 .v1-top .sub01022-p {
+  font-size: 19px;
+  width: 550px;
+  line-height: 29px;
+  color: #fff;
+  left: 70px;
+  transform: translate(0, -50%);
+  text-align: left;
+  margin-top: 0;
+}
+.sub0102.sub01022 .v1 .v1-top .sub01022-p span {
+  font-size: 73px;
+  line-height: 100px;
+  color: #fff;
+  margin-bottom: 8px;
+}
+.sub0102.sub01022 .v1 .top-cont ul li {
+  max-width: none;
+  width: 605px;
+  margin-right: 40px;
+  border: 1px solid #bdbdbd;
+  border-radius: 5px;
+  padding: 15px;
+  box-sizing: border-box;
+}
+.sub0102.sub01022 .v1 .top-cont ul li:last-child {
+  margin-right: 0;
+}
+.sub0102.sub01022 .v1 .top-cont ul li .t {
+  border: 1px solid #e0e0e0;
+  background: #fbfafa;
+  border-radius: 5px;
+  text-align: left;
+  padding: 20px 0 20px 90px;
+  box-sizing: border-box;
+}
+.sub0102.sub01022 .v1 .top-cont ul li .t img {
+  width: 79px;
+  height: 86px;
+  display: inline-block;
+  margin-right: 20px;
+  vertical-align: middle;
+}
+.sub0102.sub01022 .v1 .top-cont ul li .t p {
+  font-size: 20px;
+  line-height: 36px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.sub0102.sub01022 .v1 .top-cont ul li .t p s {
+  font-size: 26px;
+  line-height: 40px;
+  color: #267b7f;
+  font-weight: 700;
+  text-decoration: none;
+}
+.sub0102.sub01022 .v1 .top-cont ul li .cont {
+  padding: 0 19px;
+  box-sizing: border-box;
+}
+.sub0102.sub01022 .v1 .top-cont ul li .cont img {
+  width: 497px;
+  height: 332px;
+  margin: 45px 0;
+  display: inline-block;
+}
+.sub0102.sub01022 .v1 .top-cont ul li .cont p {
+  font-size: 19px;
+  line-height: 36px;
+  padding: 15px 0 15px 20px;
+  box-sizing: border-box;
+  text-align: left;
+  border-bottom: 1px solid #cccccc;
+}
+.sub0102.sub01022 .v1 .top-cont ul li .cont p:last-child {
+  border-bottom: none;
+}
+.sub0102.sub01022 .v1 .top-cont ul li .cont p s {
+  width: 180px;
+  color: #267b7f;
+  font-weight: 700;
+  text-decoration: none;
+}
 .sub0105 {
   text-align: center;
 }
