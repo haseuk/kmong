@@ -38,6 +38,14 @@ img {
 .container .wrap section {
   margin-top: 11.91111111vw;
   text-align: center;
+  padding-top: 0vw;
+  padding-right: 4.44444444vw;
+  padding-bottom: 0vw;
+  padding-left: 4.44444444vw;
+  box-sizing: border-box;
+}
+.container .wrap section.sec2 {
+  margin-top: 5.33333333vw;
 }
 .container .wrap section p.txt {
   font-size: 2.22222222vw;
@@ -55,7 +63,8 @@ img {
   font-weight: 700;
 }
 .container .wrap section p.add-txt {
-  font-size: 3.11111111vw;
+  font-size: 2.22222222vw;
+  font-weight: 700;
 }
 .container .wrap section label {
   margin-top: 1.77777778vw;
@@ -70,21 +79,20 @@ img {
   display: block;
   display: inline-block;
   position: absolute;
-  left: 50%;
+  left: 2.66666667vw;
   top: 50%;
   right: auto;
   bottom: auto;
   background-repeat: no-repeat;
   background-image: url('../img/find.png');
   background-size: contain;
-  width: 4.08888889vw;
-  height: 4.08888889vw;
-  transform: translate(-50%, -50%);
-  margin-left: -35.55555556vw;
+  width: 2.66666667vw;
+  height: 2.66666667vw;
+  transform: translateY(-50%);
 }
 .container .wrap section label input {
-  font-size: 3.11111111vw;
-  width: 80%;
+  font-size: 2.22222222vw;
+  width: 100%;
   height: 7.11111111vw;
   border-radius: 0.88888889vw;
   background-color: #f5f5f5;
@@ -94,37 +102,43 @@ img {
   box-sizing: border-box;
 }
 .container .wrap section .map {
-  width: 90%;
-  height: 44.44444444vw;
+  width: 100%;
+  height: 17.77777778vw;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 4.44444444vw;
 }
 .container .wrap section .store {
-  width: 90%;
+  width: 100%;
   margin-left: auto;
   margin-right: auto;
-  margin-top: 7.11111111vw;
+  margin-bottom: 2.66666667vw;
 }
 .container .wrap section .store ul li {
   text-align: left;
-  margin-bottom: 3.55555556vw;
+  padding-top: 3.55555556vw;
+  padding-right: 0vw;
+  padding-bottom: 3.55555556vw;
+  padding-left: 0vw;
+  box-sizing: border-box;
+  border-bottom: 2px solid #f5f5f5;
 }
 .container .wrap section .store ul li .thum-img {
-  width: 22.22222222vw;
-  height: 22.22222222vw;
+  width: 20.44444444vw;
+  height: 20.44444444vw;
   display: inline-block;
   vertical-align: middle;
 }
 .container .wrap section .store ul li .txt-box {
   display: inline-block;
-  vertical-align: middle;
+  vertical-align: top;
   padding-left: 3.55555556vw;
   box-sizing: border-box;
   width: 70%;
 }
 .container .wrap section .store ul li .txt-box .tit {
-  font-size: 3.11111111vw;
-  line-height: 3.55555556vw;
+  font-size: 2.4vw;
+  line-height: 3.11111111vw;
   margin-bottom: 0.88888889vw;
 }
 .container .wrap section .store ul li .txt-box .score {
@@ -137,13 +151,14 @@ img {
 }
 .container .wrap section .store ul li .txt-box .score .star img,
 .container .wrap section .store ul li .txt-box .score .bull img {
+  width: 1.6vw;
+  height: 1.6vw;
   display: inline-block;
-  vertical-align: middle;
-  margin-right: 0.88888889vw;
+  vertical-align: top;
 }
 .container .wrap section .store ul li .txt-box .score .star p,
 .container .wrap section .store ul li .txt-box .score .bull p {
-  font-size: 1.33333333vw;
+  font-size: 1.6vw;
   display: inline-block;
   vertical-align: middle;
   margin-right: 2.66666667vw;
@@ -154,7 +169,7 @@ img {
 }
 .container .wrap section .store ul li .txt-box p.txt-info,
 .container .wrap section .store ul li .txt-box p.tag {
-  font-size: 2.22222222vw;
+  font-size: 1.51111111vw;
   color: #8c8c8c;
   line-height: 3.11111111vw;
   margin-bottom: 0.44444444vw;
@@ -163,22 +178,22 @@ img {
 .container .wrap footer {
   background-color: #000;
   text-align: center;
-  padding-top: 5.33333333vw;
+  padding-top: 8.88888889vw;
   padding-right: 0vw;
-  padding-bottom: 5.33333333vw;
+  padding-bottom: 8.88888889vw;
   padding-left: 0vw;
   box-sizing: border-box;
 }
 .container .wrap footer .logo {
-  width: 13.06666667vw;
-  height: 3.64444444vw;
+  width: 24.44444444vw;
+  height: 6.84444444vw;
   display: inline-block;
 }
 .container .wrap footer p {
-  font-size: 1.33333333vw;
+  font-size: 2.04444444vw;
   color: #fff;
   margin-top: 2.66666667vw;
-  line-height: 2.66666667vw;
+  line-height: 4vw;
 }
 .container .wrap footer p span {
   color: #b2b2b2;

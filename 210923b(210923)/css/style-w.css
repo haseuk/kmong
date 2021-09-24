@@ -1,0 +1,224 @@
+/*--------------------------------------------------------------------------------------------------------------
+*  Template
+*--------------------------------------------------------------------------------------------------------------*/
+@media screen and (min-width: 1126px) {
+  .container .wrap .top .swiper .swiper-slide {
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height: 49.375vw;
+  }
+  .container .wrap .top .swiper .swiper-slide.swiper-slide1 {
+    background-image: url('../img/main1-w.png');
+  }
+  .container .wrap .top .swiper .swiper-slide.swiper-slide2 {
+    background-image: url('../img/main2-w.png');
+  }
+  .container .wrap .top .swiper .swiper-slide.swiper-slide3 {
+    background-image: url('../img/main3-w.png');
+  }
+  .container .wrap .top .swiper .swiper-pagination {
+    bottom: 5vw;
+  }
+  .container .wrap .top .swiper .swiper-pagination .swiper-pagination-bullet {
+    width: 0.41666667vw;
+    height: 0.41666667vw;
+    border: 1px solid #fff;
+    background: transparent;
+  }
+  .container .wrap .top .swiper .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background-color: #fff;
+  }
+  .container .wrap section {
+    margin-top: 6.97916667vw;
+    text-align: center;
+    padding: 0vw;
+    max-width: 80.72916667vw;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
+  }
+  .container .wrap section.sec2 {
+    margin-top: 3.125vw;
+    position: relative;
+  }
+  .container .wrap section p.txt {
+    font-size: 1.30208333vw;
+    line-height: 1.71875vw;
+    margin-bottom: 0.52083333vw;
+  }
+  .container .wrap section p.tit {
+    font-size: 4.16666667vw;
+    line-height: 3.95833333vw;
+  }
+  .container .wrap section p.info {
+    font-size: 0.78125vw;
+  }
+  .container .wrap section p s {
+    font-weight: 700;
+  }
+  .container .wrap section p.add-txt {
+    font-size: 1.30208333vw;
+    font-weight: 700;
+  }
+  .container .wrap section .box {
+    position: absolute;
+    left: 50%;
+    top: 0vw;
+    right: auto;
+    bottom: auto;
+    transform: translateX(-50%);
+  }
+  .container .wrap section label {
+    margin-top: 1.04166667vw;
+    margin-right: 0vw;
+    margin-bottom: 2.60416667vw;
+    margin-left: 0vw;
+    display: block;
+    position: relative;
+  }
+  .container .wrap section label:after {
+    content: '';
+    display: block;
+    display: inline-block;
+    position: absolute;
+    left: 1.5625vw;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    background-repeat: no-repeat;
+    background-image: url('../img/find.png');
+    background-size: contain;
+    width: 1.5625vw;
+    height: 1.5625vw;
+    transform: translateY(-50%);
+  }
+  .container .wrap section label input {
+    font-size: 1.30208333vw;
+    width: 46.04166667vw;
+    height: 3.4375vw;
+    border-radius: 0.52083333vw;
+    background-color: #f5f5f5;
+    border: 0;
+    outline: none;
+    padding-left: 5.20833333vw;
+    box-sizing: border-box;
+  }
+  .container .wrap section .map {
+    width: 100%;
+    height: 15.625vw;
+    position: absolute;
+    left: 50%;
+    top: 8.85416667vw;
+    right: auto;
+    bottom: auto;
+    transform: translateX(-50%);
+  }
+  .container .wrap section .store {
+    font-size: 0vw;
+    width: 100%;
+    margin-top: 31.25vw;
+    text-align: left;
+  }
+  .container .wrap section .store ul li {
+    text-align: left;
+    padding-top: 2.08333333vw;
+    padding-right: 0vw;
+    padding-bottom: 2.08333333vw;
+    padding-left: 0vw;
+    box-sizing: border-box;
+    border-bottom: 2px solid #f5f5f5;
+    display: inline-block;
+    vertical-align: middle;
+    width: 39.0625vw;
+    margin-right: 2.60416667vw;
+  }
+  .container .wrap section .store ul li:nth-child(2n) {
+    margin-right: 0vw;
+  }
+  .container .wrap section .store ul li .thum-img {
+    width: 8.33333333vw;
+    height: 8.33333333vw;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .container .wrap section .store ul li .txt-box {
+    display: inline-block;
+    vertical-align: top;
+    padding-left: 0.78125vw;
+    box-sizing: border-box;
+    width: 78%;
+  }
+  .container .wrap section .store ul li .txt-box .tit {
+    font-size: 1.04166667vw;
+    line-height: 1.45833333vw;
+    margin-bottom: 0.52083333vw;
+  }
+  .container .wrap section .store ul li .txt-box .score {
+    margin-bottom: 0.52083333vw;
+  }
+  .container .wrap section .store ul li .txt-box .score .star,
+  .container .wrap section .store ul li .txt-box .score .bull {
+    font-size: 0vw;
+    display: inline-block;
+    vertical-align: middle;
+  }
+  .container .wrap section .store ul li .txt-box .score .star img,
+  .container .wrap section .store ul li .txt-box .score .bull img {
+    width: 0.625vw;
+    height: 0.625vw;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.26041667vw;
+  }
+  .container .wrap section .store ul li .txt-box .score .star p,
+  .container .wrap section .store ul li .txt-box .score .bull p {
+    font-size: 0.83333333vw;
+    display: inline-block;
+    vertical-align: middle;
+    margin-right: 0.78125vw;
+    letter-spacing: -0.05em;
+  }
+  .container .wrap section .store ul li .txt-box .score .star p.s-txt,
+  .container .wrap section .store ul li .txt-box .score .bull p.s-txt,
+  .container .wrap section .store ul li .txt-box .score .star p.comm,
+  .container .wrap section .store ul li .txt-box .score .bull p.comm {
+    font-size: 0.625vw;
+  }
+  .container .wrap section .store ul li .txt-box .score .star p span,
+  .container .wrap section .store ul li .txt-box .score .bull p span {
+    color: #d5d5d5;
+  }
+  .container .wrap section .store ul li .txt-box p.txt-info,
+  .container .wrap section .store ul li .txt-box p.tag {
+    font-size: 0.88541667vw;
+    color: #8c8c8c;
+    line-height: 1.82291667vw;
+    margin-bottom: 0.26041667vw;
+    word-break: keep-all;
+  }
+  .container .wrap footer {
+    background-color: #000;
+    text-align: center;
+    padding-top: 5.20833333vw;
+    padding-right: 0vw;
+    padding-bottom: 5.20833333vw;
+    padding-left: 0vw;
+    box-sizing: border-box;
+  }
+  .container .wrap footer .logo {
+    width: 14.32291667vw;
+    height: 4.01041667vw;
+    display: inline-block;
+  }
+  .container .wrap footer p {
+    font-size: 1.19791667vw;
+    color: #fff;
+    margin-top: 1.5625vw;
+    line-height: 2.34375vw;
+  }
+  .container .wrap footer p span {
+    color: #b2b2b2;
+  }
+}
+/*# sourceMappingURL=style-w.css.map */

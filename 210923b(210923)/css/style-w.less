@@ -1,0 +1,70 @@
+@import "asset";
+@use-vw: true;
+@vw: 1920;
+
+@media screen and (min-width: 1126px) {
+  .container {
+    .wrap {
+      .top {
+        .swiper {
+          .swiper-slide { .contain; .no-repeat; .wh(1920,948);
+            &.swiper-slide1 { .bg('../img/main1-w.png'); }
+            &.swiper-slide2 { .bg('../img/main2-w.png'); }
+            &.swiper-slide3 { .bg('../img/main3-w.png'); }
+          }
+          .swiper-pagination { .b(96);
+            .swiper-pagination-bullet { .wh(8,8); .-a(#fff); background: transparent;
+             &.swiper-pagination-bullet-active { .bgc(#fff); }
+            }
+          }
+        }
+      }
+      section { .mt(134); .tc;  .p(0); .max-w(1550); .mh-c; overflow: hidden;
+        &.sec2 { .mt(60); .rel; }
+        p {
+          &.txt { .fs(25); .lh(33); .mb(10); }
+          &.tit { .fs(80); .lh(76); }
+          &.info { .fs(15); }
+          s { .bold; }
+          &.add-txt { .fs(25); .bold; }
+        }
+
+        .box { .abs; .lt(50%,0); transform: translateX(-50%); }
+        label { .m(20,0,50); .block; .rel;
+          &:after { .cnt; .ib; .abs; .lt(30,50%); .contain('../img/find.png'); .wh(30,30); transform: translateY(-50%); }
+          input { .fs(25); .wh(884,66); .br(10); .bgc(#f5f5f5); .-a; outline: none; .pl(100); .-box; }
+        }
+
+        .map { .wh(100%,300); .abs; .lt(50%,170); transform: translateX(-50%); }
+
+        .store { .fs(0); .wf; .mt(600); .tl;
+          ul li { .tl; .p(40,0); .-box; .-b(#f5f5f5,2px); .ib; .vam; .w(750); .mr(50);
+            &:nth-child(2n) { .mr(0); }
+            .thum-img { .wh(160,160); .ib; .vam; }
+            .txt-box { .ib; .vat; .pl(15); .-box; .w(78%);
+              .tit { .fs(20); .lh(28); .mb(10); }
+              .score { .mb(10);
+                .star, .bull { .fs(0); .ib; .vam;
+                  img { .wh(12,12); .ib; .vam; .mr(5); }
+                  p { .fs(16); .ib; .vam; .mr(15); letter-spacing: -0.05em;
+                    &.s-txt, &.comm { .fs(12); }
+                    span { color:#d5d5d5; }
+                  }
+                }
+              }
+              p {
+                &.txt-info, &.tag { .fs(17); color:#8c8c8c; .lh(35); .mb(5); .keep-all; }
+              }
+            }
+          }
+        }
+      }
+      footer { .bgc(#000); .tc; .p(100,0); .-box;
+        .logo { .wh(275,77); .ib; }
+        p { .fs(23); color:#fff; .mt(30); .lh(45);
+          span { color:#b2b2b2; }
+        }
+      }
+    }
+  }
+}
