@@ -1,0 +1,19 @@
+@import "asset";
+@use-vw: false;
+
+@media screen and (min-width: 741px) {
+  .container {
+    .wrap { .max-w(740); .mh-c; .p(0,70); .-box;
+      .top {
+        img { .wf; height: auto; }
+      }
+      article {
+        .swiper { .wf;
+          .swiper-slide {
+            img { .wf; }
+          }
+        }
+      }
+    }
+  }
+}

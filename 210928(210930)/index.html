@@ -1,0 +1,595 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>스포츠라이프</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/style-pc.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
+</head>
+<body>
+  <div class="container">
+    <div class="wrap">
+      <div class="top">
+        <img src="img/top.png" alt="">
+      </div>
+      <article>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide"><img src="img/slide1.png" alt=""></div>
+            <div class="swiper-slide"><img src="img/slide2.png" alt=""></div>
+            <div class="swiper-slide"><img src="img/slide3.png" alt=""></div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+        <section class="sec1">
+          <img src="img/img1.png" alt="" class="img">
+          <div class="input-box">
+            <label class="l1">
+              <input type="radio" name="sports" value="a" oninput="popup('v1');">
+              <i></i>
+            </label>
+            <label class="l2">
+              <input type="radio" name="sports" value="b" oninput="popup('v2');">
+              <i></i>
+            </label>
+            <label class="l3">
+              <input type="radio" name="sports" value="c" oninput="popup('v3');">
+              <i></i>
+            </label>
+            <label class="l4">
+              <input type="radio" name="sports" value="d" oninput="popup('v4');">
+              <i></i>
+            </label>
+            <label class="l5">
+              <input type="radio" name="sports" value="e" oninput="popup('v5');">
+              <i></i>
+            </label>
+            <label class="l6">
+              <input type="radio" name="sports" value="f" oninput="popup('v6');">
+              <i></i>
+            </label>
+            <label class="l7">
+              <input type="radio" name="sports" value="g" oninput="popup('v7');">
+              <i></i>
+            </label>
+            <label class="l8">
+              <input type="radio" name="sports" value="h" oninput="popup('v8');">
+              <i></i>
+            </label>
+          </div>
+        </section>
+        <section class="sec2">
+          <img src="img/img2.png" alt="" class="img">
+          <div class="guide-box">
+            <div class="cell cell1">
+              <a class="ch" onclick="challenge('ch1')">챌린지 가이드</a>
+              <a class="ru" onclick="challenge('run')">러닝 기초 훈련법</a>
+            </div>
+            <div class="cell cell2">
+              <a class="ch" onclick="challenge('ch2')">챌린지 가이드</a>
+              <a class="ru" onclick="challenge('cycle')">사이클링 기초 훈련법</a>
+            </div>
+            <div class="cell cell3">
+              <a class="ch" onclick="challenge('ch3')">챌린지 가이드</a>
+              <a class="ru" onclick="challenge('trac')">트레킹 기초 훈련법</a>
+            </div>
+          </div>
+          <div class="link-box">
+            <a href="" class="down">다운로드 링크</a>
+            <a href="" class="rule">사용방법</a>
+          </div>
+          <a class="ch-pop" onclick="chPopup()">인증사진 업로드</a>
+        </section>
+        <section class="sec3">
+          <img src="img/img3.png" alt="" class="img">
+          <a class="parti" onclick="diagPopup()">참여하기</a>
+        </section>
+      </article>
+    </div>
+  </div>
+
+  <div class="popup">
+    <div class="dim"></div>
+
+<!--    스포츠별 응모팝업-->
+    <div class="sports s1">
+      <div class="box">
+        <img src="img/popup1.png" alt="">
+        <a class="apply" onclick="apply()">응모하기</a>
+      </div>
+      <a class="close"></a>
+    </div>
+    <div class="sports s2">
+      <div class="box">
+        <img src="img/popup2.png" alt="">
+        <a class="apply" onclick="apply()">응모하기</a>
+      </div>
+      <a class="close"></a>
+    </div>
+    <div class="sports s3">
+      <div class="box">
+        <img src="img/popup3.png" alt="">
+        <a class="apply" onclick="apply()">응모하기</a>
+      </div>
+      <a class="close"></a>
+    </div>
+    <div class="sports s4">
+      <div class="box">
+        <img src="img/popup4.png" alt="">
+        <a class="apply" onclick="apply()">응모하기</a>
+      </div>
+      <a class="close"></a>
+    </div>
+    <div class="sports s5">
+      <div class="box">
+        <img src="img/popup5.png" alt="">
+        <a class="apply" onclick="apply()">응모하기</a>
+      </div>
+      <a class="close" onclick="apply()"></a>
+    </div>
+    <div class="sports s6">
+      <div class="box">
+        <img src="img/popup6.png" alt="">
+        <a class="apply" onclick="apply()">응모하기</a>
+      </div>
+      <a class="close"></a>
+    </div>
+    <div class="sports s7">
+      <div class="box">
+        <img src="img/popup7.png" alt="">
+        <a class="apply" onclick="apply()">응모하기</a>
+      </div>
+      <a class="close"></a>
+    </div>
+    <div class="sports s8">
+      <div class="box">
+        <img src="img/popup8.png" alt="">
+        <a class="apply" onclick="apply()">응모하기</a>
+        <input type="text">
+      </div>
+      <a class="close"></a>
+    </div>
+
+<!--    응모시 유저정보입력창-->
+    <div class="user">
+      <img src="img/user-info.png" alt="">
+      <div class="inner">
+        <label class="agree">
+          <input type="checkbox">
+          <i></i>
+        </label>
+        <div class="noti">
+          <p class="n1">
+            스포츠토토는 개인정보 보호법을 비롯하여 개인정보와 관련된 모든 법률을
+            준수하기 위해 개인정보 수집 및 이용에 관한 사항을 알리고 동의를 받고 있습니다.
+            스포츠토토가 직/간접적으로 수집한 개인정보에 대해 기술적, 관리적 보호조치를
+            다하고 있으며, 사용 목적이 완료된 경우 지체 없이 수집한 정보를 파기 합니다.
+            <br><br>
+            개인정보 수집 및 이용에 관한 사항은 아래와 같습니다.<br>
+          </p>
+          <div class="n2">
+            <p>1.	수집하려는 개인정보의 항목<br> -	개인정보(이름, 연락처)</p>
+            <p>2.	개인정보의 수집 및 이용 목적<br> -	스포츠토토 생활스포츠 활성화 캠페인 이벤트 당첨자 선정 및당첨시개별안내</p>
+            <p>3.	개인정보의 보유 및 이용 기간<br> -	개인정보 : 캠페인 종료일로 부터 3개월</p>
+          </div>
+          <p class="txt">본 개인정보 수집 및 이용에 관한 동의를 거부할 권리가 있습니다. 단. 거부 시 븐 캠페인 참여가 재한 됩니다.</p>
+        </div>
+        <label class="name">
+          <input type="text" placeholder="본인 성명을 적어주세요.">
+        </label>
+        <label class="phone">
+          <input type="text" placeholder="당첨 시 연락받을 본인 전화번호를 적어주세요.">
+        </label>
+      </div>
+      <a class="complete" onclick="complete()"></a>
+      <a class="close" onclick="userClose()"></a>
+    </div>
+
+<!--    응모완료-->
+    <div class="complete-wrap">
+      <img src="img/complete.png" alt="">
+      <a class="submit" onclick="submit()"></a>
+    </div>
+
+
+
+<!--    챌린지가이드, 러닝, 사이클, 트레킹  팝업-->
+    <div class="challenge">
+      <img src="img/chal.png" alt="">
+      <iframe class="chal challenge1" src="https://www.youtube.com/embed/hGZbetOam4Q?rel=0&mute=1&autoplay=1&playsinline=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="chal challenge2" src="https://www.youtube.com/embed/hGZbetOam4Q?rel=0&mute=1&autoplay=1&playsinline=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="chal challenge3" src="https://www.youtube.com/embed/hGZbetOam4Q?rel=0&mute=1&autoplay=1&playsinline=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="running" src="https://www.youtube.com/embed/jMc_0h9vcN0?rel=0&mute=1&autoplay=1&playsinline=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="cycling" src="https://www.youtube.com/embed/G7wNdMnG1P4?rel=0&mute=1&autoplay=1&playsinline=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <iframe class="tracking" src="https://www.youtube.com/embed/1UwJ9lL2hU4?rel=0&mute=1&autoplay=1&playsinline=1" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <a class="close" onclick="chClose()"></a>
+    </div>
+    
+    <div class="pic-upload">
+      <img src="img/ch-popup.png" alt="">
+      <div class="inner">
+        <label class="agree">
+          <input type="checkbox">
+          <i></i>
+        </label>
+        <div class="noti">
+          <p class="n1">
+            스포츠토토는 개인정보 보호법을 비롯하여 개인정보와 관련된 모든 법률을
+            준수하기 위해 개인정보 수집 및 이용에 관한 사항을 알리고 동의를 받고 있습니다.
+            스포츠토토가 직/간접적으로 수집한 개인정보에 대해 기술적, 관리적 보호조치를
+            다하고 있으며, 사용 목적이 완료된 경우 지체 없이 수집한 정보를 파기 합니다.
+            <br><br>
+            개인정보 수집 및 이용에 관한 사항은 아래와 같습니다.<br>
+          </p>
+          <div class="n2">
+            <p>1.	수집하려는 개인정보의 항목<br> -	개인정보(이름, 연락처)</p>
+            <p>2.	개인정보의 수집 및 이용 목적<br> -	스포츠토토 생활스포츠 활성화 캠페인 이벤트 당첨자 선정 및당첨시개별안내</p>
+            <p>3.	개인정보의 보유 및 이용 기간<br> -	개인정보 : 캠페인 종료일로 부터 3개월</p>
+          </div>
+          <p class="txt">본 개인정보 수집 및 이용에 관한 동의를 거부할 권리가 있습니다. 단. 거부 시 븐 캠페인 참여가 재한 됩니다.</p>
+        </div>
+        <label class="game">
+          <input type="text" placeholder="도전 종목을 선택해주세요.">
+        </label>
+        <label class="name">
+          <input type="text" placeholder="본인 성명을 적어주세요.">
+        </label>
+        <label class="phone">
+          <input type="text" placeholder="당첨 시 연락받을 본인 전화번호를 적어주세요.">
+        </label>
+        <label class="pic">
+          <input type="file" placeholder="캡쳐한 이미지를 첨부해주세요.">
+        </label>
+      </div>
+      <a class="complete" onclick="complete()"></a>
+      <a class="close" onclick="picClose()"></a>
+    </div>
+
+    <div class="diag-popup">
+      <img src="img/diag.png" alt="">
+      <div class="inner">
+        <label class="agree">
+          <input type="checkbox">
+          <i></i>
+        </label>
+        <div class="noti">
+          <p class="n1">
+            스포츠토토는 개인정보 보호법을 비롯하여 개인정보와 관련된 모든 법률을
+            준수하기 위해 개인정보 수집 및 이용에 관한 사항을 알리고 동의를 받고 있습니다.
+            스포츠토토가 직/간접적으로 수집한 개인정보에 대해 기술적, 관리적 보호조치를
+            다하고 있으며, 사용 목적이 완료된 경우 지체 없이 수집한 정보를 파기 합니다.
+            <br><br>
+            개인정보 수집 및 이용에 관한 사항은 아래와 같습니다.<br>
+          </p>
+          <div class="n2">
+            <p>1.	수집하려는 개인정보의 항목<br> -	개인정보(이름, 연락처)</p>
+            <p>2.	개인정보의 수집 및 이용 목적<br> -	스포츠토토 생활스포츠 활성화 캠페인 이벤트 당첨자 선정 및당첨시개별안내</p>
+            <p>3.	개인정보의 보유 및 이용 기간<br> -	개인정보 : 캠페인 종료일로 부터 3개월</p>
+          </div>
+          <p class="txt">본 개인정보 수집 및 이용에 관한 동의를 거부할 권리가 있습니다. 단. 거부 시 븐 캠페인 참여가 재한 됩니다.</p>
+        </div>
+        <label class="name">
+          <input type="text" placeholder="본인 성명을 적어주세요.">
+        </label>
+        <label class="phone">
+          <input type="text" placeholder="당첨 시 연락받을 본인 전화번호를 적어주세요.">
+        </label>
+      </div>
+      <a class="diag-start" onclick="diagStart()">자가진단 시작하기</a>
+      <a class="close" onclick="diagClose()"></a>
+    </div>
+
+    <div class="self-diag">
+      <img src="img/self-diag.png" alt="">
+      <div class="diag-score">
+        <div class="q q1">
+          <label>
+            <input type="radio" name="a" value="0">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="a" value="1">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="a" value="2">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="a" value="3">
+            <i></i>
+          </label>
+        </div>
+        <div class="q q2">
+          <label>
+            <input type="radio" name="b" value="0">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="b" value="1">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="b" value="2">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="b" value="3">
+            <i></i>
+          </label>
+        </div>
+        <div class="q q3">
+          <label>
+            <input type="radio" name="c" value="0">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="c" value="1">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="c" value="2">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="c" value="3">
+            <i></i>
+          </label>
+        </div>
+        <div class="q q4">
+          <label>
+            <input type="radio" name="d" value="0">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="d" value="1">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="d" value="2">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="d" value="3">
+            <i></i>
+          </label>
+        </div>
+        <div class="q q5">
+          <label>
+            <input type="radio" name="e" value="0">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="e" value="1">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="e" value="2">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="e" value="3">
+            <i></i>
+          </label>
+        </div>
+        <div class="q q6">
+          <label>
+            <input type="radio" name="f" value="0">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="f" value="1">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="f" value="2">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="f" value="3">
+            <i></i>
+          </label>
+        </div>
+        <div class="q q7">
+          <label>
+            <input type="radio" name="g" value="0">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="g" value="1">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="g" value="2">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="g" value="3">
+            <i></i>
+          </label>
+        </div>
+        <div class="q q8">
+          <label>
+            <input type="radio" name="h" value="0">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="h" value="1">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="h" value="2">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="h" value="3">
+            <i></i>
+          </label>
+        </div>
+        <div class="q q9">
+          <label>
+            <input type="radio" name="i" value="0">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="i" value="1">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="i" value="2">
+            <i></i>
+          </label>
+          <label>
+            <input type="radio" name="i" value="3">
+            <i></i>
+          </label>
+        </div>
+      </div>
+      <a class="result" onclick="result()">결과보기</a>
+      <a class="close" onclick="selfClose()"></a>
+    </div>
+
+    <div class="result-popup">
+      <img class="ex" src="img/exelent.png" alt="">
+      <img class="gd" src="img/good.png" alt="">
+      <img class="dg" src="img/danger.png" alt="">
+      <img class="bi" src="img/bigproblem.png" alt="">
+    </div>
+  </div>
+
+
+
+
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script>
+    var swiper = new Swiper(".swiper", {
+      pagination: {
+        el: ".swiper-pagination",
+      },
+    });
+  </script>
+
+  <script>
+    let closes = document.querySelectorAll('.popup .close');
+    let pop = document.querySelector('.popup');
+    let sport = document.querySelector('.popup .sport');
+    let inputs = document.querySelectorAll('.input-box input');
+    let user = document.querySelector('.user');
+    let com = document.querySelector('.complete-wrap');
+    let el = document.documentElement;
+    let h = el.scrollHeight
+    let w = el.scrollWidth
+
+    function popupOpen() {
+      pop.classList.add('on');
+    }
+
+    function popupClose() {
+      pop.classList.remove('on');
+    }
+
+    function popup(v) {
+      popupOpen();
+      pop.classList.add(v);
+    }
+    Array.prototype.forEach.call(closes, function(e) {
+      e.addEventListener('click', function () {
+        popupClose();
+        pop.classList.remove('v1','v2','v3','v4','v5','v6','v7','v8');
+        inputReset();
+      })
+    });
+
+    function inputReset() {
+      for (let i = 0; i < inputs.length; i++) {
+        inputs[i].checked = false;
+      }
+    }
+
+    function apply() {
+      pop.classList.remove('v1','v2','v3','v4','v5','v6','v7','v8');
+      user.classList.add('on');
+    }
+
+    function userClose() {
+      user.classList.remove('on');
+      popupClose();
+    }
+
+    function complete() {
+      user.classList.remove('on');
+      chPop.classList.remove('on');
+      com.classList.add('on');
+    }
+
+    function submit() {
+      com.classList.remove('on');
+      popupClose();
+      inputReset();
+    }
+
+
+    let chal = document.querySelector('.challenge');
+    function challenge(v) {
+      popupOpen();
+      chal.classList.add(v);
+    }
+
+    function chClose() {
+      popupClose();
+      chal.classList.remove('ch1','ch2','ch3','run','cycle','trac');
+    }
+
+    let chPop = document.querySelector('.pic-upload');
+    function chPopup() {
+      popupOpen();
+      chPop.classList.add('on');
+    }
+
+    function picClose() {
+      popupClose();
+      chPop.classList.remove('on');
+    }
+
+
+    let diagPop = document.querySelector('.diag-popup');
+    function diagPopup() {
+      popupOpen();
+      diagPop.classList.add('on');
+    }
+
+    function diagClose() {
+      popupClose();
+      diagPop.classList.remove('on');
+    }
+
+    let self = document.querySelector('.self-diag');
+    function diagStart() {
+      diagPop.classList.remove('on');
+      self.classList.add('on');
+    }
+
+    function selfClose() {
+      popupClose();
+      self.classList.remove('on');
+    }
+
+    let digInput = document.querySelectorAll('.diag-score input')
+
+    let score = [];
+    let total;
+    function result() {
+      for (let i = 0; i < digInput.length; i++) {
+        if (digInput[i].checked === true) {
+          score.push(Number(digInput[i].value));
+        }
+      }
+      total = score.reduce((a,b) => a + b);
+    }
+  </script>
+</body>
+</html>
