@@ -1,7 +1,21 @@
-@media screen and (min-width: 740px) {
+@media screen and (min-width: 741px) {
   @import "style";
-  .popup {
-    .pic-upload {  .lt(50%,150); }
-    .self-diag { .h(600); }
+  .container {
+    .dir-btns { .fs(0); .fix; .rt(0,150); .pt(0);
+      img.mo { .hide; }
+      img.web { .block; .t(0); }
+    }
+    .popup {
+      .pic-upload {  .lt(50%,150); }
+      .self-diag { .h(600); }
+      .keeperPopup {
+        img.web { .wh(675,937); .block; }
+        .runswiper { .hide; }
+        .veb-close { .wh(146,27); .abs; .rt(43,866); .block; }
+      }
+    }
   }
+}
+@media screen and (min-width: 1200px) {
+  .container .dir-btns { left:50%; right: auto; margin-left: 375px; }
 }

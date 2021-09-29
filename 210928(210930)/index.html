@@ -6,6 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>스포츠라이프</title>
   <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/font.css">
   <link rel="stylesheet" href="css/style-pc.css">
   <link rel="stylesheet" href="css/style-m.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
@@ -13,11 +14,11 @@
 <body>
   <div class="container">
     <div class="wrap">
-      <div class="top">
+      <div id="first" class="top">
         <img src="img/top.png" alt="">
       </div>
       <article>
-        <div class="swiper">
+        <div class="swiper myswiper">
           <div class="swiper-wrapper">
             <div class="swiper-slide"><img src="img/slide1.png" alt=""></div>
             <div class="swiper-slide"><img src="img/slide2.png" alt=""></div>
@@ -25,7 +26,7 @@
           </div>
           <div class="swiper-pagination"></div>
         </div>
-        <section class="sec1">
+        <section id="evt1" class="sec1">
           <img src="img/img1-1.png" alt="" class="img">
           <div class="input-box">
             <label class="l1">
@@ -62,7 +63,7 @@
             </label>
           </div>
         </section>
-        <section class="sec2">
+        <section id="evt2" class="sec2">
           <img src="img/img2-1.png" alt="" class="img">
           <div class="guide-box">
             <div class="cell cell1">
@@ -80,11 +81,11 @@
           </div>
           <div class="link-box">
             <a href="" class="down">다운로드 링크</a>
-            <a href="" class="rule">사용방법</a>
+            <a class="rule" onclick="runkeeper()">사용방법</a>
           </div>
           <a class="ch-pop" onclick="chPopup()">인증사진 업로드</a>
         </section>
-        <section class="sec3">
+        <section id="evt3" class="sec3">
           <img src="img/img3-1.png" alt="" class="img">
           <a class="parti" onclick="diagPopup()">참여하기</a>
         </section>
@@ -96,6 +97,17 @@
     <footer>
       <img src="img/footer.png" alt="">
     </footer>
+
+    <div class="dir-btns">
+      <a onclick="dirBtn()">
+        <img src="img/dir-m.png" alt="" class="mo">
+      </a>
+      <img src="img/dir-btn.png" alt="" class="web">
+      <a class="btn" href="#first">처음으로</a>
+      <a class="btn" href="#evt1">이벤트 1</a>
+      <a class="btn" href="#evt2">이벤트 2</a>
+      <a class="btn" href="#evt3">이벤트 3</a>
+    </div>
   </div>
 
   <div class="popup">
@@ -466,6 +478,23 @@
       <img class="bi" src="img/bigproblem.png" alt="">
       <a class="btn" onclick="resultEnd()">확인</a>
     </div>
+    
+    <div class="keeperPopup">
+      <img src="img/runkeeper.png" alt="" class="web">
+      <div class="swiper runswiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide"><img src="img/r-slide1.png" alt=""></div>
+          <div class="swiper-slide"><img src="img/r-slide2.png" alt=""></div>
+          <div class="swiper-slide"><img src="img/r-slide3.png" alt=""></div>
+          <div class="swiper-slide"><img src="img/r-slide4.png" alt=""></div>
+          <div class="swiper-slide"><img src="img/r-slide5.png" alt=""></div>
+          <div class="swiper-slide swiper-slide6"><img src="img/r-slide6.png" alt=""><a class="mo-close" onclick="keeperClose()"></a></div>
+        </div>
+        <div class="swiper-button swiper-button-next"></div>
+        <div class="swiper-button swiper-button-prev"></div>
+      </div>
+      <a class="web-close" onclick="keeperClose()"></a>
+    </div>
   </div>
 
 
@@ -473,9 +502,19 @@
 
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
   <script>
-    var swiper = new Swiper(".swiper", {
+    new Swiper(".myswiper", {
+      autoplay: {
+        delay: 5000,
+      },
       pagination: {
         el: ".swiper-pagination",
+      },
+    });
+
+    new Swiper(".runswiper", {
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
       },
     });
   </script>
@@ -618,8 +657,74 @@
       }
     }
     function resultEnd() {
-      popupClose();
+      selfClose();
       resultPopup.classList.remove('a','b','c','d');
+      for (let i = 0; i < digInput.length; i++) {
+        digInput[i].checked = false;
+      }
+    }
+
+    let keeper = document.querySelector('.keeperPopup');
+    function runkeeper() {
+      popupOpen();
+      keeper.classList.add('on');
+    }
+
+    function keeperClose() {
+      popupClose();
+      keeper.classList.remove('on');
+    }
+
+    let dir = document.querySelector('.dir-btns');
+    function dirBtn() {
+      dir.classList.toggle('on');
+    }
+
+    if (!("classList" in document.documentElement) && Object.defineProperty && typeof HTMLElement !== 'undefined') {
+      Object.defineProperty(HTMLElement.prototype, 'classList', {
+        get: function() {
+          var self = this;
+          function update(fn) {
+            return function(value) {
+              var classes = self.className.split(/\s+/),
+                index = classes.indexOf(value);
+
+              fn(classes, index, value);
+              self.className = classes.join(" ");
+            }
+          }
+
+          var ret = {
+            add: update(function(classes, index, value) {
+              ~index || classes.push(value);
+            }),
+
+            remove: update(function(classes, index) {
+              ~index && classes.splice(index, 1);
+            }),
+
+            toggle: update(function(classes, index, value) {
+              ~index ? classes.splice(index, 1) : classes.push(value);
+            }),
+
+            contains: function(value) {
+              return !!~self.className.split(/\s+/).indexOf(value);
+            },
+
+            item: function(i) {
+              return self.className.split(/\s+/)[i] || null;
+            }
+          };
+
+          Object.defineProperty(ret, 'length', {
+            get: function() {
+              return self.className.split(/\s+/).length;
+            }
+          });
+
+          return ret;
+        }
+      });
     }
   </script>
 </body>
