@@ -6,8 +6,8 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>스포츠라이프</title>
   <link rel="stylesheet" href="css/base.css">
-  <link rel="stylesheet" href="css/style.css">
   <link rel="stylesheet" href="css/style-pc.css">
+  <link rel="stylesheet" href="css/style-m.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css"/>
 </head>
 <body>
@@ -88,8 +88,14 @@
           <img src="img/img3.png" alt="" class="img">
           <a class="parti" onclick="diagPopup()">참여하기</a>
         </section>
+        <section class="sec4">
+          <img src="img/noti.png" alt="" class="img">
+        </section>
       </article>
     </div>
+    <footer>
+      <img src="img/footer.png" alt="">
+    </footer>
   </div>
 
   <div class="popup">
@@ -458,6 +464,7 @@
       <img class="gd" src="img/good.png" alt="">
       <img class="dg" src="img/danger.png" alt="">
       <img class="bi" src="img/bigproblem.png" alt="">
+      <a class="btn" onclick="resultEnd()">확인</a>
     </div>
   </div>
 
@@ -580,6 +587,7 @@
 
     let digInput = document.querySelectorAll('.diag-score input')
 
+    let resultPopup = document.querySelector('.result-popup');
     let score = [];
     let total;
     function result() {
@@ -588,7 +596,29 @@
           score.push(Number(digInput[i].value));
         }
       }
+      if (score.length < 9) {
+        alert('셀프 진단평가 9문항을 모두 진행해주세요.');
+        score = [];
+        return;
+      }
       total = score.reduce((a,b) => a + b);
+      if (total === 0) {
+        resultPopup.classList.add('a');
+        return total;
+      } else if (total <= 2) {
+        resultPopup.classList.add('b');
+        return total;
+      } else if (total <= 7) {
+        resultPopup.classList.add('c');
+        return total;
+      } else {
+        resultPopup.classList.add('d');
+        return total;
+      }
+    }
+    function resultEnd() {
+      popupClose();
+      resultPopup.classList.remove('a','b','c','d');
     }
   </script>
 </body>

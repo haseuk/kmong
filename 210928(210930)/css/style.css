@@ -220,6 +220,13 @@ input {
   height: 6.35135135vw;
   display: inline-block;
 }
+.container footer {
+  width: 100%;
+}
+.container footer img {
+  width: 100%;
+  height: 100%;
+}
 .popup {
   position: absolute;
   left: 0vw;
@@ -775,6 +782,54 @@ input {
   bottom: auto;
 }
 .popup .self-diag.on {
+  display: block;
+}
+.popup .result-popup {
+  position: fixed;
+  left: 50%;
+  top: 50%;
+  right: auto;
+  bottom: auto;
+  transform: translate(-50%, -50%);
+}
+.popup .result-popup img {
+  width: 91.21621622vw;
+  height: 73.37837838vw;
+  background-size: contain;
+  background-repeat: no-repeat;
+  display: none;
+}
+.popup .result-popup img.bi {
+  width: 91.21621622vw;
+  height: 74.72972973vw;
+}
+.popup .result-popup img.bi .btn {
+  left: 32.02702703vw;
+  top: 62.7027027vw;
+  right: auto;
+  bottom: auto;
+}
+.popup .result-popup .btn {
+  font-size: 0vw;
+  width: 27.02702703vw;
+  height: 7.56756757vw;
+  display: inline-block;
+  position: absolute;
+  left: 32.2972973vw;
+  top: 60.54054054vw;
+  right: auto;
+  bottom: auto;
+}
+.popup .result-popup.a .ex {
+  display: block;
+}
+.popup .result-popup.b .gd {
+  display: block;
+}
+.popup .result-popup.c .dg {
+  display: block;
+}
+.popup .result-popup.d .bi {
   display: block;
 }
 /*# sourceMappingURL=style.css.map */
