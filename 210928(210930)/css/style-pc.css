@@ -17,10 +17,6 @@
     max-width: 740px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 0px;
-    padding-right: 34px;
-    padding-bottom: 0px;
-    padding-left: 34px;
     box-sizing: border-box;
   }
   .container .wrap .top img {
@@ -29,6 +25,13 @@
   }
   .container .wrap article .swiper {
     width: 100%;
+    width: 675px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container .wrap article .swiper .swiper-slide {
+    width: 675px;
+    height: 227px;
   }
   .container .wrap article .swiper .swiper-slide img {
     width: 100%;
@@ -98,50 +101,50 @@
     display: none;
   }
   .container .wrap article .sec1 .input-box label.l1 {
-    left: 23px;
-    top: 329px;
+    left: 56px;
+    top: 338px;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec1 .input-box label.l2 {
-    left: 181px;
-    top: 329px;
+    left: 215px;
+    top: 338px;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec1 .input-box label.l3 {
-    left: 334px;
-    top: 329px;
+    left: 374px;
+    top: 338px;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec1 .input-box label.l4 {
-    left: 490px;
-    top: 329px;
+    left: 533px;
+    top: 338px;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec1 .input-box label.l5 {
-    left: 23px;
-    top: 530px;
+    left: 56px;
+    top: 543px;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec1 .input-box label.l6 {
-    left: 181px;
-    top: 530px;
+    left: 215px;
+    top: 543px;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec1 .input-box label.l7 {
-    left: 334px;
-    top: 530px;
+    left: 374px;
+    top: 543px;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec1 .input-box label.l8 {
-    left: 490px;
-    top: 530px;
+    left: 533px;
+    top: 543px;
     right: auto;
     bottom: auto;
   }
@@ -162,27 +165,27 @@
     margin-top: 8px;
   }
   .container .wrap article .sec2 .guide-box .cell.cell1 {
-    left: 66px;
-    top: 822px;
+    left: 98px;
+    top: 838px;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec2 .guide-box .cell.cell2 {
-    left: 262px;
-    top: 822px;
+    left: 298px;
+    top: 838px;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec2 .guide-box .cell.cell3 {
-    left: 456px;
-    top: 822px;
+    left: 498px;
+    top: 838px;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec2 .link-box {
     position: absolute;
-    left: 373px;
-    top: 950px;
+    left: 413px;
+    top: 968px;
     right: auto;
     bottom: auto;
   }
@@ -198,13 +201,13 @@
     bottom: auto;
   }
   .container .wrap article .sec2 .link-box a.rule {
-    left: 128px;
+    left: 133px;
   }
   .container .wrap article .sec2 .ch-pop {
     font-size: 0px;
     position: absolute;
-    left: 208px;
-    top: 1039px;
+    left: 248px;
+    top: 1058px;
     right: auto;
     bottom: auto;
     width: 259px;
@@ -213,8 +216,8 @@
   }
   .container .wrap article .sec3 .parti {
     position: absolute;
-    left: 206px;
-    top: 358px;
+    left: 243px;
+    top: 364px;
     right: auto;
     bottom: auto;
     width: 257px;
@@ -222,7 +225,9 @@
     display: inline-block;
   }
   .container footer {
-    width: 100%;
+    width: 740px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .container footer img {
     width: 100%;
@@ -415,7 +420,7 @@
     bottom: auto;
   }
   .popup .user .inner .noti {
-    left: 138px;
+    left: 170px;
     top: 210px;
     right: auto;
     bottom: auto;
@@ -529,12 +534,10 @@
     display: block;
   }
   .popup .pic-upload {
-    position: fixed;
+    position: absolute;
     left: 50%;
-    top: 50%;
-    right: auto;
-    bottom: auto;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    margin-top: 50px;
     display: none;
   }
   .popup .pic-upload img {
@@ -548,7 +551,7 @@
     bottom: auto;
   }
   .popup .pic-upload .inner .noti {
-    left: 137px;
+    left: 170px;
     top: 225px;
     right: auto;
     bottom: auto;
@@ -832,6 +835,15 @@
   }
   .popup .result-popup.d .bi {
     display: block;
+  }
+  .popup .pic-upload {
+    left: 50%;
+    top: 150px;
+    right: auto;
+    bottom: auto;
+  }
+  .popup .self-diag {
+    height: 600px;
   }
 }
 /*# sourceMappingURL=style-pc.css.map */

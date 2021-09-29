@@ -26,7 +26,7 @@
           <div class="swiper-pagination"></div>
         </div>
         <section class="sec1">
-          <img src="img/img1.png" alt="" class="img">
+          <img src="img/img1-1.png" alt="" class="img">
           <div class="input-box">
             <label class="l1">
               <input type="radio" name="sports" value="a" oninput="popup('v1');">
@@ -63,7 +63,7 @@
           </div>
         </section>
         <section class="sec2">
-          <img src="img/img2.png" alt="" class="img">
+          <img src="img/img2-1.png" alt="" class="img">
           <div class="guide-box">
             <div class="cell cell1">
               <a class="ch" onclick="challenge('ch1')">챌린지 가이드</a>
@@ -85,11 +85,11 @@
           <a class="ch-pop" onclick="chPopup()">인증사진 업로드</a>
         </section>
         <section class="sec3">
-          <img src="img/img3.png" alt="" class="img">
+          <img src="img/img3-1.png" alt="" class="img">
           <a class="parti" onclick="diagPopup()">참여하기</a>
         </section>
         <section class="sec4">
-          <img src="img/noti.png" alt="" class="img">
+          <img src="img/noti1.png" alt="" class="img">
         </section>
       </article>
     </div>
@@ -489,6 +489,7 @@
     let com = document.querySelector('.complete-wrap');
     let el = document.documentElement;
     let h = el.scrollHeight
+    let t = el.scrollTop
     let w = el.scrollWidth
 
     function popupOpen() {
@@ -555,13 +556,13 @@
     function chPopup() {
       popupOpen();
       chPop.classList.add('on');
+      chPop.style.marginTop = ((h/2)/w)*100 + 'vw';
     }
 
     function picClose() {
       popupClose();
       chPop.classList.remove('on');
     }
-
 
     let diagPop = document.querySelector('.diag-popup');
     function diagPopup() {

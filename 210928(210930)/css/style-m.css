@@ -17,10 +17,6 @@
     max-width: 740px;
     margin-left: auto;
     margin-right: auto;
-    padding-top: 0vw;
-    padding-right: 4.59459459vw;
-    padding-bottom: 0vw;
-    padding-left: 4.59459459vw;
     box-sizing: border-box;
   }
   .container .wrap .top img {
@@ -29,6 +25,13 @@
   }
   .container .wrap article .swiper {
     width: 100%;
+    width: 91.21621622vw;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .container .wrap article .swiper .swiper-slide {
+    width: 91.21621622vw;
+    height: 30.67567568vw;
   }
   .container .wrap article .swiper .swiper-slide img {
     width: 100%;
@@ -98,50 +101,50 @@
     display: none;
   }
   .container .wrap article .sec1 .input-box label.l1 {
-    left: 3.10810811vw;
-    top: 44.45945946vw;
+    left: 7.56756757vw;
+    top: 45.67567568vw;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec1 .input-box label.l2 {
-    left: 24.45945946vw;
-    top: 44.45945946vw;
+    left: 29.05405405vw;
+    top: 45.67567568vw;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec1 .input-box label.l3 {
-    left: 45.13513514vw;
-    top: 44.45945946vw;
+    left: 50.54054054vw;
+    top: 45.67567568vw;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec1 .input-box label.l4 {
-    left: 66.21621622vw;
-    top: 44.45945946vw;
+    left: 72.02702703vw;
+    top: 45.67567568vw;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec1 .input-box label.l5 {
-    left: 3.10810811vw;
-    top: 71.62162162vw;
+    left: 7.56756757vw;
+    top: 73.37837838vw;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec1 .input-box label.l6 {
-    left: 24.45945946vw;
-    top: 71.62162162vw;
+    left: 29.05405405vw;
+    top: 73.37837838vw;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec1 .input-box label.l7 {
-    left: 45.13513514vw;
-    top: 71.62162162vw;
+    left: 50.54054054vw;
+    top: 73.37837838vw;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec1 .input-box label.l8 {
-    left: 66.21621622vw;
-    top: 71.62162162vw;
+    left: 72.02702703vw;
+    top: 73.37837838vw;
     right: auto;
     bottom: auto;
   }
@@ -162,27 +165,27 @@
     margin-top: 1.08108108vw;
   }
   .container .wrap article .sec2 .guide-box .cell.cell1 {
-    left: 8.91891892vw;
-    top: 111.08108108vw;
+    left: 13.24324324vw;
+    top: 113.24324324vw;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec2 .guide-box .cell.cell2 {
-    left: 35.40540541vw;
-    top: 111.08108108vw;
+    left: 40.27027027vw;
+    top: 113.24324324vw;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec2 .guide-box .cell.cell3 {
-    left: 61.62162162vw;
-    top: 111.08108108vw;
+    left: 67.2972973vw;
+    top: 113.24324324vw;
     right: auto;
     bottom: auto;
   }
   .container .wrap article .sec2 .link-box {
     position: absolute;
-    left: 50.40540541vw;
-    top: 128.37837838vw;
+    left: 55.81081081vw;
+    top: 130.81081081vw;
     right: auto;
     bottom: auto;
   }
@@ -198,13 +201,13 @@
     bottom: auto;
   }
   .container .wrap article .sec2 .link-box a.rule {
-    left: 17.2972973vw;
+    left: 17.97297297vw;
   }
   .container .wrap article .sec2 .ch-pop {
     font-size: 0vw;
     position: absolute;
-    left: 28.10810811vw;
-    top: 140.40540541vw;
+    left: 33.51351351vw;
+    top: 142.97297297vw;
     right: auto;
     bottom: auto;
     width: 35vw;
@@ -213,8 +216,8 @@
   }
   .container .wrap article .sec3 .parti {
     position: absolute;
-    left: 27.83783784vw;
-    top: 48.37837838vw;
+    left: 32.83783784vw;
+    top: 49.18918919vw;
     right: auto;
     bottom: auto;
     width: 34.72972973vw;
@@ -222,7 +225,9 @@
     display: inline-block;
   }
   .container footer {
-    width: 100%;
+    width: 100vw;
+    margin-left: auto;
+    margin-right: auto;
   }
   .container footer img {
     width: 100%;
@@ -415,7 +420,7 @@
     bottom: auto;
   }
   .popup .user .inner .noti {
-    left: 18.64864865vw;
+    left: 22.97297297vw;
     top: 28.37837838vw;
     right: auto;
     bottom: auto;
@@ -529,12 +534,10 @@
     display: block;
   }
   .popup .pic-upload {
-    position: fixed;
+    position: absolute;
     left: 50%;
-    top: 50%;
-    right: auto;
-    bottom: auto;
-    transform: translate(-50%, -50%);
+    transform: translateX(-50%);
+    margin-top: 6.75675676vw;
     display: none;
   }
   .popup .pic-upload img {
@@ -548,7 +551,7 @@
     bottom: auto;
   }
   .popup .pic-upload .inner .noti {
-    left: 18.51351351vw;
+    left: 22.97297297vw;
     top: 30.40540541vw;
     right: auto;
     bottom: auto;
