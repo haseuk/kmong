@@ -1,0 +1,18 @@
+/*--------------------------------------------------------------------------------------------------------------
+*  Template
+*--------------------------------------------------------------------------------------------------------------*/
+img {
+  transform: translateZ(0);
+  backface-visibility: hidden;
+  display: block;
+}
+html {
+  font-family: Notokr, sans-serif;
+}
+.b-col {
+  color: #6fd9f8;
+}
+.container .wrap {
+  text-align: center;
+}
+/*# sourceMappingURL=style-m.css.map */

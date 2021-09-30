@@ -831,6 +831,9 @@
     background: rgba(194, 53, 44, 0.3);
     border-radius: 0.40540541vw;
   }
+  .popup .self-diag .diag-score .q label input {
+    display: none;
+  }
   .popup .self-diag .diag-score .q label:nth-child(1) {
     left: 0vw;
   }
