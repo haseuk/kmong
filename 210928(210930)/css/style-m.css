@@ -38,6 +38,7 @@
     bottom: auto;
     box-sizing: border-box;
     pointer-events: none;
+    z-index: 1;
   }
   .container .wrap .top img {
     width: 100vw;
@@ -82,8 +83,9 @@
     padding-top: 9.32432432vw;
   }
   .container .wrap article .sec1 .input-box {
+    position: absolute;
     left: 0vw;
-    top: 0vw;
+    top: 9.18918919vw;
     right: auto;
     bottom: auto;
   }
@@ -262,20 +264,20 @@
     font-size: 0vw;
     position: fixed;
     right: 0vw;
-    top: 6.75675676vw;
+    top: 0vw;
     left: auto;
     bottom: auto;
     padding-top: 9.45945946vw;
     z-index: 10;
   }
   .container .dir-btns img.mo {
-    width: 11.08108108vw;
-    height: 7.83783784vw;
+    width: 100vw;
+    height: 9.05405405vw;
     display: block;
-    position: absolute;
-    right: 0vw;
+    position: fixed;
+    left: 0vw;
     top: 0vw;
-    left: auto;
+    right: auto;
     bottom: auto;
   }
   .container .dir-btns img.web {
@@ -289,17 +291,21 @@
     bottom: auto;
     pointer-events: none;
   }
-  .container .dir-btns.on img.web {
-    display: block;
-  }
   .container .dir-btns .btn {
     width: 26.08108108vw;
     height: 8.78378378vw;
     margin-bottom: 1.35135135vw;
     display: block;
+    pointer-events: none;
   }
   .container .dir-btns .btn:last-child {
     margin-bottom: 0vw;
+  }
+  .container .dir-btns.on img.web {
+    display: block;
+  }
+  .container .dir-btns.on .btn {
+    pointer-events: auto;
   }
   .popup {
     position: absolute;
@@ -466,6 +472,7 @@
   }
   .popup .inner ::placeholder {
     font-size: 2.7027027vw;
+    color: #666;
     font-family: Notokr, sans-serif;
   }
   .popup .user {
@@ -603,10 +610,12 @@
     display: block;
   }
   .popup .pic-upload {
-    position: absolute;
+    position: fixed;
     left: 50%;
-    transform: translateX(-50%);
-    margin-top: 6.75675676vw;
+    top: 50%;
+    right: auto;
+    bottom: auto;
+    transform: translate(-50%, -50%);
     display: none;
   }
   .popup .pic-upload img {
@@ -636,6 +645,19 @@
     text-align: center;
     border: 0;
     background: transparent;
+  }
+  .popup .pic-upload .inner select {
+    font-size: 2.7027027vw;
+    display: block;
+    color: #666;
+    position: absolute;
+    width: 54.05405405vw;
+    height: 7.7027027vw;
+    line-height: 7.7027027vw;
+    text-align: center;
+    border: 0;
+    background: transparent;
+    outline: none;
   }
   .popup .pic-upload .inner input {
     font-size: 2.7027027vw;
@@ -668,6 +690,7 @@
     bottom: auto;
   }
   .popup .pic-upload .pic input::-webkit-file-upload-button {
+    color: #666;
     visibility: hidden;
     margin-left: -6.75675676vw;
   }
@@ -770,8 +793,9 @@
     transform: translate(-50%, -50%);
     display: none;
     width: 91.21621622vw;
-    height: 108.10810811vw;
+    height: 81.08108108vw;
     overflow: auto;
+    padding-right: 2.02702703vw;
   }
   .popup .self-diag img {
     width: 91.21621622vw;

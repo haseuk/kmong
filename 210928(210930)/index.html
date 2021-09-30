@@ -100,7 +100,7 @@
 
     <div class="dir-btns">
       <a onclick="dirBtn()">
-        <img src="img/dir-m.png" alt="" class="mo">
+        <img src="img/m-header.png" alt="" class="mo">
       </a>
       <img src="img/dir-btn.png" alt="" class="web">
       <a class="btn" href="#first">처음으로</a>
@@ -250,9 +250,12 @@
           </div>
           <p class="txt">본 개인정보 수집 및 이용에 관한 동의를 거부할 권리가 있습니다. 단. 거부 시 븐 캠페인 참여가 재한 됩니다.</p>
         </div>
-        <label class="game">
-          <input type="text" placeholder="도전 종목을 선택해주세요.">
-        </label>
+        <select class="game">
+          <option value="">도전 종목을 선택해 주세요.</option>
+          <option value="">러닝</option>
+          <option value="">사이클</option>
+          <option value="">트레킹</option>
+        </select>
         <label class="name">
           <input type="text" placeholder="본인 성명을 적어주세요.">
         </label>
@@ -260,7 +263,7 @@
           <input type="text" placeholder="당첨 시 연락받을 본인 전화번호를 적어주세요.">
         </label>
         <label class="pic">
-          <input type="file" placeholder="캡쳐한 이미지를 첨부해주세요.">
+          <input type="file" placeholder="캡쳐한 이미지를 첨부해주세요." style="color:#666;">
         </label>
       </div>
       <a class="complete" onclick="complete()"></a>
@@ -526,6 +529,7 @@
     let inputs = document.querySelectorAll('.input-box input');
     let user = document.querySelector('.user');
     let com = document.querySelector('.complete-wrap');
+    let body = document.querySelector('body');
     let el = document.documentElement;
     let h = el.scrollHeight
     let t = el.scrollTop
@@ -533,10 +537,12 @@
 
     function popupOpen() {
       pop.classList.add('on');
+      body.style.overflow = 'hidden';
     }
 
     function popupClose() {
       pop.classList.remove('on');
+      body.style.overflow = 'unset';
     }
 
     function popup(v) {
@@ -595,7 +601,6 @@
     function chPopup() {
       popupOpen();
       chPop.classList.add('on');
-      chPop.style.marginTop = ((h/2)/w)*100 + 'vw';
     }
 
     function picClose() {
@@ -623,6 +628,7 @@
     function selfClose() {
       popupClose();
       self.classList.remove('on');
+      // window.location.reload()
     }
 
     let digInput = document.querySelectorAll('.diag-score input')
@@ -662,6 +668,8 @@
       for (let i = 0; i < digInput.length; i++) {
         digInput[i].checked = false;
       }
+      score = [];
+      total = 0;
     }
 
     let keeper = document.querySelector('.keeperPopup');
