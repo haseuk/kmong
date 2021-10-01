@@ -26,13 +26,17 @@ window.onload = function() {
 
   function titFadeIn(v) {
     slide1.classList.add(v);
+    // typeWriter1(v);
+    // typeWriter2(v);
   }
   function titFadeOut() {
     setTimeout(function() {
       slide1.classList.remove('active-t1');
+      // title1.innerHTML = '';
     },9000);
     setTimeout(function() {
       slide1.classList.remove('active-t2');
+      // title2.innerHTML = '';
     },15000);
   }
 
@@ -65,5 +69,30 @@ window.onload = function() {
   function txtMotion(v) {
     pageSwiper.setAttribute('data-page',v);
   }
+
+  // let i = 0;
+  // let txt1 = '#훅가고싶니?';
+  // let txt2 = '#설탕을끊자';
+  // let spd = 200;
+  //
+  // let title1 = document.querySelector('.swiper-slide1 .tit1');
+  // let title2 = document.querySelector('.swiper-slide1 .tit2');
+  //
+  // function typeWriter1(v) {
+  //   if (v !== 'active-t1') return;
+  //   if (i < txt1.length) {
+  //     title1.innerHTML += txt1.charAt(i);
+  //     i++;
+  //     setTimeout(typeWriter1, spd);
+  //   }
+  // }
+  // function typeWriter2(v) {
+  //   if(v !== 'active-v2') return;
+  //   if (i < txt1.length) {
+  //     title2.innerHTML += txt2.charAt(i);
+  //     i++;
+  //     setTimeout(typeWriter2, spd);
+  //   }
+  // }
 
 }
