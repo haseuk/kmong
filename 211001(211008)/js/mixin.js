@@ -1,6 +1,6 @@
 window.onload = function() {
-  // 영상재생
   let mainV = document.querySelector('.main-v');
+  let vid = document.querySelector('.vid8');
   let slide1 = document.querySelector('.swiper-slide1');
 
   function videoPlay() {
@@ -47,6 +47,8 @@ window.onload = function() {
 
   mainV.addEventListener('ended', pageCheck);
 
+  let slide8 = document.querySelector('.swiper-slide8 iframe');
+  let slide12 = document.querySelector('.swiper-slide12 iframe');
 
   let pageSwiper = document.querySelector('.pageSwiper');
   let nowPage = 1;
@@ -55,6 +57,7 @@ window.onload = function() {
     pageCheck();
     txtMotion(nowPage);
   });
+
   function pageCheck() {
     if(nowPage !== 1) {
       videoStop();
@@ -63,11 +66,51 @@ window.onload = function() {
     if(nowPage === 1) {
       videoPlay();
     }
+    if(nowPage === 8) {
+      vidPlay();
+    }
+    if(nowPage !== 8) {
+      vidStop();
+    }
+    if(nowPage === 12) {
+      utvPlay();
+      setTimeout(function() {
+        scrollHide();
+      },500);
+    }
+    if(nowPage !== 12) {
+      utvStop();
+      setTimeout(function () {
+        scrollActive();
+      },500)
+    }
   }
 
   pageCheck();
   function txtMotion(v) {
     pageSwiper.setAttribute('data-page',v);
+  }
+
+  function utvPlay() {
+    setTimeout(function() {
+      slide12.contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+    },1000);
+  }
+  function utvStop() {
+    setTimeout(function() {
+      slide12.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+    },500);
+  }
+
+  function vidPlay() {
+    setTimeout(function() {
+      slide8.contentWindow.postMessage('{"event":"command","func":"' + 'playVideo' + '","args":""}', '*');
+    },1000);
+  }
+  function vidStop() {
+    setTimeout(function() {
+      slide8.contentWindow.postMessage('{"event":"command","func":"' + 'stopVideo' + '","args":""}', '*');
+    },500);
   }
 
   // let i = 0;
@@ -95,4 +138,15 @@ window.onload = function() {
   //   }
   // }
 
+  let scrollDown = document.querySelector('.scroll-down');
+  scrollDown.addEventListener('click', function() {
+    swiper.slideTo(nowPage);
+  });
+
+  function scrollActive() {
+    scrollDown.classList.add('active');
+  }
+  function scrollHide() {
+    scrollDown.classList.remove('active');
+  }
 }

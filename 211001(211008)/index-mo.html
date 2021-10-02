@@ -177,9 +177,9 @@
             <p class="t-top">BINGE WATCH</p>
             <p class="sub-tit">설탕으로 훅 가는<br>충격영상 정주행하기</p>
             <p class="txt25">저승사자는 왜 그들을 찾아 갔나?<br>하이퍼리얼리즘 에피소드 5가지.</p>
-            <video class="vid" muted>
-              <source src="img/wide-v.mp4" type="video/mp4">
-            </video>
+            <div class="utv">
+              <iframe src="https://www.youtube.com/embed/bk5H_SS6XR0?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&showinfo=0&autohide=1&playsinline&hd=1&wmode=opaque" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
           </div>
         </div>
         <div class="swiper-slide swiper-slide9">
@@ -353,7 +353,7 @@
 <!-- Initialize Swiper -->
 <script>
   var swiper = new Swiper(".pageSwiper", {
-    speed:700,
+    speed:1000,
     direction: "vertical",
     effect: "creative",
     creativeEffect: {
@@ -376,11 +376,6 @@
   });
   var innerSwiper2 = new Swiper(".innerSwiper2", {
   });
-</script>
-<script>
-  document.onload(function() {
-    document.querySelector('.vid').play();
-  })
 </script>
 
 </body>
