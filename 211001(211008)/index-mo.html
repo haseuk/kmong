@@ -7,19 +7,19 @@
   <title>Document</title>
   <link rel="stylesheet" href="css/base.css">
   <link rel="stylesheet" href="css/style-m.css">
-  <link rel="stylesheet" href="css/style-tb.css">
+<!--  <link rel="stylesheet" href="css/style-tb.css">-->
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/earlyaccess/notosanskr.css">
   <link rel="stylesheet" href="https://unpkg.com/swiper@7/swiper-bundle.min.css"/>
 </head>
 <body>
-<div class="container">
+<div class="container" data-page="1">
   <div class="wrap">
-    <div class="swiper pageSwiper" data-page>
+    <h1 class="logo"><a href="/">자연지애</a></h1>
+    <div class="swiper pageSwiper">
       <div class="swiper-wrapper">
         <div class="swiper-slide swiper-slide1">
-<!--          <img src="img/mo/img1.png" alt="">-->
-          <video class="main-v" muted>
-            <source src="img/mo/main-v.mp4" type="video/mp4">
+          <video class="main-v" muted playsinline>
+            <source src="img/mo/mo_low.mp4" type="video/mp4">
           </video>
           <div class="inner">
             <p class="tit tit1">#훅가고싶니?</p>
@@ -27,7 +27,6 @@
           </div>
         </div>
         <div class="swiper-slide swiper-slide2">
-          <img src="img/mo/img2.png" alt="">
           <div class="inner">
             <p class="t-top">COMMENTARY</p>
             <p class="sub-tit">‘설탕은 악이다’<br>문제적 캠페인의 시작</p>
@@ -42,7 +41,6 @@
           </div>
         </div>
         <div class="swiper-slide swiper-slide3">
-          <img src="img/mo/img3.png" alt="">
           <div class="inner">
             <p class="sub-tit">왜 설탕을<br>끊어야 하는지</p>
             <p class="txt35">이미 많은 논문들이<br>증명하고 있습니다</p>
@@ -53,7 +51,6 @@
           </div>
         </div>
         <div class="swiper-slide swiper-slide4">
-          <img src="img/mo/img4.png" alt="">
           <div class="inner">
             <p class="t-top">TEST</p>
             <p class="sub-tit">이래도<br>계속 드시겠습니까</p>
@@ -63,15 +60,14 @@
               당이 없어 가열해도 카라멜화가 되지 않습니다.<br>
               설탕을 끊기 전 눈으로 직접 확인 해보세요.
             </p>
-            <div class="utv" style="background: #ccc;">
-              영상들어갈 자리
-            </div>
+            <video class="exper-v" muted playsinline>
+              <source src="img/mo/exper_low.mp4" type="video/mp4">
+            </video>
             <p class="txt30">설탕 vs <s>눈꽃스테비아</s><br>가열비교</p>
-            <p class="dr">Dr. Helke / 닥터 헬케</p>
           </div>
+          <p class="dr">Dr. Helke / 닥터 헬케</p>
         </div>
         <div class="swiper-slide swiper-slide5">
-          <img src="img/mo/img5.png" alt="">
           <div class="inner">
             <p class="t-top">AWARD</p>
             <p class="sub-tit">네이버쇼핑 1위<br>쿠팡 1위<br>국민 스테비아<br><s>‘눈꽃’</s></p>
@@ -83,7 +79,6 @@
           </div>
         </div>
         <div class="swiper-slide swiper-slide6">
-          <img src="img/mo/img6.png" alt="">
           <div class="inner">
             <p class="t-top">SYNOPSIS</p>
             <p class="txt70">“훅 가고 싶니?”</p>
@@ -100,7 +95,6 @@
           </div>
         </div>
         <div class="swiper-slide swiper-slide7">
-          <img src="img/mo/img6.png" alt="">
           <div class="inner">
             <div class="swiper innerSwiper1">
               <div class="swiper-wrapper">
@@ -166,24 +160,22 @@
                   </div>
                 </div>
               </div>
+              <div class="swiper-button swiper-button-next"></div>
+              <div class="swiper-button swiper-button-prev"></div>
             </div>
-            <div class="swiper-button swiper-button-next"></div>
-            <div class="swiper-button swiper-button-prev"></div>
           </div>
         </div>
         <div class="swiper-slide swiper-slide8">
-          <img src="img/mo/img8.png" alt="">
           <div class="inner">
             <p class="t-top">BINGE WATCH</p>
             <p class="sub-tit">설탕으로 훅 가는<br>충격영상 정주행하기</p>
             <p class="txt25">저승사자는 왜 그들을 찾아 갔나?<br>하이퍼리얼리즘 에피소드 5가지.</p>
-            <video class="vid" muted>
-              <source src="img/wide-v.mp4" type="video/mp4">
-            </video>
+            <div class="utv">
+              <iframe src="https://www.youtube.com/embed/bk5H_SS6XR0?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&showinfo=0&autohide=1&playsinline&hd=1&wmode=opaque" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            </div>
           </div>
         </div>
         <div class="swiper-slide swiper-slide9">
-          <img src="img/mo/img9.png" alt="">
           <div class="inner">
             <p class="t-top">REVIEW</p>
             <p class="sub-tit">눈꽃스테비아로<br>구원받은 고객들의 간증</p>
@@ -216,7 +208,6 @@
           </div>
         </div>
         <div class="swiper-slide swiper-slide10">
-          <img src="img/mo/img10.png" alt="">
           <div class="inner">
             <p class="t-top">TASTE</p>
             <p class="sub-tit">눈꽃팬이라면 환장할<br>추천메뉴 시리즈</p>
@@ -231,79 +222,80 @@
                 <div class="swiper-slide">
                   <div class="slide-inner">
                     <img src="img/mo/img10-1.png" alt="" class="img10">
-                    <div class="t-box">
-                      <p class="txt20">RECOMMEND. 01</p>
-                      <p class="txt40">무설탕 떡볶이</p>
-                      <p class="txt22">
-                        <s>TIP.</s>
-                        떡볶이 단맛은 이제 설탕 대신<br>
-                        눈꽃스테비아로 맞추세요.
-                      </p>
-                    </div>
+<!--                    <div class="t-box">-->
+<!--                      <p class="txt20">RECOMMEND. 01</p>-->
+<!--                      <p class="txt40">무설탕 떡볶이</p>-->
+<!--                      <p class="txt22">-->
+<!--                        <s>TIP.</s>-->
+<!--                        떡볶이 단맛은 이제 설탕 대신<br>-->
+<!--                        눈꽃스테비아로 맞추세요.-->
+<!--                      </p>-->
+<!--                    </div>-->
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="slide-inner">
                     <img src="img/mo/img10-2.png" alt="" class="img10">
-                    <div class="t-box">
-                      <p class="txt20">RECOMMEND. 02</p>
-                      <p class="txt40">NO설탕 불고기</p>
-                      <p class="txt22">
-                        <s>TIP.</s>
-                        불고기도 눈꽃스테비아 하나면<br>
-                        설탕 없이 달달하게 즐길 수 있어요.
-                      </p>
-                    </div>
+<!--                    <div class="t-box">-->
+<!--                      <p class="txt20">RECOMMEND. 02</p>-->
+<!--                      <p class="txt40">NO설탕 불고기</p>-->
+<!--                      <p class="txt22">-->
+<!--                        <s>TIP.</s>-->
+<!--                        불고기도 눈꽃스테비아 하나면<br>-->
+<!--                        설탕 없이 달달하게 즐길 수 있어요.-->
+<!--                      </p>-->
+<!--                    </div>-->
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="slide-inner">
                     <img src="img/mo/img10-3.png" alt="" class="img10">
-                    <div class="t-box">
-                      <p class="txt20">RECOMMEND. 03</p>
-                      <p class="txt40">눈꽃 도너츠</p>
-                      <p class="txt22">
-                        <s>TIP.</s>
-                        마음껏 달달하게 먹어도 죄책감 없이<br>
-                        맛있게 당충전 하세요.
-                      </p>
-                    </div>
+<!--                    <div class="t-box">-->
+<!--                      <p class="txt20">RECOMMEND. 03</p>-->
+<!--                      <p class="txt40">눈꽃 도너츠</p>-->
+<!--                      <p class="txt22">-->
+<!--                        <s>TIP.</s>-->
+<!--                        마음껏 달달하게 먹어도 죄책감 없이<br>-->
+<!--                        맛있게 당충전 하세요.-->
+<!--                      </p>-->
+<!--                    </div>-->
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="slide-inner">
                     <img src="img/mo/img10-4.png" alt="" class="img10">
-                    <div class="t-box">
-                      <p class="txt20">RECOMMEND. 04</p>
-                      <p class="txt40">무가당 과일쨈</p>
-                      <p class="txt22">
-                        <s>TIP.</s>
-                        우리 가족 먹을 쨈인데 아직도 설탕?<br>
-                        눈꽃스테비아로 건강하게 챙기세요.
-                      </p>
-                    </div>
+<!--                    <div class="t-box">-->
+<!--                      <p class="txt20">RECOMMEND. 04</p>-->
+<!--                      <p class="txt40">무가당 과일쨈</p>-->
+<!--                      <p class="txt22">-->
+<!--                        <s>TIP.</s>-->
+<!--                        우리 가족 먹을 쨈인데 아직도 설탕?<br>-->
+<!--                        눈꽃스테비아로 건강하게 챙기세요.-->
+<!--                      </p>-->
+<!--                    </div>-->
                   </div>
                 </div>
                 <div class="swiper-slide">
                   <div class="slide-inner">
                     <img src="img/mo/img10-5.png" alt="" class="img10">
-                    <div class="t-box">
-                      <p class="txt20">RECOMMEND. 05</p>
-                      <p class="txt40">슈가프리 커피</p>
-                      <p class="txt22">
-                        <s>TIP.</s>
-                        달콤한 카페인 수혈이 필요한 날도<br>
-                        설탕 대신 눈꽃스테비아로 채우세요.
-                      </p>
-                    </div>
+<!--                    <div class="t-box">-->
+<!--                      <p class="txt20">RECOMMEND. 05</p>-->
+<!--                      <p class="txt40">슈가프리 커피</p>-->
+<!--                      <p class="txt22">-->
+<!--                        <s>TIP.</s>-->
+<!--                        달콤한 카페인 수혈이 필요한 날도<br>-->
+<!--                        설탕 대신 눈꽃스테비아로 채우세요.-->
+<!--                      </p>-->
+<!--                    </div>-->
                   </div>
                 </div>
               </div>
+              <div class="swiper-button swiper-button-next"></div>
+              <div class="swiper-button swiper-button-prev"></div>
             </div>
           </div>
         </div>
         <div class="swiper-slide swiper-slide11">
-          <img src="img/mo/img11.png" alt="">
           <div class="inner">
             <p class="t-top">EVENT</p>
             <p class="txt92">설탕 가면<br> 눈꽃 온다</p>
@@ -324,12 +316,9 @@
           </div>
         </div>
         <div class="swiper-slide swiper-slide12">
-          <img src="img/mo/img12.png" alt="">
           <div class="inner">
             <p class="txt36">슈퍼스타 오날두<br>긴급 기자회견 영상보기</p>
-            <div class="utv">
-              <iframe src="https://www.youtube.com/embed/bk5H_SS6XR0?enablejsapi=1&version=3&playerapiid=ytplayer&rel=0&showinfo=0&autohide=1&playsinline&hd=1&wmode=opaque" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-            </div>
+            <a href="" class="utv"><img src="img/pc/img12-1.jpg" alt="" ></a>
           </div>
           <footer>
             <p class="txt">
@@ -353,7 +342,7 @@
 <!-- Initialize Swiper -->
 <script>
   var swiper = new Swiper(".pageSwiper", {
-    speed:700,
+    speed:1000,
     direction: "vertical",
     effect: "creative",
     creativeEffect: {
@@ -375,12 +364,12 @@
     },
   });
   var innerSwiper2 = new Swiper(".innerSwiper2", {
+    spaceBetween: 30,
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
   });
-</script>
-<script>
-  document.onload(function() {
-    document.querySelector('.vid').play();
-  })
 </script>
 
 </body>
